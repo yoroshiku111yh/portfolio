@@ -1,0 +1,40 @@
+.fix { position : fixed;}
+.rela { position : relative;}
+.abo { position : absolute;}
+.clearAfter::after{ content : "" ; clear : both; display: block}
+.left { float : left}
+.right {float : right}
+.point{ cursor : pointer;}
+.bold { font-weight : bold;}
+body { background-color : white;}
+#wrapper { width : 100% ; height : auto ; position : relative ; margin : 0 auto;}
+.box-shadow { 	
+	box-shadow:0 1px 1px rgba(166, 165, 165, 0.4);
+	-webkit-box-shadow:0 1px 1px rgba(166, 165, 165, 0.4);
+	-moz-box-shadow:0 1px 1px rgba(166, 165, 165, 0.4); 
+}
+.animation-all {
+	-webkit-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.hoverMaskup
+ {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
+	overflow: hidden;
+	background-color : rgba(3, 3, 3, 0);
+} 
+.red { color : red;}
+.blue { color : #3E8FB6 ;}
+.bold { font-weight : bold;}
+a { list-style-type : none; text-decoration : none ; outline : none; color : inherit;}
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}

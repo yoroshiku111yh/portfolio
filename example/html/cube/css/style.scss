@@ -1,0 +1,94 @@
+@import "helper";
+
+.wrapper {
+    height: 600px;
+    margin: 80px auto;
+    .shadow {
+        width : 372px;
+        margin: 0 auto;
+        margin-top : 248px;
+        height : 158px;
+        img {
+            position: relative;
+            margin: 0 auto;
+            //margin-top: 248px;
+            display: block;
+            width: 372px;
+            height: 153px;
+            @include TransitionWithDurationAndEase(0.85s, $EasingQuintInOut, 0s);
+        }
+    }
+    #view {
+        perspective: 1000px;
+        -webkit-perspective: 1000px;
+        display: block;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        top: 115px;
+
+        left:502px;
+        margin: 0px auto;
+        z-index : 99;
+        /*transition: all 0.85s cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
+        @include TransitionWithDurationAndEase(0.85s, $EasingBackInOut, 0s);
+        #cube3D {
+            width: inherit;
+            height: inherit;
+            position: relative;
+            margin: 0 auto;
+            /*transition: all 0.85s cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
+            @include TransitionWithDurationAndEase(1s, $EasingExpoOut, 0.4s);
+            transform-style: preserve-3d;
+            text-align: center;
+            display: inline-block;
+            .cube-face {
+                width: inherit;
+                height: inherit;
+                position: absolute;
+            }
+            .cube-front-face {
+                background-color: gray;
+                transform: translate3d(0, 0, /*$size/2*/ 125px);
+                width: 250px;
+                height: 250px;
+            }
+            .cube-back-face {
+                width: 250px;
+                height: 250px;
+                background-color: black;
+                transform: rotateY(180deg) translate3d(0, 0, /*$size/2*/ 125px);
+            }
+            .cube-left-face {
+                background-color: skyblue;
+                transform: rotateY(-90deg) translate3d(0, 0, 125px);
+            }
+            .cube-right-face {
+                background-color: greenyellow;
+                transform: rotateY(90deg) translate3d(0, 0, 125px);
+                left: 50%;
+                margin-left: -125px;
+            }
+            .cube-top-face {
+                background-color: antiquewhite;
+                transform: rotateX(90deg) translate3d(0, 0, 125px);
+            }
+            .cube-bottom-face {
+                background-color: wheat;
+                transform: rotateX(-90deg) translate3d(0, 0, 125px);
+            }
+        }
+    }
+}
+
+.button {
+    width: 700px;
+    margin: auto;
+   // margin-top: 520px;
+    padding-top: 60px;
+
+    .button-face {
+        display: inline-block;
+        margin: 20px;
+    }
+}

@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/resizeCustask.min.js" />
+        <item url="file://$PROJECT_DIR$/js/data.min.js" />
+        <item url="file://$PROJECT_DIR$/js/resizeCustask.min.min.js" />
+        <item url="file://$PROJECT_DIR$/js/popUpSuccess.min.js" />
+        <item url="file://$PROJECT_DIR$/js/popUpWait.min.js" />
+        <item url="file://$PROJECT_DIR$/js/popUpInput.min.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/js/resizeCustask.min.js" />
+      <root url="file://$PROJECT_DIR$/js/resizeCustask.min.min.js" />
+      <root url="file://$PROJECT_DIR$/js/data.min.js" />
+      <root url="file://$PROJECT_DIR$/js/popUpSuccess.min.js" />
+      <root url="file://$PROJECT_DIR$/js/popUpWait.min.js" />
+      <root url="file://$PROJECT_DIR$/js/popUpInput.min.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>

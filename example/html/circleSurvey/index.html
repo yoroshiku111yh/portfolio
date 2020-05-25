@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Circle Survey</title>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/powerange.js"></script>
+    <script src="js/Draggable.min.js"></script>
+    <link rel="stylesheet" href="css/powerange.css" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="content-circle">
+            <div class="mainCircle">
+                <span class="circleBigNotMove dragdrop blackcricle">
+                    <span class="text">
+                        <p class="title-circle">Drop here</p>
+                        <span class="value">0</span>
+                        <span class="bar">
+                            <input type="text" class="bar-total js-min-max-start bar-value" />
+                        </span>
+                        <div class="button-ok">OK</div>
+                    </span>
+                </span>
+            </div>
+            <span class="showResult">
+                <button disabled>-See result-</button>
+            </span>
+            <div class="listChoice clearAfter">
+                <span owner ="bt-1" title="box 1 is me" backgroundColor = url('./img/1.jpg') class="float-left bt-1 bt" style="background-color: green ; background-image: url('./img/1.jpg');"></span>
+                <span owner ="bt-2" title="box 2 is me" backgroundColor =  url('./img/3.jpg') class="float-left bt-2 bt" style="background-color: dodgerblue ; background-image: url('./img/3.jpg');"></span>
+                <span owner ="bt-3" title="box 3 is me" backgroundColor =  url('./img/8.jpg') class="float-left bt-3 bt" style="background-color: darkred ; background-image: url('./img/8.jpg');"></span>
+                <span owner ="bt-4" title="box 4 is me" backgroundColor = url('./img/10.jpg') class="float-left bt-4 bt" style="background-color: white ; background-image: url('./img/10.jpg');"></span>
+                <span owner ="bt-5" title="box 5 is me" backgroundColor = url('./img/11.jpg') class="float-left bt-5 bt" style="background-color: white ; background-image: url('./img/11.jpg');"></span>
+                <span owner ="bt-6" title="box 6 is me" backgroundColor = url('./img/12.jpg') class="float-left bt-6 bt" style="background-color: white ; background-image: url('./img/12.jpg');"></span>
+            </div>
+        </div>
+
+    </div>
+<script>
+    var R = 0;
+    var R_old = 200;
+    var i = 10;
+    var value_edited = 0;
+    var max_weight = 50;
+    var owner = '';
+    jQuery.fn.extend({
+        disable: function(state) {
+            return this.each(function() {
+                this.disabled = state;
+            });
+        }
+    });
+    defaults = {
+        callback      : function() {}
+        , decimal       : false
+        , disable       : false
+        , disableOpacity: 0.5
+        , hideRange     : true
+        , klass         : ''
+        , min           : 0
+        , max           : 100
+        , start         : 0
+        , step          : null
+        , vertical      : false
+    };
+
+    vals = document.querySelector('.js-min-max-start.bar-total');
+    $(".bt" ).draggable({ revert: "invalid" });
+    initVals = new Powerange(vals, defaults);
+    $('.dragdrop').droppable({
+        activeClass: "ui-state-default",
+        hoverClass: "ui-state-hover",
+        drop : function( event , ui)
+        {
+            $('.text .value').html(0);
+            $('.showResult button').disable(true);
+            //console.dir(ui.draggable);
+            var BG_color = $(ui.draggable).attr('backgroundColor');
+            var weight   = '10px';
+            ui.draggable.css({'display' : 'none'});
+            owner = $(ui.draggable).attr('owner');
+            var title = $(ui.draggable).attr('title');
+            $(this).css({'width' : ''+400+'px' , 'height' : ''+400+'px'});
+            $('.title-circle').html(title);
+            $('.mainCircle').append('<span class="circleBig '+owner+'" owner="'+owner+'" style="z-index :'+i+' ; background-image : '+BG_color+'">'+'</span>').show('slow');
+            R = R_old + 20;
+            $('.mainCircle').find('.'+owner+'').css({'width' : ''+450+'px' , 'height' : ''+450+'px' })
+            $('.bar').css({'display':'block'});
+            $('.button-ok').css({'display' : 'block'});
+            $('.bt').draggable( 'disable' );
+            i--;
+            Draggable.create(".circleBig", {type:"rotation", throwProps:true});
+        }
+    });
+    $('.bar .bar-value').change(function(){
+		console.log($(this).val());
+       $('.text .value').html($(this).val());
+        value_edited = $(this).val();
+    });
+    $('.button-ok').click(function(){
+        $('.showResult button').disable(false);
+        var value = $('.text .value').html();
+        $('.bt').draggable( 'enable' );
+        $('.bar').css({'display':'none'});
+        $('.button-ok').css({'display' : 'none'});
+        //
+        $('.range-quantity').css({'width' : 0});
+        $('.range-handle').css({'left' : 0});
+        $('input.bar-value').val(0);
+        //
+        R = R + ((value_edited *50)/100);
+        value_edited = 0;
+        R_old = R;
+        $('.dragdrop').css({'width' : '200px' , 'height' : '200px'});
+        $('.mainCircle').find('.'+owner+'').css({'width' : ''+R+'px' , 'height' : ''+R+'px' })
+        console.log(value);
+    });
+
+    $('.showResult button').click(function(){
+        R = 0;
+        R_old = 200;
+        i = 10;
+        $('.bt').css({'display' : 'block' , 'opacity' : 1, 'top' : 0,'left' : 0});
+        $('.circleBig').css({'opacity' : 0});
+        $('.title-circle').html('Drop here');
+        $('.text .value').html(0);
+        setTimeout($('.circleBig').remove(),2000);
+    });
+</script>
+</body>
+</html>

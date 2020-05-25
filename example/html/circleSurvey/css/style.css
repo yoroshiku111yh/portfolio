@@ -1,0 +1,144 @@
+.wrapper {
+  width: auto;
+  height: auto;
+  position: relative;
+  margin: 0px auto;
+}
+
+.wrapper .content-circle {
+  width: auto;
+  height: 930px;
+  margin: 0 auto;
+  background-color: gainsboro;
+}
+
+.wrapper .content-circle .showResult {
+  width: 100px;
+}
+
+.wrapper .content-circle .showResult button {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+  width: 100px;
+  line-height: 25px;
+  border: 1px solid #c2bcbc;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.wrapper .content-circle .mainCircle {
+  width: auto;
+  padding: 20px;
+  height: 700px;
+  position: relative;
+}
+
+.wrapper .content-circle .mainCircle .blackcricle {
+  z-index: 990;
+}
+
+.wrapper .content-circle .mainCircle .circleBig, .wrapper .content-circle .mainCircle .circleBigNotMove {
+  border-radius: 50%;
+  display: table;
+  margin: 0 auto;
+  opacity: 1;
+  position: absolute;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  background-position: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-align: center;
+  background-color: white;
+  color: black;
+  width: 150px;
+  height: 150px;
+  cursor: pointer;
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text, .wrapper .content-circle .mainCircle .circleBigNotMove .text {
+  width: 80%;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  position: relative;
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text .range-bar, .wrapper .content-circle .mainCircle .circleBigNotMove .text .range-bar {
+  width: 85%;
+  margin: 0 auto;
+  color: white;
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text .range-min, .wrapper .content-circle .mainCircle .circleBig .text .range-max, .wrapper .content-circle .mainCircle .circleBigNotMove .text .range-min, .wrapper .content-circle .mainCircle .circleBigNotMove .text .range-max {
+  color: white;
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text .value, .wrapper .content-circle .mainCircle .circleBigNotMove .text .value {
+  position: relative;
+  display: block;
+  width: 50px;
+  text-align: center;
+  height: 25px;
+  color: black;
+  font-size: 15px;
+  margin: 0 auto;
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text .bar, .wrapper .content-circle .mainCircle .circleBigNotMove .text .bar {
+  display: none;
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text .bar .range-handle, .wrapper .content-circle .mainCircle .circleBigNotMove .text .bar .range-handle {
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: move;
+  height: 15px;
+  width: 15px;
+  left: 0;
+  top: -5px;
+  position: absolute;
+  /* width: 30px; */
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .content-circle .mainCircle .circleBig .text .button-ok, .wrapper .content-circle .mainCircle .circleBigNotMove .text .button-ok {
+  background-color: white;
+  color: black;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 15px;
+  width: 50px;
+  margin: 20px auto;
+  cursor: pointer;
+  border-radius: 10px;
+  text-align: center;
+  display: none;
+}
+
+.wrapper .content-circle .listChoice {
+  text-align: center;
+  width: 550px;
+  margin: 10px auto;
+}
+
+.wrapper .content-circle .listChoice .bt {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 10px;
+  margin-left: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background-position: center;
+  z-index: 999;
+}
+/*# sourceMappingURL=style.css.map */

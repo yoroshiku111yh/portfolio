@@ -1,0 +1,1082 @@
+$clYellow: #febf13;
+$cl_optimum: #2d3973;
+$clGreyEEE : #eee;
+
+.bgBlue {
+	background: $cl_optimum;
+	color: $white;
+}
+
+.text-yellow {
+    color: $clYellow;
+}
+
+
+.doctor-name, .doctor-job {
+	color: #323232;
+}
+.row-back{
+  background: url('../images/products/back-product.png') no-repeat center center;
+  width: 225px;
+  height: 26px;
+  display: inline-block;
+  margin-top: 40px;
+  cursor: pointer;
+  position: absolute;
+  left: 60px;
+  @include TransitionWithDurationAndEase(.4s,$EasingQuadOut);
+  &:hover{
+    margin-left: -10px;
+  }
+}
+
+.btn-white {
+	display: inline-block;
+	color: #ed193b;
+	background: $white;
+	font-size: 18px;
+	font-family: 'GothamMed';
+	padding: 10px 15px;
+	border-radius: 20px;
+	-webkit-box-shadow: 1px 1px 1px #a99a09;
+	-moz-box-shadow: 1px 1px 1px #a99a09;
+	box-shadow: 1px 1px 1px #a99a09;
+
+	@include TransitionWithDurationAndEase(.3s, $EasingOut);
+
+	@media screen and (max-width: 550px) {
+		font-size: 14px;
+	}
+
+	&:hover{
+		background: #ed193b;
+		color: $white;
+	}
+}
+
+.dielac-growplus-v02 {
+	.banner1{
+		background: url("../images/dielac-growplus/banner-2.jpg") no-repeat;
+		background-size: cover;
+		width: 100%;
+		padding-top: 110px;
+		font-size: 0;
+		text-align: center;
+
+		@media screen and (max-width: 770px) {
+			padding-top: 15px;
+		}
+
+		.container {
+			img {
+				@media screen and (max-width: 770px) {
+					display: none;
+				}
+			}
+		}
+		.info {
+			display: inline-block;
+			width: 50%;
+			max-width: 430px;
+			text-align: center;
+			vertical-align: top;
+			@media screen and (max-width: 770px) {
+				background: url("../images/dielac-growplus/girl.png") left bottom no-repeat;
+				background-size: 53%;
+				padding: 0 0 0 40%;
+				max-width: none;
+				width: 100%;
+				min-height: 370px;
+
+				p {
+					display: none;
+				}
+			}
+			@media screen and (max-width: 620px) {
+				min-height: 0;
+			}
+			img {
+				display: block;
+				margin: 0 auto 10px auto;
+			}
+			p {
+				font-size: 18px;
+				color: #3c3c3c;
+				line-height: 27px;
+				margin-bottom: 50px;
+			}
+		}
+	}
+
+	.guide-scroll {
+		display: inline-block;
+		background: url("../images/arr-down.png")no-repeat center bottom;
+		padding-bottom: 15px;
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		color: $cl_optimum;
+		font-size: 20px;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		margin-bottom: 10px;
+	}
+
+	.title-op-gold {
+		padding-top: 90px;
+		margin-bottom: 20px;
+	}
+	.content-op {
+		font-size: 18px;
+		line-height: 27px;
+		margin-bottom: 40px;
+	}
+	.pro-sec1 {
+		margin-top: 40px;
+		display: inline-block;
+		margin-left: 100px;
+		margin-bottom: 80px;
+		@media screen and (max-width:  490px)
+		{
+			margin-left: 25%;
+		}
+		@media screen and (max-width: 493px)
+		{
+			opacity: 1;
+		}
+	}
+
+	.op-gold-2 {
+		display: block;
+		background: url('../images/op_gold_bg_sec2.jpg') center center no-repeat;
+
+		.text-yellow {
+			@include textShadow(0 2px 9px rgba(0,0,0,.6));
+		}
+		&-inner {
+			margin: 20px 0;
+			color: $cl_optimum;
+			line-height: 27px;
+			@media screen and (min-width: 768px){
+				margin-top: 210px;
+			}
+		}
+	}
+
+	.op-gold-3 {
+		.sld-op-3 {
+			.op-sld-1 {
+
+			}
+			.op-sld-2 {
+				background: #f7f7f9;
+			}
+			.op-sld-3 {
+				background: #f4f4f4;
+			}
+			.op-sld-4 {
+				background: url("../images/op_gold_bg_sec3.jpg")no-repeat center center;
+				-webkit-background-size: cover;
+				background-size: cover;
+				height: 100%;
+				.ico-medal {
+					display: inline-block;
+					margin-top: 40px;
+					> img   {
+						width: auto;
+					}
+				}
+			}
+			.op-sld-item {
+				.circle {
+					display: inline-block;
+					margin-top: 70px;
+				}
+				.op-item-img {
+					font-size: 0;
+					text-align: center;
+				}
+				.img-per {
+					display: inline-block;
+				}
+				.content-sld {
+					padding: 130px 0 120px;
+					font-size: 30px;
+					color: $cl_optimum;
+					@media screen and (max-width: 768px) {
+						padding: 30px 0;
+					}
+					.op-ico {
+						display: inline-block;
+					}
+					&-center {
+						padding-top: 100px;
+					}
+				}
+			}
+			.wrapSliderOp {
+				.owl-nav {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin-top: -20px;
+
+					.owl-next {
+						display: block;
+						position: absolute;
+						right: 0;
+						text-indent: -9999px;
+						background: url("../images/products/row-next.png")no-repeat center center;
+						width: 40px;
+						height: 40px;
+					}
+					.owl-prev {
+						@extend .owl-next;
+						right: auto;
+						left: 0;
+						background: url("../images/products/row-pre.png")no-repeat center center;
+					}
+				}
+			}
+		}
+		.content-sec3 {
+			background: #408aca;
+			position: relative;
+			z-index: 2;
+			padding-top: 55px;
+			&-item {
+				@extend .clbt;
+				margin-bottom: 55px;
+				color: $white;
+				.ico-child {
+					display: inline-block;
+					background: url("../images/op_gold_ico_child.png")no-repeat 0 0;
+					width: 50px;
+					height: 39px;
+				}
+				.ico-global {
+					display: inline-block;
+					background: url("../images/op_gold_ico_global.png")no-repeat 0 0;
+					width: 49px;
+					height: 49px;
+				}
+				.ico-people {
+					display: inline-block;
+					background: url("../images/op_gold_ico_people.png")no-repeat 0 0;
+					width: 46px;
+					height: 66px;
+				}
+				.ico-brain {
+					display: inline-block;
+					background: url("../images/op_gold_ico_brain.png")no-repeat 0 0;
+					width: 55px;
+					height: 41px;
+				}
+				&.active {
+					.ico-child {
+						background-position: 0 -39px;
+					}
+					.ico-global {
+						background-position: 0 -49px;
+					}
+					.ico-people {
+						background-position: 0 -66px;
+					}
+					.ico-brain {
+						background-position: 0 -41px;
+					}
+				}
+			}
+			.op-pro-3 {
+				text-align: center;
+				> span {
+					display: inline-block;
+					position: absolute;
+					left: 50%;
+					top: -80%;
+					-webkit-transform: translateX(-50%);
+					-moz-transform: translateX(-50%);
+					-ms-transform: translateX(-50%);
+					-o-transform: translateX(-50%);
+					transform: translateX(-50%);
+					@media screen and (max-width: 767px){
+						position: relative;
+						left: 0;
+						top: 0;
+						-webkit-transform: translateX(0);
+						-moz-transform: translateX(0);
+						-ms-transform: translateX(0);
+						-o-transform: translateX(0);
+						transform: translateX(0);
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.dielac-growplus-v02{
+		#main{
+			.banner5 {
+				background: #e5331a;
+				.title-banner5 {
+					.title_info {
+						color: #731a0f !important;
+					}
+				}
+			}
+		}
+	}
+
+	.banner5_info {
+		&.op-sec-info {
+			.wrapper_banner {
+				.banner5_info_right {
+					.title-xs {
+						color: #e5331a;
+					}
+				}
+			}
+		}
+	}
+
+	.op-gold-info {
+		padding-top: 50px;
+		.title-md {
+          font-size: 55px;
+          color : #e5331a;
+          margin-bottom: 55px;
+          @media screen and (max-width: 768px){
+            margin-bottom: 20px;
+          }
+          @media screen and (max-width: 768px){
+            margin-bottom: 20px;
+          }
+          @media screen and (max-width: 548px)
+          {
+            font-size: 30px;
+            text-align: left;
+          }
+		}
+		&-item {
+			margin-bottom: 40px;
+			@media screen and (max-width: 768px){
+				margin-bottom: 10px;
+			}
+			.btn-more {
+				background: #e5331a;
+				color: $white;
+				border: 2px solid #e5331a;
+
+				@include TransitionWithDurationAndEase(.3s, $EasingOut);
+
+				&:hover {
+					background: $white;
+					color: #e5331a;
+				}
+			}
+			.thumb-op_info {
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+		&-ctn {
+			.title-xs {
+				color: #e5331a;
+				margin-bottom: 30px;
+				padding-top: 0;
+			}
+			p {
+				margin-bottom: 30px;
+				font-size: 16px;
+				color: #6f6e6e;
+				line-height: 24px;
+				@media screen and (max-width: 768px){
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	#optimum{
+		.modal-alpha{
+			.modal-banner-alpha{
+				background: url("../images/optimum/images/background_story_banner1_02.png") no-repeat center center;
+				.row-back{
+					float: left;
+					margin-left: 40px;
+				}
+				.img_banner1{
+					background: url("../images/optimum/images/img_banner1_story_03.png") no-repeat center center;
+					width: 578px;
+					height: 587px;
+					bottom: 0;
+					left: 0;
+					@media screen and (max-width: 768px){
+						position: absolute;
+						top: 0;
+						left: 50%;
+						margin-left: -138px;
+					}
+				}
+				.col-7{
+					vertical-align: middle;
+					float: right;
+					margin: 212.5px 0;
+					.content-op{
+						color: #fff;
+					}
+				}
+				.row-middle{
+					color: #2d3973;
+					display: inline-block;
+					font-size: 17px;
+				}
+				.row-bottom{
+					background: url("../images/arr-down.png") no-repeat center center;
+				}
+			}
+		}
+		.content-banner-alpha{
+			h2{
+				color: #2d3973;
+				width: 100%;
+				margin-top: -40px;
+				padding: 0 0 25px 0;
+				display: inline-block;
+			}
+			.image_modal{
+				background: url("../images/optimum/img_content_optimum_story.png") no-repeat center center;
+			}
+			.caption-modal{
+				color: #2d3973;
+			}
+			.caption-modal2{
+				color: #575e89;
+			}
+			.caption-content{
+				width: 50%;
+				text-align: center;
+				color: #6f6f6f;
+				font-family: GothamMed, sans-serif;
+				font-size: 17px;
+				display: inline-block;
+				margin: 10px 0;
+				line-height: 34px;
+			}
+		}
+	}
+
+	.wrapper-no-padding{
+		padding: 0px 5px;
+		.img_banner5_left
+		{
+			@media screen and (max-width: 764px)
+			{
+				display: block;
+			}
+		}
+		.title-banner5
+		{
+			@media screen and (max-width: 770px)
+			{
+				display: none;
+			}
+		}
+		.step-banner5
+		{
+			.item
+			{
+				@media screen and (max-width: 415px)
+				{
+					padding: 0px 10px 70px !important;
+
+				}
+			}
+		}
+
+	}
+
+	.wrapper-slide-yo{
+		padding: 0px 5px;
+		.slide-yo
+		{
+			.slide-image
+			{
+				float : none;
+				width : 30%;
+				position: relative;
+				display: inline-block;
+				vertical-align: bottom;
+			}
+			.slide-content
+			{
+				float : none;
+				width : 65%;
+				display: inline-block;
+				vertical-align: bottom;
+				padding-bottom: 25px;
+				@media screen and (max-width: 810px) {
+					padding-bottom: 0px;
+				}
+				.doctor-content{
+					color: #3a3a3a;
+					font-family: Arial;
+					font-size: 16px;
+					line-height: 20px;
+					text-align: center;
+					margin-bottom: 10px;
+				}
+				.responsive
+				{
+					display: none;
+				}
+				.responsive:first-child
+				{
+					padding-top : 5px;
+				}
+				.responsive:last-child
+				{
+					padding-bottom: 5px;
+				}
+				.non-responsive
+				{
+					display: block;
+				}
+			}
+			@media screen and (max-width: 810px)
+			{
+				padding: 10px;
+				.slide-image
+				{
+					display: block;
+					margin:  10px auto;
+					width : 206px;
+				}
+				.slide-content
+				{
+					display: block;
+					margin:  5px auto;
+					.responsive
+					{
+						display: block;
+					}
+					.non-responsive
+					{
+						display: none;
+					}
+				}
+			}
+		}
+		.owl-dots
+		{
+			@media screen and (max-width: 810px) {
+				display: none !important;
+			}
+		}
+		.owl-dots .active
+		{
+			background: #e5331a !important;
+		}
+	}
+	.thumb-op_info{
+		@media screen  and (max-width: 767px){
+			img
+			{
+				width : 100%;
+			}
+		}
+	}
+	.home-info-box-quarter{
+		.home-box-header
+		{
+			span
+			{
+				font-size: 20px;
+				line-height: 24px;
+			}
+		}
+	}
+	.home-info{
+		.home-box-nutrition
+		{
+			div:first-child
+			{
+				h2
+				{
+					font-size: 25px;
+				}
+			}
+		}
+	}
+	.wrapper-margin{
+		max-width: 1183px;
+		margin:  15px auto;
+		position: relative;
+	}
+//	.no-padding{
+//		margin:  0 auto;
+//		max-width: 10000px;
+//		@media screen and (max-width: 1024px)
+//		{
+//			//margin : 0px 10px;
+//		}
+//	}
+
+	.clearAfter{
+		content : '';
+		clear : both;
+		display: block;
+	}
+  .optimum-gold-special
+  {
+    display: block;
+    position: relative;
+    width : auto;
+    height : auto;
+    .wrapper
+    {
+      background-color: white;
+      .content-all
+      {
+        position: relative;
+        max-width: 880px;
+        margin : 0 auto;
+        @media screen and (max-width:  711px)
+        {
+          padding: 0px 10px;
+        }
+        .description-responsive
+        {
+          clear: both;
+          margin: 5px auto;
+          padding-top: 10px;
+          max-width: 600px;
+          display: none;
+          text-align: center;
+          @media screen and (max-width:  742px)
+          {
+            display: block;
+            font-family: "Arial";
+            font-size: 20px;
+            line-height: 23px;
+            color : #373737;
+          }
+          @media screen and (max-width:  711px)
+          {
+            font-size: 18px;
+            line-height: 20px;
+          }
+        }
+
+        .detail-optimum-gold
+        {
+          float: left;
+          width : 50%;
+          @media screen and (max-width:  622px)
+          {
+            float : none;
+            width: 49%;
+            display: inline-block;
+            vertical-align: middle;
+            margin:  0 auto;
+          }
+
+          .circle-gold
+          {
+            display: block;
+            max-width: 80%;
+            margin: 5px auto;
+            img
+            {
+              max-width: 100%;
+              display: block;
+              margin : 0 auto;
+            }
+          }
+          .wrap-title
+          {
+            display: block;
+            text-align: center;
+            padding: 12px 0px;
+            .title
+            {
+              display: block;
+              font-family: /*"GothamRoundedBook"*/ "Arial";
+              font-size: 36px;
+              line-height: 40px;
+              color : #24326d;
+              @media screen and (max-width:  711px)
+              {
+                font-size: 30px;
+                line-height: 35px;
+              }
+            }
+            .description
+            {
+              display: block;
+              font-family: "Arial";
+              font-size: 23px;
+              line-height: 25px;
+              color : #373737;
+              padding-top: 8px;
+              @media screen and (max-width:  711px)
+              {
+                font-size: 18px;
+                line-height: 20px;
+              }
+            }
+          }
+          .detail-txt
+          {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            line-height: 20px;
+            color : #373737;
+            padding: 0px 0px 12px 0px;
+
+            @media screen and (max-width:  742px)
+            {
+              display: none;
+            }
+
+            @media screen and (max-width:  711px)
+            {
+              font-size: 16px;
+              line-height: 18px;
+
+            }
+          }
+          .species
+          {
+            display: block;
+            text-align: center;
+            .title
+            {
+              display: block;
+              font-size: 12px;
+              font-family: "GothamMed";
+              color : #373737;
+              font-style: italic;
+              line-height: 15px;
+            }
+            .detail
+            {
+              border: 1px solid #8f8f8f;
+              border-radius : 5px;
+              -moz-border-radius: 5px;
+              -ms-border-radius : 5px;
+              -o-border-radius : 5px;
+              margin: 5px auto;
+              max-width: 225px;
+
+              .specie
+              {
+                display: block;
+                font-family: "Arial";
+                font-size: 14px;
+                text-align: center;
+                line-height: 18px;
+                padding: 10px 0px;
+              }
+              .specie:nth-child(1)
+              {
+                border-bottom : 1px solid #8f8f8f;
+              }
+            }
+          }
+        }
+        .image-optimum-gold
+        {
+          float : left ;
+          width : 50%;
+          display: block;
+          position: relative;
+          min-height: 560px;
+          @media screen and (max-width:  700px)
+          {
+            min-height: 500px;
+          }
+          @media screen and (max-width:  622px)
+          {
+            float : none;
+            display: inline-block;
+            vertical-align: middle;
+            width : 49%;
+            margin:  0 auto;
+            min-height: 5px;
+          }
+          .image-product{
+            position: absolute;
+            bottom: 24px;
+            left : 0;
+            right : 0;
+            margin-left : auto;
+            margin-right: auto;
+            @media screen and (max-width:  711px)
+            {
+              bottom: 24px;
+            }
+            @media screen and (max-width:  622px)
+            {
+              /*bottom : 57px;*/
+              bottom : 0;
+              position: relative;
+            }
+            @media screen and (max-width:  377px)
+            {
+              bottom : 24px;
+            }
+            img
+            {
+              max-width: 100%;
+              display: block;
+              margin:  0 auto;
+            }
+          }
+          .wave
+          {
+            position: absolute;
+            bottom: -36px;
+            left : 0;
+            right : 0;
+            margin-left : auto;
+            margin-right: auto;
+            @media screen and (max-width:  477px)
+            {
+              bottom : -16px;
+            }
+            @media screen and (max-width:  384px)
+            {
+              bottom : 0px;
+            }
+            @media screen and (max-width:  377px)
+            {
+              display: none;
+            }
+            img
+            {
+              margin: 0 auto;
+              display: block;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+	.benefit-optimum{
+		display: block;
+		position: relative;
+		.wrapper
+		{
+			padding-bottom: 0;
+			.content-all
+			{
+				.background
+				{
+					min-height: 392px;
+					display: block;
+					width: auto;
+					background : url("../images/dielac-growplus/benefit-bg.jpg") no-repeat center;
+					background-size: cover;
+					position: relative;
+					@media screen and (max-width: 770px)
+					{
+						min-height: 280px;
+						background-position: 75%;
+					}
+					.title
+					{
+						display: block;
+						background: url("../images/benefit-bg-text.png") no-repeat center;
+						background-size: contain;
+						max-width: 300px;
+						top: 0;
+						bottom: 0;
+						left: 80px;
+						margin-top: auto;
+						margin-bottom: auto;
+						height: 130px;
+						position: absolute;
+						@media screen and (max-width: 770px)
+						{
+							height: 90px;
+							left: 50px;
+						}
+						@media screen and (max-width: 415px)
+						{
+							left: 20px;
+						}
+						.text
+						{
+							font-family: "GothamMed";
+							font-size: 60px;
+							text-align: left;
+							line-height: 65px;
+							color : #e5331a;
+							@media screen and (max-width: 770px)
+							{
+								font-size: 35px;
+								line-height: 42px;
+							}
+							@media screen and (max-width: 415px)
+							{
+								font-size: 25px;
+								line-height: 30px;
+							}
+						}
+
+					}
+				}
+				.options
+				{
+					display: block;
+					position: relative;
+					background-color: #e5331a;
+					padding: 10px;
+					.option
+					{
+						padding-left: 40px;
+						padding-top: 20px;
+						padding-bottom: 20px;
+						display: inline-block;
+						width : 49%;
+						vertical-align: top;
+						@media screen and (max-width: 950px)
+						{
+							display: block;
+							width : auto;
+						}
+						@media screen and (max-width: 723px)
+						{
+							padding-left: 5px;
+							max-width: 500px;
+							margin:  0px auto;
+						}
+						.icon
+						{
+							vertical-align: top;
+							display: inline-block;
+							width : 60px;
+							@media screen and (max-width: 1100px)
+							{
+								display: block;
+								margin:  5px auto;
+							}
+							@media screen and (max-width: 950px)
+							{
+								display: inline-block;
+								margin: 0px;
+							}
+						}
+						.detail
+						{
+							max-width: 418px;
+							vertical-align: top;
+							display: inline-block;
+							text-align: left;
+							padding-left: 15px;
+
+							@media screen and (max-width: 1100px)
+							{
+								display: block;
+							}
+							@media screen and (max-width: 950px)
+							{
+								display: inline-block;
+								max-width: 90%;
+							}
+							@media screen and (max-width: 723px)
+							{
+								max-width: 80%;
+
+							}
+							@media screen and (max-width: 374px)
+							{
+								max-width: 75%;
+							}
+							.title
+							{
+								font-family: "GothamMed";
+								font-size: 18px;
+								color : white;
+								line-height: 22px;
+								padding-bottom: 15px;
+								display: block;
+								@media screen and (max-width: 1106px)
+								{
+									font-size: 16px;
+									line-height: 20px;
+									padding-bottom: 5px;
+								}
+								@media screen and (max-width: 1100px)
+								{
+									text-align: center;
+								}
+								@media screen and (max-width: 950px)
+								{
+									font-size: 18px;
+									text-align: left;
+								}
+							}
+							.detail-content
+							{
+								font-family: "Arial";
+								font-size: 14px;
+								color : white;
+								line-height: 18px;
+								@media screen and (max-width: 1106px)
+								{
+									font-size: 14px;
+									line-height: 16px;
+								}
+								@media screen and (max-width: 1100px)
+								{
+									text-align: center;
+								}
+								@media screen and (max-width: 950px)
+								{
+									text-align: left;
+								}
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.blue-txt{
+		color : #24326d;
+		font-size: 33px;
+	}
+	.title-responsive{
+		display: none;
+		@media screen and (max-width:  770px) {
+			display: block;
+		}
+	}
+	#optimum{
+		.col-7
+		{
+			@media screen and (max-width: 768px)
+			{
+				width: 43.75%;
+				float: right;
+			}
+			@media screen and (max-width: 479px)
+			{
+
+				width: 50%;
+				.btn-more.bgBlue
+				{
+					font-size: 8px;
+				}
+			}
+		}
+	}
+}

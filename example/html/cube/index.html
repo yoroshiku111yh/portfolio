@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title>Cube 3D</title>
+  <script src="js/jquery-2.0.3.min.js"></script>
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  <script src="js/snap.svg.js"></script>
+</head>
+<body>
+    <div class="wrapper clearAfter">
+        <div id="view">
+            <div id="cube3D">
+                <div class="cube-face cube-front-face actived" go="cube-front-face">1</div>
+                <div class="cube-face cube-back-face" go="cube-back-face">2</div>
+                <div class="cube-face cube-left-face" go="cube-left-face">3</div>
+                <div class="cube-face cube-right-face" go="cube-right-face">4</div>
+                <div class="cube-face cube-top-face" go="cube-top-face">5</div>
+                <div class="cube-face cube-bottom-face" go="cube-bottom-face">6</div>
+            </div>
+        </div>
+        <div class="shadow">
+            <img src="img/shadow.png"/>
+        </div>
+        <div class="button">
+            <button class="button-face" go="cube-front-face" rotation=0 coordinates="Y"> front face</button>
+            <button class="button-face" go="cube-back-face" rotation=180 coordinates="Y" pers="200px"> back face</button>
+            <button class="button-face" go="cube-left-face" rotation=90 coordinates="Y"> left face</button>
+            <button class="button-face" go="cube-right-face" rotation=-90 coordinates="Y"> right face</button>
+            <button class="button-face" go="cube-top-face" rotation=-90 coordinates="X"> top face</button>
+            <button class="button-face" go="cube-bottom-face" rotation=90 coordinates="X"> bottom face</button>
+        </div>
+        <div class="box">
+
+        </div>
+    </div>
+    <script>
+        $('.button-face').click(function(){
+            $('#view').css({'top' : '35px'});
+            var where_start = $(this).attr('go');
+            var rotation    = $(this).attr('rotation');
+            var coor        = $(this).attr('coordinates');
+            var pers    = $(this).attr('pers');
+            $('#cube3D').css({'transform': 'rotate'+coor+'('+rotation+'deg)' });
+            //TweenMax.to($('.shadow img'), {width:"295", opacity:0.6, ease:Sine.EaseIn});
+
+            $('.shadow img').css({'width' : '295px' ,'opacity' : 0.6});
+
+            setTimeout(
+                    function(){
+                        $('#view').removeAttr('style');
+                        $('.shadow img').removeAttr('style');
+            },450);
+        });
+
+
+    </script>
+</body>
+</html>

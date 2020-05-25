@@ -1,0 +1,136 @@
+.title-xxs {
+	font-size: 14px;
+}
+
+.dielac-grow-plus-story {
+	.row-back {
+		background: url("../images/dielac-growplus/back-product.png") no-repeat center center;
+		z-index: 99;
+		@media screen and (max-width: 700px){
+			left: 10px;
+		}
+		@media screen and (max-width: 570px){
+			background: url("../images/dielac-growplus/back-ico.png") no-repeat left center;
+		}
+	}
+	.story-banner1{
+		background: url("../images/dielac-growplus/banner.jpg") no-repeat;
+		background-size: cover;
+		width: 100%;
+		padding-top: 110px;
+		font-size: 0;
+		text-align: center;
+
+		@media screen and (max-width: 700px) {
+			//padding-top: 15px;
+		}
+
+		.container {
+			img {
+				@media screen and (max-width: 770px) {
+					display: none;
+				}
+			}
+		}
+		.info {
+			display: inline-block;
+			width: 50%;
+			max-width: 430px;
+			text-align: center;
+			vertical-align: top;
+			@media screen and (max-width: 770px) {
+				background: url("../images/dielac-growplus/grow-plus-can.png") left 12px no-repeat;
+				background-size: 60%;
+				padding: 0 0 0 50%;
+				max-width: none;
+				width: 100%;
+				min-height: 360px;
+
+				p {
+					display: none;
+				}
+
+			}
+			img {
+				display: block;
+				margin: 0 auto 10px auto;
+			}
+			p {
+				font-size: 18px;
+				color: #212e6c;
+				line-height: 27px;
+			}
+		}
+	}
+	.nav-main {
+		.nav {
+			background: #e5331a;
+			.navInner {
+				.navBar {
+					.lstNav > li {
+						.navInner-sub {
+							background: #e4513c;
+							.lstNav-sub-item > a:hover {
+								background: #e33f28;
+							}
+						}
+						&.active:before {
+							border-color: transparent transparent #e4513c transparent;
+						}
+					}
+				}
+			}
+		}
+	}
+	.story {
+		text-align: center;
+		padding: 60px 0;
+		h4.title-xxs, .title-xs {
+			color: #e5331a;
+			margin-bottom: 10px;
+		}
+		.title-xs {
+			@media screen and (max-width: 700px){
+				font-size: 30px;
+				line-height: 40px;
+			}
+		}
+		p {
+			font-size: 20px;
+			color: #6f6f6f;
+			line-height: 36px;
+			margin-bottom: 20px;
+			@media screen and (max-width: 700px){
+				font-size: 14px;
+				line-height: 24px;
+			}
+		}
+		.content {
+			@media screen and (max-width: 700px){
+				p{
+					text-align: justify;
+				}
+			}
+			iframe {
+				border-radius: 8px;
+				margin-bottom: 25px;
+				@media screen and (max-width: 590px) {
+					width: 100%;
+				}
+			}
+			.video-description {
+				font-size: 0;
+				max-width: 450px;
+				margin: 0 auto;
+				.title-xs-inner {
+					color: #e95542;
+					padding-bottom: 2px;
+				}
+				p {
+					font-size: 14px;
+					line-height: 30px;
+				}
+			}
+		}
+	}
+}

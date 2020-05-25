@@ -1,0 +1,240 @@
+@import "helper";
+.news-section
+{
+  display: block;
+  position: relative;
+  width : auto;
+  height : auto;
+  .content-news
+  {
+    display: block;
+    position: relative;
+    width : auto;
+    height : auto;
+    margin:  0 auto;
+    .news-item
+    {
+      float : left;
+      display: block;
+      position: relative;
+      width : auto;
+      max-width: 50%;
+      /*max-height : 640px;
+      min-height: 640px;*/
+      padding: 20px 0;
+      .thumbnail-img
+      {
+        display: block;
+        position: relative;
+        width : auto;
+        max-height : 327px;
+        min-height: 327px;
+        overflow: hidden;
+        background-size: cover ;
+        img
+        {
+          /**/
+          height : 100%;
+          width : 100%;
+          position: absolute;
+          display: block;
+          top : 0;
+          left: 0;
+          bottom : 0;
+          right : 0;
+          margin : auto;
+        }
+        @media screen and ( max-width: 870px ) {
+          max-height : 280px;
+          min-height: 280px;
+
+        }
+        @media screen and ( max-width: 509px) {
+          max-height: 280px;
+        }
+      }
+      .detail-content
+      {
+        display: block;
+        position: relative;
+        width : auto;
+        .title
+        {
+
+          font-size: 25px;
+          color: #5f7835;
+          text-align: left;
+          display: block;
+          padding-top: 20px;
+          line-height: 30px;
+          font-family: "UTMAptimaBold";
+          //font-family: "UTMTimesBold";
+        }
+        .date
+        {
+          font-family: "UTMAptimaItalic";
+          font-size: 15px;
+          line-height: 20px;
+          color : $gray-text;
+          text-align: left;
+          display: block;
+          padding: 15px 0px;
+        }
+        .detail
+        {
+          font-family: "UTMAptimaRegular";
+          //font-size: 18px;
+          line-height: 22px;
+          /*text-align: left;*/
+          text-align: justify;
+          color : $gray-text;
+          margin-bottom: 25px;
+          max-height: 92px;
+          overflow: hidden;
+
+        }
+      }
+      @media screen and (max-width: 738px) {
+        display: block;
+        float: none;
+        max-width: 477px;
+        padding: 20px 0px;
+        margin: 0 auto;
+        min-height: 120px ;
+      }
+    }
+
+    .news-item:nth-child( 2n + 1)
+    {
+      padding-right: 25px;
+      clear:both;
+      @media screen and (max-width: 738px) {
+        padding-right: 0;
+      }
+    }
+    .news-item:nth-child(2n)
+    {
+      padding-left: 25px;
+      @media screen and (max-width: 738px) {
+        padding-left: 0;
+      }
+    }
+  }
+}
+
+.seemore-all
+{
+  font-family: "UTMAptimaRegular";
+  font-size: 18px;
+  line-height: 37px;
+  text-align: left;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  color : $gold-text;
+  border: 1px solid $gold-text;
+  max-width: 120px;
+  padding-left : 10px;
+  padding-right: 25px;
+  height: 45px;
+  @include  TransitionWithDurationAndEase(0.85s, $EasingExpoOut);
+  .arrow
+  {
+    @include  TransitionWithDurationAndEase(0.85s, $EasingExpoOut);
+    position: absolute;
+    right : 10px;
+    top : 0;
+    bottom : 0;
+    margin-top : auto;
+    margin-bottom: auto;
+    opacity: 1;
+  }
+  .arrow.white
+  {
+    opacity: 0;
+  }
+}
+
+.seemore-all:hover
+{
+  color : white;
+  background-color: $gold-text;
+  .arrow
+  {
+    opacity: 0;
+  }
+  .arrow.white
+  {
+    opacity: 1;
+  }
+}
+
+.paginator
+{
+
+  //width : 280px;
+  text-align: center;
+  background: transparent;
+  margin : 0 auto 20px;
+  position: relative;
+  display: block;
+  .btn
+  {
+    width : 40px;
+    height : 40px;
+    border : 1px solid #626262;
+    display: inline-block;
+    font-size: 18px;
+    /*line-height: 40px;*/
+    padding-top: 4px;
+    font-family: "UTMAptimaRegular";
+    text-align: center;
+    vertical-align: top;
+    position: relative;
+    .arrow
+    {
+      position: absolute;
+      top :0;
+      left : 0;
+      right : 0;
+      bottom : 0;
+      width : 10px;
+      height : 11px;
+      margin : auto;
+      opacity:  1;
+    }
+    .arrow.white
+    {
+      opacity: 0;
+    }
+  }
+  .btn.active
+  {
+    background-color: $gold-text;
+    color : white;
+    border:  1px solid $gold-text;
+    .arrow
+    {
+      opacity: 0;
+    }
+    .arrow.white
+    {
+      opacity: 1;
+    }
+  }
+  .btn:hover
+  {
+    background-color: $gold-text;
+    color : white;
+    border:  1px solid $gold-text;
+    .arrow
+    {
+      opacity: 0;
+    }
+    .arrow.white
+    {
+      opacity: 1;
+    }
+  }
+}
+

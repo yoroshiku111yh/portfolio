@@ -1,0 +1,27 @@
+@import "helper";
+$blackGrey : #323232;
+
+.process {
+    .title-sm {
+        @include font('UTMAptimaBold', 30px, $olive);
+        margin-bottom: 35px;
+        a {
+            color: $olive;
+        }
+    }
+    &-art {
+        .title-sm {
+            font-size: 25px;
+            a {
+                color: $olive;
+            }
+        }
+        .date-post {
+            @include font('UTMAptimaItalic', 15px, $darkGrey);
+            margin-bottom: 30px;
+        }
+        &.boxType {
+            padding-top: 120px;
+        }
+    }
+}

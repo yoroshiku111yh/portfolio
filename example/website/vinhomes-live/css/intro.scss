@@ -1,0 +1,82 @@
+.ctn-img {
+    padding-bottom: 30px;
+    @extend .clbt;
+    &-inner {
+        display: block;
+        float: left;
+        margin: 0 45px 10px 0;
+        max-width: 600px;
+        @media screen and (max-width: 970px){
+            float: none;
+            margin: 20px 0;
+            text-align: center;
+        }
+    }
+    &-text {
+        text-align: justify;
+        .title-xs-inner {
+            text-align: initial;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.seemoreText {
+    display: inline-block;
+    @include font('UTMAptimaItalic', 15px, $clYellow);
+    position: relative;
+    &:after {
+        display: block;
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: $olive;
+        @include TransitionWithDurationAndEase(.1s, $EasingOut);
+    }
+    &:hover {
+        cursor: pointer;
+        &:after {
+            width: 100%;
+        }
+    }
+}
+.seemoreLink
+{
+  display: inline-block;
+  @include font('UTMAptimaItalic', 15px, $clYellow);
+  position: relative;
+    margin-top: 20px;
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: $olive;
+    @include TransitionWithDurationAndEase(.1s, $EasingOut);
+  }
+  &:hover {
+    cursor: pointer;
+    &:after {
+      width: 100%;
+    }
+  }
+}
+p {
+    margin-bottom: 10px;
+}
+/*
+b
+{
+  font-family: "UTMAptimaBold";
+  font-size: 20px;
+  line-height: 25px;
+
+}*/

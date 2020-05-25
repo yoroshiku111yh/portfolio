@@ -1,0 +1,656 @@
+@import "helper";
+html, body{
+    width : 100%;
+    height : 100%;
+}
+
+html {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.clearAfter:after
+{
+    content: "";
+    clear: both;
+    display: block;
+}
+.nav-menu
+{
+    position: fixed;
+    top : 0;
+    background-color: $blue;
+    width : 100%;
+    z-index: 999;
+    @include TransitionWithDurationAndEase(.3s, $EasingOut);
+    .menu-main
+    {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+        .menu-li
+        {
+            display: inline-block;
+            vertical-align: middle;
+            //font-family: "SFUFuturaRegular";
+            //font-size: 18px;
+            //line-height: 96px;
+            //height : 96px;
+            //color : white;
+            //padding: 0px 10px;
+            //cursor: pointer;
+            @include TransitionWithDurationAndEase(0.75s, $EasingExpoOut);
+            @media screen and (max-width: 1129px)
+            {
+                font-size: 15px;
+                padding: 0px 5px;
+
+            }
+            @media screen and (max-width: 973px)
+            {
+                display: none;
+                //line-height: 70px;
+                //height : 70px;
+            }
+            > a {
+                display: block;
+                line-height: 96px;
+                font-family: "SFUFuturaRegular";
+                font-size: 18px;
+                color: $color_title;
+                padding: 0px 10px;
+                @include TransitionWithDurationAndEase(0.75s, $EasingExpoOut);
+                &:hover {
+                    color: #ffc20e
+                }
+                &.active {
+                    color: #ffc20e
+                }
+            }
+            @media screen and (max-width: 1136px)
+            {
+                > a {
+                    line-height: 72px;
+                }
+            }
+            @media screen and (max-width: 1070px)
+            {
+                > a {
+                    font-size: 16px;
+                }
+            }
+            @media screen and (max-width: 992px)
+            {
+                > a {
+                    padding: 0 5px;
+                }
+            }
+        }
+        .menu-li:hover
+        {
+            color : $gold;
+        }
+        .logo.menu-li
+        {
+            width : 350px;
+            padding-right: 8px;
+            position: relative;
+            display: inline-block;
+            float : none;
+            margin-top: -94px;
+            img
+            {
+                position: absolute;
+                width: 350px;
+                top: -40px;
+                z-index: 999;
+                @media screen and (max-width: 936px)
+                {
+                    //width: 270px;
+                    -webkit-transform: scale(.8);
+                    -moz-transform: scale(.8);
+                    -ms-transform: scale(.8);
+                    -o-transform: scale(.8);
+                    transform: scale(.8);
+                }
+                @media screen and (max-width: 382px)
+                {
+                    width: 206px;
+                }
+            }
+            @media screen and (max-width: 1136px)
+            {
+                width: 226px;
+                margin-top: -68px;
+                img {
+                    top: -28px;
+                    left: 0;
+                }
+            }
+            @media screen and (max-width: 973px)
+            {
+                float : left;
+                display: block;
+                margin-top: -13px;
+            }
+            @media screen and (max-width: 936px)
+            {
+                width: 270px;
+            }
+            @media screen and (max-width: 414px)
+            {
+                margin-left: -40px;
+                margin-top: 0;
+            }
+            @media screen and (max-width: 382px)
+            {
+                width: 185px;
+            }
+        }
+        .hambuger.menu-li
+        {
+            display: none;
+            position: relative;
+            float : right;
+            font-family: "SFUFuturaBook";
+            z-index: 999;
+            @media screen and (max-width: 973px)
+            {
+                display: block;
+            }
+            .hambuger-ct
+            {
+                display: block;
+                width : 41px;
+                height : 17px;
+                border-top : 5px solid white;
+                border-bottom : 5px solid white;
+                position: relative;
+                margin: 10px auto;
+                margin-right: 25px;
+                overflow: hidden;
+            }
+
+            .hambuger-ico
+            {
+                /*display: block;
+                position: absolute;
+                font-size: 13px;
+                line-height: 30px;
+                height: 30px;
+                width: 86px;
+                left : 0px;
+                top: -8px;*/
+                display: block;
+                position: absolute;
+                font-size: 13px;
+                line-height: 30px;
+                height: 30px;
+                width: 86px;
+                left : 0px;
+                top: -7px;
+                @include TransitionWithDurationAndEase(0.75s, $EasingExpoOut);
+                .line
+                {
+                    display: inline-block;
+                    width : 46px;
+                    height : 5px ;
+                    background-color: white;
+                    vertical-align: middle;
+                    margin-bottom: 2px;
+                }
+                .word
+                {
+                    font-size: 13px;
+                    line-height: 26px;
+                    height: 28px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    color : $gold;
+                }
+
+            }
+            .menu-mobile
+            {
+                display: block;
+                position: absolute;
+                height: 229px;
+                width: 228px;
+                overflow: hidden;
+                top : 70px;
+                right :-999px;
+                background-color: white;
+                padding-right: 25px;
+
+                @include TransitionWithDurationAndEase(0.45s, $EasingExpoOut);
+                .menu-item-rs a
+                {
+                    display: block;
+                    text-align: right;
+                    white-space: nowrap;
+                    font-family: "SFUFuturaBook";
+                    font-size: 18px;
+                    line-height: 45px;
+                    height : 45px;
+                    color : $blue;
+                    padding-left: 25px;
+                    @include TransitionWithDurationAndEase(0.45s, $EasingExpoOut);
+                }
+                .menu-item-rs
+                {
+                    border-bottom: 1px solid rgba(181, 166, 166, 0.45);
+                    //margin-left: 999px;
+                    display: block;
+                }
+                .menu-item-rs:hover
+                {
+                    a{
+                        color : $gold;
+                    }
+                }
+
+                .menu-item-rs:last-child
+                {
+                    border-bottom: 0px solid white;
+                }
+            }
+        }
+    }
+    &.fixNav {
+        .menu-main {
+            .menu-li {
+                > a {
+                    line-height: 50px;
+                }
+                &.logo {
+                    width: 220px;
+                    margin-top: -20px;
+                    margin-right: 50px;
+                }
+            }
+        }
+        @media screen and (max-width: 1136px){
+            .menu-main {
+                .menu-li {
+                    &.logo {
+                        width: 180px;
+                        margin-top: -36px;
+                        margin-right: 50px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 973px){
+            .menu-main {
+                .menu-li {
+                    &.logo {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 414px){
+            .menu-main {
+                .menu-li {
+                    &.logo {
+                        margin-left: -40px;
+                    }
+                }
+            }
+        }
+    }
+}
+.section_1
+{
+    width: auto;
+    height : 100%;
+    position: relative;
+    background: url("../images/background_header.png") no-repeat center;
+    background-size: cover;
+    @media screen and (max-height: 700px)
+    {
+        height : auto;
+    }
+    @media screen and (max-width: 936px)
+    {
+        height : auto;
+    }
+    .content
+    {
+        width : auto;
+        height : 100%;
+        position: relative;
+        .can_milk
+        {
+            display: inline-block;
+            vertical-align: bottom;
+            position: relative;
+            width:49%;
+            img
+            {
+                display: block;
+                float : right;
+            }
+            @media screen and (max-width: 936px)
+            {
+                display: none;
+            }
+        }
+        .slogan_vid
+        {
+            display: inline-block;
+            vertical-align: bottom;
+            position: relative;
+            width : 49%;
+            @media screen and (max-width: 936px)
+            {
+                display: block;
+               width: 820px;
+                margin: 0 auto;
+                padding-top: 180px;
+            }
+            @media screen and (max-height: 700px)
+            {
+                //padding-bottom: 50px;
+
+            }
+            @media screen and (max-width: 820px)
+            {
+                //padding-bottom: 50px;
+                max-width: 722px;
+                width : auto;
+            }
+            .slogan_description
+            {
+                display: block;
+                position: relative;
+                @media screen and (max-width: 936px)
+                {
+                    display: inline-block;
+                }
+                @media screen and (max-width: 740px)
+                {
+                    display: block;
+                }
+                .slogan
+                {
+                    img
+                    {
+                        margin : 15px auto;
+                        display: block;
+                        @media screen and (max-width: 820px) {
+                            width: 340px;
+                        }
+                        @media screen and (max-width: 421px)
+                        {
+                            width: 240px;
+                        }
+                    }
+                }
+                .description
+                {
+                    text-align: center;
+                    color : white;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-family: "SFUFuturaBook";
+                    padding-bottom: 40px;
+                    @media screen and (max-width: 421px)
+                    {
+                        font-size: 15px;
+                    }
+                }
+                .btn_check_it_out
+                {
+                    width : 280px;
+                    height : 54px;
+                    line-height: 54px;
+                    color : white;
+                    font-family: "SFUFuturaBook";
+                    font-size: 21px;
+                    text-align: center;
+                    background-color: $blue_fillter;
+                    display: block;
+                    border-radius: 80px;
+                    -webkit-border-radius : 80px;
+                    -moz-border-radius : 80px;
+                    -o-border-radius : 80px;
+                    margin : 0 auto;
+                    margin-bottom : 40px;
+                    cursor: pointer;
+                    -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
+                    -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
+                    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
+                    @include TransitionWithDurationAndEase(0.5s, $EasingExpoOut);
+                    a
+                    {
+                        text-decoration: none;
+                        list-style-type: none;
+                        color : white;
+                    }
+
+                }
+                .btn_check_it_out:hover
+                {
+                    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32);
+                    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32);
+                    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32);
+                }
+            }
+            .btn_vid
+            {
+                @media screen and (max-width: 936px)
+                {
+                    padding-left: 70px;
+                    display: inline-block;
+                }
+                @media screen and (max-width: 740px)
+                {
+                    display: block;
+                    padding-left: 0px;
+                }
+                .vid_utube
+                {
+                    display: block;
+                    margin : 0 auto;
+                    max-width : 390px;
+                    height : 216px;
+                    padding-bottom: 20px;
+                    @media screen and (max-width: 421px)
+                    {
+                        max-width : 290px;
+                        height : 150px;
+                    }
+                    .iframeVid
+                    {
+                        width : 100%;
+                        display: block;
+                        height : 100%;
+                    }
+                }
+            }
+        }
+        .make_img_vertical_bottom
+        {
+            display: inline-block;
+            width : 0px;
+            height : 100%;
+        }
+
+    }
+}
+.section_2
+{
+    display: block;
+    position: relative;
+    width : auto;
+    height : 100%;
+    background: url("../images/background_sec_2.png") no-repeat center center;
+    background-size: cover;
+    @media screen and (max-width: 600px)
+    {
+        height : auto;
+    }
+    @media screen and (max-height: 700px)
+    {
+        height : auto;
+    }
+    .content
+    {
+        width : auto;
+        height : auto;
+        position: relative;
+        .title
+        {
+            display: block;
+            @include ace_title();
+        }
+        .description
+        {
+            display: block;
+            @include ace_description();
+            margin-top: 10px;
+            padding-bottom: 10px;
+        }
+        .line
+        {
+            @include ace_line();
+        }
+        .mixinContent
+        {
+            display: block;
+            max-width: 1050px;
+            margin : 0 auto;
+            padding-top: 40px;
+            @media screen and (max-width: 1082px)
+            {
+                max-width: 670px;
+            }
+            @media screen and (max-width: 729px) {
+                max-width: 580px;
+            }
+            @media screen and (max-width: 600px) {
+                max-width: 330px;
+            }
+            .mixin
+            {
+                display: inline-block;
+                padding: 0px;
+                vertical-align: top;
+                cursor: pointer;
+                position: relative;
+                max-width: 250px;
+                @media screen and (max-width: 1082px) {
+                    padding : 0px 5px;
+                }
+                .imgDetail
+                {
+                    display : block;
+                    position: relative;
+                    height: 323px;
+                    width: 250px;
+                    @media screen and (max-width: 1082px)
+                    {
+                        height: 260px;
+                        width: 150px;
+                    }
+                    @media screen and (max-width: 729px) {
+                        width: 125px;
+                        height: 210px;
+                    }
+
+                    img
+                    {
+                        width: 250px;
+                        display: block;
+                        position: absolute;
+                        bottom : 0;
+                        @include TransitionWithDurationAndEase(0.5s, $EasingExpoOut);
+                        @media screen and (max-width: 1082px)
+                        {
+                            width : 150px;
+                        }
+                        @media screen and (max-width: 729px) {
+
+                        }
+                    }
+                    position: relative;
+                }
+                .title
+                {
+                    color : $blue_text;
+                    font-size: 48px;
+                    line-height: 52px;
+                    min-height : 52px;
+                    text-align: center;
+                    font-family: "SFUFuturaRegular";
+                    @include TransitionWithDurationAndEase(0.5s, $EasingExpoOut);
+                    @media screen and (max-width: 1082px)
+                    {
+                        font-size: 30px;
+                    }
+                    @media screen and (max-width: 600px)
+                    {
+                        font-size: 20px;
+
+                    }
+                }
+            }
+            .mixin:hover
+            {
+                .title
+                {
+                    color : white;
+                }
+                .imgDetail
+                {
+                    img
+                    {
+                        bottom : 20px;
+                    }
+                }
+            }
+            .mixin:nth-child(2)
+            {
+                .imgDetail
+                {
+                    @media screen and (max-width: 1082px)
+                    {
+                        height: 260px;
+                    }
+                        img
+                        {
+                            width : 150px;
+                            left : 50px;
+                            @media screen and (max-width: 1082px)
+                            {
+                                height: 260px;
+                                left : 0;
+
+                            }
+                            @media screen and (max-width: 729px) {
+                                height : 210px;
+                            }
+                        }
+
+                    @media screen and (max-width: 729px)
+                    {
+                        height: 210px;
+                    }
+                }
+            }
+            .mixin:nth-child(1)
+            {
+                .title{
+                    text-align: right;
+                    margin-right: 40px;
+                    @media screen and (max-width: 729px)
+                    {
+                        margin-right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

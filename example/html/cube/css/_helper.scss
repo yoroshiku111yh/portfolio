@@ -1,0 +1,138 @@
+@font-face {
+    font-family: Gotham-ExtraLight;
+    src: url(../fontface/Gotham-XLight.eot),
+    url(../font/Gotham-XLight.otf),
+    url(../font/Gotham-XLight.svg),
+    url('../fontface/Gotham-XLight.eot?#iefix') format('embedded-opentype'), /*/ IE6-IE8 /*/
+    url('../fontface/Gotham-XLight.woff2') format('woff2'), /*/ Super Modern Browsers /*/
+    url('../fontface/Gotham-XLight.woff') format('woff'), /*/ Pretty Modern Browsers /*/
+    url('../fontface/Gotham-XLight.ttf')  format('truetype'), /*/ Safari, Android, iOS /*/
+    url('../fontface/Gotham-XLight.svg#svgFontName') format('svg'); /*/ Legacy iOS /*/
+}
+@font-face {
+    font-family: Gotham-Light;
+    src: url(../fontface/Gotham-Light.eot),
+    url(../fontface/Gotham-Light.OTF),
+    url(../fontface/Gotham-Light.svg),
+    url('../fontface/Gotham-Light.eot?#iefix') format('embedded-opentype'), /*/ IE6-IE8 /*/
+    url('../fontface/Gotham-Light.woff2') format('woff2'), /*/ Super Modern Browsers /*/
+    url('../fontface/Gotham-Light.woff') format('woff'), /*/ Pretty Modern Browsers /*/
+    url('../fontface/Gotham-Light.ttf')  format('truetype'), /*/ Safari, Android, iOS /*/
+    url('../fontface/Gotham-Light.svg#svgFontName') format('svg'); /*/ Legacy iOS /*/
+}
+@font-face {
+    font-family: Lucida-Grande;
+    src: url(../fontface/lucida-grande-1361501376.eot),
+    url(../fontface/lucida-grande-1361501376.OTF),
+    url(../fontface/lucida-grande-1361501376.svg),
+    url('../fontface/lucida-grande-1361501376.eot?#iefix') format('embedded-opentype'), /*/ IE6-IE8 /*/
+    url('../fontface/lucida-grande-1361501376.woff2') format('woff2'), /*/ Super Modern Browsers /*/
+    url('../fontface/lucida-grande-1361501376.woff') format('woff'), /*/ Pretty Modern Browsers /*/
+    url('../fontface/lucida-grande-1361501376.ttf')  format('truetype'), /*/ Safari, Android, iOS /*/
+    url('../fontface/lucida-grande-1361501376.svg#svgFontName') format('svg'); /*/ Legacy iOS /*/
+}
+@font-face {
+    font-family: proximaNova-Light;
+    src: url(../font/light/PROXIMA_NOVA_LIGHT.eot),
+    url(../font/light/PROXIMA_NOVA_LIGHT.OTF),
+    url(../font/light/PROXIMA_NOVA_LIGHT.svg),
+    /*url(../font/light/PROXIMA_NOVA_LIGHT.ttf),
+    url(../font/light/PROXIMA_NOVA_LIGHT.woff),
+    url(../font/light/PROXIMA_NOVA_LIGHT.woff2),*/
+    url('../font/light/PROXIMA_NOVA_LIGHT.eot?#iefix') format('embedded-opentype'), /*/ IE6-IE8 /*/
+    url('../font/light/PROXIMA_NOVA_LIGHT.woff2') format('woff2'), /*/ Super Modern Browsers /*/
+    url('../font/light/PROXIMA_NOVA_LIGHT.woff') format('woff'), /*/ Pretty Modern Browsers /*/
+    url('../font/light/PROXIMA_NOVA_LIGHT.ttf')  format('truetype'), /*/ Safari, Android, iOS /*/
+    url('../font/light/PROXIMA_NOVA_LIGHT.svg#svgFontName') format('svg'); /*/ Legacy iOS /*/
+}
+
+
+
+
+$EasingQuadIn: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$EasingCubicIn: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$EasingQuartIn: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$EasingQuintIn: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$EasingSineIn: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$EasingExpoIn: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$EasingCircIn: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$EasingBackIn: cubic-bezier(0.600, 0, 0.735, 0.045);
+
+$EasingQuadOut: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$EasingCubicOut: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$EasingQuartOut: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$EasingQuintOut: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$EasingSineOut: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$EasingExpoOut: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$EasingCircOut:cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$EasingBackOut: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+$EasingQuadInOut: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$EasingCubicInOut: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$EasingQuartInOut: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$EasingQuintInOut: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$EasingSineInOut: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$EasingExpoInOut: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$EasingCircInOut: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$EasingBackInOut: cubic-bezier(0.680, 0, 0.265, 1);
+
+
+@mixin TransitionWithDurationAndEase($duration, $easing, $delay) {
+    -webkit-transition: all $duration $easing $delay;
+    -moz-transition: all $duration $easing $delay;
+    -ms-transition: all $duration $easing $delay;
+    -o-transition: all $duration $easing $delay;
+    transition: all $duration $easing $delay;
+}
+
+
+@mixin centerTransformOrigin {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+@mixin transformScale($scale){
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+}
+
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($name, $dur, $easing, $delay, $repeat, $direction, $fillMode, $state){
+    /* @keyframes name | duration | timing-function | delay |
+       iteration-count | direction | fill-mode | play-state */
+    /*animation: slidein 3s ease-in 1s 2 reverse both paused;*/
+
+    -webkit-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    -moz-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+}
+
+
+@mixin font($fontName, $fontSize, $fontColor){
+    font-family: $fontName;
+    font-size: $fontSize;
+    color:$fontColor;
+}
+
+

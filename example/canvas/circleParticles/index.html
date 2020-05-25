@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> Circle Particles Animate - canvas HTML5</title>
+  <style>
+      #canvas
+      {
+          cursor: pointer;
+      }
+      html,body
+      {
+          overflow: hidden;
+      }
+  </style>
+  <link rel="stylesheet" href="css/reset.css" />
+  
+  <script src="js/jquery-2.0.3.min.js"></script>
+<body>
+<canvas id="canvas"></canvas>
+<script>
+
+    window.requestAnimFrame = (function(){
+        return window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback){
+                    window.setTimeout(callback, 1000/60);
+                };
+    })();
+
+    var mx = 0;
+    var my = 0;
+
+    var return_p = true;
+
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var W = $(window).width();
+    var H = $(window).height();
+    canvas.width = W;
+    canvas.height = H;
+
+    var radius_particles = 1;
+
+    var center_x = W/2;
+    var center_y = H/2;
+
+    var bg = 'rgba(21, 20, 20, 1)';
+    var colorParticle = 'rgba(45, 116, 204, 0.5)';
+    var colorArray = ['rgba(45, 116, 204, 0.5)', 'rgba(73, 165, 35, 0.77)', 'rgba(212, 32, 23, 0.77)']
+    var radius_circle_particle = 0.05;
+    var lineWidth = 0.05;
+    var R = 150;
+    var total_particles = 200;
+
+    var max_range = 25;
+
+    var array_particle = [];
+    var array_randomed = [];
+    function particles( angle )
+    {
+        this.x = Math.sin(angle)*(R) + center_x;
+        this.y = Math.cos(angle)*(R) + center_y;
+        this.default_x = this.x ;
+        this.default_y = this.y ;
+        this.radius = /*radius_circle_particle*/ Math.random()*15;
+        var random_angle = getRandomInt(0,360);
+        var random_range = getRandomInt(50, 100);
+        var range_v = getRandomInt(50,200);
+        this.range_x = Math.sin(angle)*random_range + this.x;
+        this.range_y = Math.cos(angle)*random_range + this.y;
+        this.r = random_range + R;
+        this.trend = 1;
+
+        this.color = colorArray[getRandomInt(0 , 2)];
+
+        this.vx = (this.range_x - this.default_x)/range_v;
+        this.vy = (this.range_y - this.default_y)/range_v;
+
+        this.return = true;
+
+        this.draw = function()
+        {
+            context.fillStyle = this.color;
+            context.beginPath();
+            context.arc(this.x , this.y , this.radius , 0 , 2*Math.PI);
+            context.fill();
+        }
+    }
+
+    loop();
+    function loop()
+    {
+        init();
+        requestAnimFrame(loop);
+    }
+
+
+    circle();
+    pushCircleRandom();
+    //init();
+    function init()
+    {
+        clear();
+        createCanvas();
+        drawCircle();
+        //lineCircle();
+    }
+
+    function clear()
+    {
+        context.clearRect(0 , 0 , W , H);
+    }
+
+    function createCanvas()
+    {
+        context.fillStyle = bg;
+        context.fillRect(0, 0, W, H);
+    }
+
+    function circle()
+    {
+        for(var i = 0 ; i <=  360 ; i+= 0.03)
+        {
+            array_particle.push(new particles(i));
+        }
+    }
+
+    function pushCircleRandom()
+    {
+        array_randomed = [];
+        for( var i = 0 ; i <  array_particle.length ; i++)
+        {
+            var isDraw = getRandomInt(0 , 25);
+            if(isDraw == 1)
+                array_randomed.push(array_particle[i]);
+        }
+    }
+
+    function drawCircle()
+    {
+        for( var i = 0 ; i <  array_randomed.length ; i++)
+        {
+            array_randomed[i].draw();
+            update(array_randomed[i]);
+        }
+    }
+
+    function getRandomInt (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function lineCircle()
+    {
+        for( var i = 0 ; i < array_particle.length - 1 ; i++)
+        {
+            context.strokeStyle = colorParticle;
+            context.beginPath();
+            context.moveTo(array_particle[i].x , array_particle[i].y);
+            context.lineTo(array_particle[i+1].x , array_particle[i+1].y);
+            context.lineWidth = lineWidth;
+            context.stroke();
+        }
+    }
+
+
+    function update(p)
+    {
+        var dx = (p.x + p.radius) - center_x;
+        var dy = (p.y + p.radius) - center_y;
+        var dist = Math.abs(Math.sqrt(Math.pow(dx , 2) + Math.pow(dy,2)));
+        if(dist >= p.r && p.return == true)
+        {
+            /*p.trend = -1*dist;*/ // return to center circle
+            p.trend = -1*(dist/R);
+        }
+        else if (dist <= R )
+        {
+            if(p.trend < 1)
+                p.trend = 1;
+        }
+        p.x += p.trend*p.vx;
+        p.y += p.trend*p.vy;
+        mouseHover(mx , my);
+    }
+
+    $('canvas').on('mousemove',function(e){
+        //console.log(e.clientX , e.clientY);
+        mx = e.clientX;
+        my = e.clientY;
+        mouseHover(e.clientX , e.clientY);
+    });
+    $('canvas').on('mouseout', function(){
+        mx = -1;
+        my = -1;
+    });
+    function mouseHover(mx,my)
+    {
+        var random = getRandomInt(150, 200);
+        for(var i = 0 ; i < array_randomed.length ; i++)
+        {
+            var p = array_randomed[i];
+            var dx = p.x - mx;
+            var dy = p.y - my;
+
+            var dist = Math.abs(Math.sqrt(Math.pow(dx , 2) + Math.pow(dy,2)));
+
+            var dmx = (mx) - center_x;
+            var dmy = (my) - center_y;
+
+            var dist2 = Math.abs(Math.sqrt(Math.pow(dmx , 2) + Math.pow(dmy,2)));
+                if(dist <= 100)
+                {
+                    p.trend = 5*(100/dist);
+                    p.return = false;
+                }
+                else if(dist >= random)
+                {
+                    p.return = true;
+                }
+        }
+    }
+
+
+</script>
+</body>
+</html>

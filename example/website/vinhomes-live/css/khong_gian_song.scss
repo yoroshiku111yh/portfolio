@@ -1,0 +1,436 @@
+@import "helper";
+.arrow-left {
+  width: 0;
+  height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+
+  border-right:14px solid white;
+}
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 14px solid transparent;
+  border-right: 14px solid transparent;
+
+  border-bottom: 14px solid white;
+}
+
+.gallery-section
+{
+  display: block;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  .gallery
+  {
+    display: block;
+    position: relative;
+    @media screen and (max-width: 1043px)
+    {
+      margin-left : 15px;
+      margin-right: 15px;
+    }
+    .gallery-content
+    {
+      position: relative;
+      display: block;
+      width : auto;
+      height : auto;
+      .product-content
+      {
+        display: block;
+        position: relative;
+        width : auto;
+        overflow : hidden;
+        /*max-height: 372px;*/
+        min-height: 372px;
+        margin-bottom: 70px;
+        .thumbnail-product
+        {
+          background-size: cover;
+          float : left;
+          display: block;
+          width : 50%;
+          height : 400px;
+          text-align: center;
+          overflow: hidden;
+          position: relative;
+          cursor: pointer;
+          @media screen and (max-width: 407px)
+          {
+            height : auto;
+          }
+          img
+          {
+            display: block;
+            width : 100%;
+            height : 100%;
+            position:absolute;
+            left:0;
+            right:0;
+            margin-left:auto;
+            margin-right:auto;
+            /*ko chay tren ie 6 va 7 */
+            @media screen and (max-width: 407px)
+            {
+              position: relative;
+            }
+          }
+          .hovermark
+          {
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.34);
+            cursor: pointer;
+            .ico-play
+            {
+              display: block;
+              position: relative;
+              width: 100%;
+              height : 100%;
+              img
+              {
+                width : 76px;
+                height : 76px;
+                position:absolute;
+                left:0;
+                right:0;
+                top : 0;
+                bottom : 0;
+                margin : auto;
+                /*ko chay tren ie 6 va 7 */
+              }
+            }
+          }
+          @media screen and (max-width: 881px) {
+            display: block;
+            float: none;
+            width: 100%;
+
+          }
+        }
+        .detail-product
+        {
+          display: block;
+          float : left;
+          width: 50%;
+          height : 100%;
+          overflow: hidden;
+          position: relative;
+          .content
+          {
+            max-width: 390px;
+            margin: 0px auto;
+            position: relative;
+            .title-center
+            {
+              padding-top: 19%;
+            }
+            .title
+            {
+              text-align: left;
+              font-family: "UTMAptimaBold";
+              //font-family: "utmtrajanproboldregular";
+              font-size: 25px;
+              color : $gold-text;
+              line-height: 35px;
+              width : auto;
+              display: block;
+              text-transform: uppercase;
+
+            }
+            .detail
+            {
+
+              text-align: justify;
+              /*text-align: left;*/
+              //font-size: 18px;
+              line-height: 26px;
+              color : $gray-text;
+              margin-bottom: 20px;
+              margin-top: 20px;
+              /*max-height: *//*145px*//* 218px; ;*/
+              overflow: hidden;
+              font-family: "UTMAptimaRegular";
+              @media screen and (max-width: 881px) {
+                max-height: 1000px;
+              }
+            }
+
+            .seemore
+            {
+              text-align: center;
+              display: block;
+              //font-size: 18px;
+              width : 140px;
+              margin : 0 auto;
+              color : $gold-text;
+              font-family: "UTMAptimaRegular";
+            }
+
+            @media screen and (max-width: 881px) {
+              .title
+              {
+                text-align: center;
+                padding-top: 15px;
+              }
+              .detail
+              {
+                text-align: center;
+              }
+            }
+
+          }
+          @media screen and (max-width: 881px) {
+            display: block;
+            float: none;
+            width: 100%;
+            /*min-height: 300px;*/
+            text-align: center;
+          }
+
+          .list-btn
+          {
+            display: block;
+            position: relative;
+            font-family: "UTMAptimaRegular";
+            font-size: 0px;
+            padding-bottom: 1px;
+            .btn
+            {
+              @include  TransitionWithDurationAndEase(0.85s, $EasingExpoOut);
+              display: inline-block;
+              font-size: 15px;
+              line-height: 34px;
+              height : 43px;
+              text-align: center;
+              color : $gold-text;
+              padding-left: 10px;
+              padding-right: 25px;
+              border: 1px solid $gold-text;
+              background-color: white;
+              margin-right: 5px;
+              position: relative;
+              cursor: pointer;
+              .arrow
+              {
+                @include  TransitionWithDurationAndEase(0.85s, $EasingExpoOut);
+                position: absolute;
+                right: 5px;
+
+                top: -1px;
+                bottom: 0;
+                margin-bottom: auto;
+                margin-top: auto;
+                width: 10px;
+                height: 12px;
+              }
+              .arrow-hover
+              {
+                opacity: 0;
+              }
+
+            }
+            .btn:hover
+            {
+              color : white;
+              background-color: $gold-text;
+              .arrow.arrow-hover
+              {
+                opacity: 1;
+              }
+            }
+            @media screen and (max-width: 445px) {
+              .btn
+              {
+                display: block;
+                margin:  10px auto;
+                max-width: 200px;
+              }
+            }
+          }
+
+        }
+
+        @media screen and (max-width: 940px) {
+          display: block;
+          height : auto;
+          max-height: 1000px;
+          margin-bottom: 25px;
+        }
+      }
+      .product-content:last-child
+      {
+        margin-bottom: 0px;
+      }
+      .product-content:after
+      {
+        clear: both;
+        content: "";
+        display: block;
+      }
+    }
+  }
+}
+.popup-content
+{
+
+  position: fixed;
+  opacity: 0;
+  display: block;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.61);
+  @include  TransitionWithDurationAndEase(0.65s, $EasingExpoOut);
+  top : 0;
+  right : 0;
+  bottom : 0;
+  left : 0;
+  z-index: -1;
+  .wrap-all
+  {
+    position: relative;
+    display: block;
+    width : 100%;
+    height : 100%;
+  }
+  .content-slide-all
+  {
+    display: block;
+    position: relative;
+    max-width: 90%;
+    max-height: 70%;
+    .detail-item
+    {
+      background-color: black;
+      max-width: 100%;
+      max-height: 100%;
+      visibility: visible;
+      opacity: 0;
+      margin:  auto;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      @include  TransitionWithDurationAndEase(0.65s, $EasingExpoOut);
+    }
+  }
+  .content
+  {
+    display: block;
+    position: relative;
+    width : 100%;
+    height : 100%;
+    .detail
+    {
+      max-width: 90%;
+      max-height: 70%;
+      top: 0px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin : auto;
+      position: absolute;
+      opacity: 0;
+      display: block;
+      opacity: 0;
+      visibility: hidden;
+      @include  TransitionWithDurationAndEase(0.65s, $EasingExpoOut);
+
+      .wrap-img
+      {
+        position: relative;
+        width : auto;
+        height : 100%;
+
+        .wrap-content
+        {
+          position: absolute;
+          width : 100%;
+          height : 100%;
+          background-color: white;
+        }
+        .wrap-content.active
+        {
+          z-index : 997;
+        }
+
+      }
+      .wrap-content-all
+      {
+        position: relative;
+        width : auto;
+        display: block;
+        margin : 0 auto;
+        height : 100%;
+        /*.slide-top
+        {
+          height: 100%;
+        }*/
+        .swiper-container {
+          width: 100%;
+          height: 300px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .swiper-slide {
+          background-size: cover;
+          background-position: center;
+          .coverPopup {
+            display: block;
+            img {
+              max-height: 100%;
+            }
+          }
+        }
+
+        .gallery-top {
+          height: 80%;
+          width: 100%;
+        }
+        .gallery-thumbs {
+          height: 20%;
+          box-sizing: border-box;
+          padding: 10px 0;
+          background: $white;
+        }
+        .gallery-thumbs .swiper-slide {
+          width: 25%;
+          height: 100%;
+          opacity: 0.6;
+        }
+        .gallery-thumbs .swiper-slide-active {
+          opacity: 1;
+        }
+      }
+
+      .img-detail
+      {
+        max-width: 100%;
+       /* max-height: 100%;*/
+        display: block;
+        position: absolute;
+        top: 0;
+        left : 0;
+        right : 0;
+        bottom : 0;
+        margin : auto;
+        border: 1px solid #464343;
+      }
+    }
+  }
+  .ico-exit
+  {
+    position: absolute;
+    right : -18px;
+    top : -18px;
+    z-index: 998;
+    cursor: pointer;
+  }
+
+}

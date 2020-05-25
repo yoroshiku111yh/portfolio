@@ -1,0 +1,1163 @@
+@font-face {
+  font-family: 'HelveticaLt';
+  src: url("../fonts/HelveticaLt.eot");
+  src: url("../fonts/HelveticaLt.eot") format("embedded-opentype"), url("../fonts/HelveticaLt.woff") format("woff"), url("../fonts/HelveticaLt.ttf") format("truetype"), url("../fonts/HelveticaLt.svg#HelveticaLt") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaLtIt';
+  src: url("../fonts/HelveticaLtIt.eot");
+  src: url("../fonts/HelveticaLtIt.eot") format("embedded-opentype"), url("../fonts/HelveticaLtIt.woff") format("woff"), url("../fonts/HelveticaLtIt.ttf") format("truetype"), url("../fonts/HelveticaLtIt.svg#HelveticaLtIt") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaRg';
+  src: url("../fonts/HelveticaRg.eot");
+  src: url("../fonts/HelveticaRg.eot") format("embedded-opentype"), url("../fonts/HelveticaRg.woff") format("woff"), url("../fonts/HelveticaRg.ttf") format("truetype"), url("../fonts/HelveticaRg.svg#HelveticaRg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaBt';
+  src: url("../fonts/HelveticaBt.eot");
+  src: url("../fonts/HelveticaBt.eot") format("embedded-opentype"), url("../fonts/HelveticaBt.woff") format("woff"), url("../fonts/HelveticaBt.ttf") format("truetype"), url("../fonts/HelveticaBt.svg#HelveticaBt") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#v02-loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 99;
+}
+
+.v02-loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -25px 0 -25px;
+  width: 50px;
+}
+
+.v02-loader:before {
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.v02-circular {
+  -webkit-animation: rotate 2s linear infinite;
+          animation: rotate 2s linear infinite;
+  height: 100%;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.v02-path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+          animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+}
+
+@-webkit-keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -35px;
+  }
+  100% {
+    stroke-dasharray: 89,200;
+    stroke-dashoffset: -124px;
+  }
+}
+
+@-webkit-keyframes color {
+  100%, 0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
+}
+
+@keyframes color {
+  100%, 0% {
+    stroke: #d62d20;
+  }
+  40% {
+    stroke: #0057e7;
+  }
+  66% {
+    stroke: #008744;
+  }
+  80%, 90% {
+    stroke: #ffa700;
+  }
+}
+
+.v02-clearAfter:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+#v02-noc-award-scholarship {
+  position: relative;
+}
+
+#v02-noc-award-scholarship .v02-mySlice {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+#v02-noc-award-scholarship .v02-banner-home {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 40px;
+  /*@media screen and (max-width: 1023px){
+        -webkit-clip-path: none;
+        -moz-clip-path: none;
+        -ms-clip-path: none;
+        -o-clip-path: none;
+        clip-path: none;
+    }*/
+}
+
+#v02-noc-award-scholarship .v02-banner-home-img {
+  display: block;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#v02-noc-award-scholarship .v02-banner-home-img svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  #v02-noc-award-scholarship .v02-banner-home-img image {
+    -webkit-clip-path: url(#v02-myMask);
+            clip-path: url(#v02-myMask);
+  }
+}
+
+#v02-noc-award-scholarship .v02-banner-home .v02-mask-overlay {
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#v02-noc-award-scholarship .v02-banner-home-item {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 708px;
+  width: 100%;
+}
+
+#v02-noc-award-scholarship .v02-banner-home-item .v02-container {
+  display: block;
+  height: 100%;
+  padding: 0;
+}
+
+#v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner {
+  display: table;
+  text-align: center;
+  height: 100%;
+  margin: 0 5%;
+}
+
+#v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn .v02-title-lg {
+  color: #eee;
+}
+
+@media screen and (max-width: 640px) {
+  #v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn .v02-title-lg {
+    margin-bottom: 10px;
+    font-size: 22px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn .v02-title-xs {
+  font-size: 26px;
+  color: #eee;
+}
+
+@media screen and (min-width: 992px) {
+  #v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn .v02-title-xs {
+    margin: 0 22%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn .v02-title-xs {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner-ctn .v02-title-xs {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #v02-noc-award-scholarship .v02-banner-home-item .v02-container .v02-home-item-inner {
+    margin: 0 15%;
+  }
+}
+
+#v02-noc-award-scholarship .v02-banner-home .owl-nav {
+  position: absolute;
+  top: 44%;
+  z-index: 2;
+  width: 100%;
+}
+
+#v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-prev, #v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-next {
+  display: block;
+  background: url("../images/ico/banner-top-left.png") no-repeat 0 0;
+  background-size: 100%;
+  width: 72px;
+  height: 72px;
+  text-indent: -9999px;
+  position: absolute;
+  left: 3%;
+  top: -36px;
+  -webkit-transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+  transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+}
+
+#v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-prev:hover, #v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-next:hover {
+  left: 2.6%;
+}
+
+@media screen and (max-width: 1023px) {
+  #v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-prev, #v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-next {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-next {
+  background: url("../images/ico/banner-top-right.png") no-repeat 0 0;
+  background-size: 100%;
+  left: auto;
+  right: 3%;
+}
+
+#v02-noc-award-scholarship .v02-banner-home .owl-nav .owl-next:hover {
+  left: auto;
+  right: 2.6%;
+}
+
+#v02-noc-award-scholarship .v02-banner-home .owl-dots {
+  display: block;
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 640px) {
+  #v02-noc-award-scholarship .v02-banner-home .owl-dots {
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #v02-noc-award-scholarship .v02-banner-home {
+    margin-bottom: 20px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship {
+  position: relative;
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content {
+  z-index: 1;
+  display: block;
+  position: relative;
+  max-width: 1240px;
+  margin: 5px auto;
+  background-color: white;
+}
+
+@media screen and (max-width: 1600px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (max-width: 1378px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content {
+    max-width: 900px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content {
+    max-width: 800px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .banner-left {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -91px;
+  width: 91px;
+  height: 399px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1005px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .banner-left {
+    display: none;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .banner-right {
+  display: block;
+  position: absolute;
+  width: 91px;
+  height: 399px;
+  top: 0;
+  right: -91px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 1005px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .banner-right {
+    display: none;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header {
+  position: relative;
+  width: auto;
+  height: auto;
+  background-color: #93ca01;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive {
+  display: none;
+}
+
+@media screen and (max-width: 794px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive {
+    /*display: block;*/
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res {
+  position: relative;
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-li-menu-res {
+  display: block;
+  position: relative;
+  width: auto;
+  height: auto;
+  color: white;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-li-menu-res a {
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-li-menu-res .v02-menu-child {
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-li-menu-res:last-child {
+  border-bottom: 0px solid white;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-text {
+  display: block;
+  font-size: 24px;
+  font-family: "Helvetica";
+  text-align: center;
+  line-height: 66px;
+  height: 66px;
+  position: relative;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media screen and (max-width: 1378px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-text {
+    font-size: 18px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-responsive .v02-ul-menu-res .v02-arrow-down {
+  background: url("../images/arrow.png") no-repeat center;
+  background-size: contain;
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header {
+  display: block;
+  max-width: 1016px;
+  margin: 0 auto;
+  position: relative;
+}
+
+@media screen and (max-width: 794px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header {
+    display: none;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  color: white;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+  padding-right: 32px;
+  padding-left: 32px;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item a {
+  color: white;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-menu-child {
+  position: absolute;
+  width: auto;
+  height: 0px;
+  bottom: 0;
+  background-color: #6a9836;
+  color: white;
+  overflow: hidden;
+  left: 32px;
+  z-index: 999;
+  opacity: 0;
+  -webkit-transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-menu-child .v02-li-menu-child {
+  white-space: nowrap;
+  min-width: 180px;
+  font-size: 18px;
+  line-height: 54px;
+  height: 54px;
+  text-align: left;
+  display: block;
+  padding: 0 40px;
+  border-bottom: 2px solid #527c22;
+  font-family: "Helvetica";
+  background-color: #6a9836;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-menu-child .v02-li-menu-child a {
+  color: white;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-menu-child .v02-li-menu-child:hover {
+  background-color: #93ca01;
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-menu-child .v02-li-menu-child:last-child {
+  border-bottom: 0px solid transparent;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-text {
+  display: block;
+  font-size: 24px;
+  font-family: "Helvetica";
+  text-align: center;
+  line-height: 66px;
+  height: 66px;
+  position: relative;
+  /*padding-left: 10px;
+              padding-right: 10px;*/
+}
+
+@media screen and (max-width: 1378px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-text {
+    font-size: 18px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item .v02-arrow-down {
+  background: url("../images/arrow.png") no-repeat center;
+  background-size: contain;
+  width: 14px;
+  height: 8px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-menu-item:last-child .v02-menu-child {
+  left: auto;
+  right: 0;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-nav-header .v02-menu-header .v02-line-animate {
+  position: absolute;
+  height: 7px;
+  width: 25px;
+  background-color: #365b0b;
+  bottom: 0;
+  left: 0;
+  display: block;
+  opacity: 0;
+  -webkit-transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail {
+  position: relative;
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper {
+  position: relative;
+  padding: 30px 45px;
+  background-color: #ebebeb;
+}
+
+@media screen and (max-width: 353px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper {
+    padding: 10px 15px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line {
+  position: relative;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search {
+  float: left;
+  width: 50%;
+  display: block;
+}
+
+@media screen and (max-width: 655px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search {
+    float: none;
+    width: auto;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search .v02-text {
+  display: block;
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 5px;
+  color: #949494;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search .v02-input-search {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search .v02-input-search .v02-input {
+  padding-left: 15px;
+  width: 100%;
+  display: block;
+  font-family: "HelveticaLtIt";
+  font-size: 21px;
+  line-height: 50px;
+  height: 50px;
+  border: 0px solid transparent;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search .v02-input-search form .v02-btn-search {
+  position: absolute;
+  right: 15px;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 25px;
+  height: 25px;
+  border: 0px solid transparent;
+  background-color: transparent;
+  text-decoration: none;
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-search .v02-input-search form .v02-btn-search img {
+  width: 100%;
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text {
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+@media screen and (max-width: 655px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text {
+    float: none;
+    width: auto;
+    padding-top: 20px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text {
+  padding-left: 80px;
+}
+
+@media screen and (max-width: 750px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text {
+    padding-left: 35px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text {
+    padding-left: 0px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-text {
+  display: block;
+  font-family: "HelveticaLtIt";
+  font-size: 20px;
+  line-height: 25px;
+  padding-bottom: 5px;
+  color: #949494;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line {
+  display: block;
+  position: relative;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap {
+  position: relative;
+  display: block;
+  margin-top: 18px;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+  position: relative;
+  display: block;
+  width: 360px;
+  background-color: #b7b7b7;
+  height: 3px;
+  margin-left: 45px;
+}
+
+@media screen and (max-width: 1595px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+    width: 300px;
+    margin-left: 38px;
+  }
+}
+
+@media screen and (max-width: 1382px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+    width: 240px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+    width: 192px;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+    width: 240px;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+    width: 192px;
+    margin-left: 24px;
+  }
+}
+
+@media screen and (max-width: 353px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line {
+    width: 160px;
+    margin-left: 20px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-line-animate {
+  position: absolute;
+  width: 5px;
+  height: 3px;
+  background-color: #ee9b42;
+  top: 0;
+  -webkit-transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones {
+  display: block;
+  position: relative;
+  display: block;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+  float: left;
+  display: block;
+  width: 90px;
+  position: relative;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1595px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 1382px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+    width: 48px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+    width: 48px;
+  }
+}
+
+@media screen and (max-width: 353px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones {
+    width: 40px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones .v02-circle {
+  display: block;
+  margin: 0 auto;
+  width: 11px;
+  /*plus 5 when active*/
+  height: 11px;
+  /*plus 5 when active*/
+  border: 3px solid #b7b7b7;
+  background-color: #b7b7b7;
+  border-radius: 50%;
+  position: absolute;
+  top: -7px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones .v02-text {
+  padding-top: 10px;
+  display: block;
+  font-size: 16px;
+  line-height: 25px;
+  color: #a8a8a8;
+  font-family: "Helvetica";
+  text-align: center;
+  -webkit-transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 1382px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones .v02-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones .v02-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones .v02-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones .v02-text {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones:hover .v02-text {
+  color: #ef7c00;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-search-wrapper .v02-search-time-line .v02-time-line-text .v02-wrap-time-line-text .v02-time-line .v02-line-wrap .v02-list-milestones .v02-milestones:hover .v02-circle {
+  border: 3px solid #ef7c00;
+  background-color: white;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter {
+  display: block;
+  position: relative;
+  background-color: white;
+  padding: 30px 45px;
+}
+
+@media screen and (max-width: 353px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter {
+    padding: 10px 15px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .wave-left {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: -264px;
+  width: 264px;
+  height: 374px;
+}
+
+@media screen and (max-width: 1005px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .wave-left {
+    display: none;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .wave-right {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: -264px;
+  width: 264px;
+  height: 374px;
+}
+
+@media screen and (max-width: 1005px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .wave-right {
+    display: none;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap {
+  display: block;
+  position: relative;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-text {
+  width: 45px;
+  float: left;
+  display: block;
+  vertical-align: top;
+  font-family: "Helvetica";
+  font-size: 16px;
+  line-height: 47px;
+  height: 47px;
+  color: #949494;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-filter-tag {
+  display: block;
+  float: left;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-filter-tag .v02-tag {
+  position: relative;
+  color: #ef7c00;
+  cursor: pointer;
+  margin: 3px;
+  display: inline-block;
+  padding: 10px;
+  padding-left: 35px;
+  border: 2px solid #ef7c00;
+  font-family: "HelveticaBt";
+  font-size: 19px;
+  line-height: 23px;
+  background: url("../images/ico-tick.png") no-repeat;
+  background-position: 10px 50%;
+  white-space: nowrap;
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 538px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-filter-tag .v02-tag {
+    font-size: 15px;
+    line-height: 20px;
+    padding: 5px;
+    padding-left: 35px;
+    padding-right: 10px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-filter-tag .v02-tag .deactive {
+  opacity: 0;
+  z-index: 1;
+  display: block;
+  position: absolute;
+  width: 19px;
+  height: 18px;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+  background: url("../images/ico-cancel.png") no-repeat center;
+  background-size: contain;
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-filter-tag .v02-tag:hover {
+  background: none;
+  border: 2px solid #cccccc;
+  color: #cccccc;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-filter-wrap .v02-filter-tag .v02-tag:hover .deactive {
+  opacity: 1;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result {
+  display: block;
+  position: relative;
+  padding-top: 30px;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail {
+  margin: 0px 5px;
+  vertical-align: top;
+  display: inline-block;
+  width: 270px;
+}
+
+@media screen and (max-width: 1586px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail {
+    width: 200px;
+  }
+}
+
+@media screen and (max-width: 1383px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 1203px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail {
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 622px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail {
+    width: auto;
+    padding: 5px;
+    display: block;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-image {
+  display: block;
+  width: auto;
+  height: 282px;
+  background-size: cover !important;
+}
+
+@media screen and (max-width: 1203px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-image {
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 542px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-image {
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-image {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 301px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-image {
+    height: 200px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-detail-content {
+  display: block;
+  width: auto;
+  padding-bottom: 28px;
+  padding-top: 18px;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-detail-content .v02-title {
+  font-family: "HelveticaBt";
+  font-size: 23px;
+  line-height: 26px;
+  color: #003d7c;
+  text-align: left;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail .v02-detail-content .v02-description {
+  padding-top: 5px;
+  font-family: "Helvetica";
+  color: #828181;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail:nth-child(4n+1) {
+  margin-left: 0px;
+}
+
+@media screen and (max-width: 1383px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail:nth-child(4n+1) {
+    margin-left: 5px;
+  }
+}
+
+#v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail:nth-child(4n) {
+  margin-right: 0px;
+}
+
+@media screen and (max-width: 1383px) {
+  #v02-noc-award-scholarship .v02-wrapper-noc-award-scholarship .v02-content .v02-detail .v02-result-filter .v02-result .v02-result-detail:nth-child(4n) {
+    margin-right: 5px;
+  }
+}
+/*# sourceMappingURL=noc-award-scholarship.css.map */

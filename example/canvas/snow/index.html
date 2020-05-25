@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <title> Particles snow - canvas HTML5</title>
+  <style>
+      #canvas
+      {
+          cursor: pointer;
+      }
+  </style>
+  <link rel="stylesheet" href="css/reset.css" />
+  
+  <script src="js/jquery-2.0.3.min.js"></script>
+<body style="overflow: hidden">
+<canvas id="canvas"></canvas>
+<script>
+
+    window.requestAnimFrame = (function(){
+        return window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame ||
+                window.oRequestAnimationFrame ||
+                window.msRequestAnimationFrame ||
+                function (callback){
+                    window/setTimeout(callback, 1000/60);
+                };
+    })();
+
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var W = $(window).width();
+    var H = $(window).height();
+    canvas.width = W;
+    canvas.height = H;
+
+    var  particleTotal = 800;
+    var particles = [];
+    var minDist = 200;
+    var maxRadius = 50;
+    var dist;
+    var bg = 'rgba(21, 20, 20, 1)';
+    var colorArray = ['rgba(45, 116, 204, 0.5)', 'rgba(73, 165, 35, 0.77)', 'rgba(212, 32, 23, 0.77)']
+    var colorParticle = 'rgba(45, 116, 204, 0.5)';
+    var arrayPosRadiusMouse = [];
+    var radiusMouse = 100;
+    var center_mouse_x = 0;
+    var center_mouse_y = 0;
+    pushArrayParticles();
+    loop();
+
+    $('canvas').on('mousemove' , function(e){
+        /**/
+        arrayPosRadiusMouse = [];
+        center_mouse_x = e.clientX;
+        center_mouse_y = e.clientY;
+        /*var slice = 2*Math.PI/360;
+        for(var i = 0 ; i < 360 ; i++)
+        {
+            var angle = slice*i;
+            var x = center_mouse_x + radiusMouse*Math.cos(angle);
+            var y = center_mouse_y + radiusMouse*Math.cos(angle);
+            arrayPosRadiusMouse.push({'x ' : x , 'y' : y});
+        }*/
+        /**/
+    });
+
+    function getRandomInt (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function checkRangeParticlesWithMouse(particle)
+    {
+        var dx = particle.x - center_mouse_x;
+        var dy = particle.y - center_mouse_y;
+        dist = Math.abs(Math.sqrt(dx*dx + dy*dy));
+        if(dist <= radiusMouse)
+        {
+            var range = ((radiusMouse*particle.default)/dist)*(maxRadius/10);
+            if(range <= maxRadius)
+                particle.radius = range;
+            else
+                particle.radius = maxRadius
+        }
+        else
+        {
+            particle.radius = particle.default;
+        }
+    }
+
+    function loop()
+    {
+        init();
+        requestAnimFrame(loop);
+    }
+
+    function createCanvas ()
+    {
+        //context.clearRect(0 , 0 , W, H);
+        context.fillStyle = bg;
+        context.fillRect(0, 0, W, H);
+    }
+
+    function init()
+    {
+        createCanvas();
+        drawArcParticles();
+    }
+    function particle()
+    {
+        /*random position each particles*/
+        this.x = Math.random()*W;
+        this.y = H;
+        /*velocity of particles*/
+        this.vx = -1 + Math.random()*2;
+        this.vy = -Math.random()*2;
+        /*set radius of particles*/
+        this.radius = Math.random()*2;
+        this.default = this.radius;
+        this.color = colorArray[getRandomInt(0,2)];
+        this.draw = function(){
+            context.fillStyle = /*colorParticle*/ this.color ;
+            context.beginPath();
+            context.arc(this.x, this.y, this.radius, 0, 2*Math.PI);
+            context.fill();
+        };
+    }
+
+    /*make array particles*/
+    function pushArrayParticles()
+    {
+        for(var i = 0 ; i < particleTotal ; i++)
+        {
+            particles.push( new particle() );
+        }
+    }
+
+    function drawArcParticles()
+    {
+        for (var i = 0 ; i < particles.length; i++)
+        {
+            var p = particles[i];
+            p.draw();
+        }
+        update();
+    }
+
+    function update()
+    {
+        /*
+        * update thật ra là vẽ chồng lên lớp context cũ , chứ không phải clear đi vẽ lại.
+        * */
+        for(var i = 0 ; i < particles.length ; i++)
+        {
+            var p = particles[i];
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if(p.x + p.radius > W)
+            {
+                p.x = p.radius;
+            }
+            else if(p.x - p.radius < 0)
+            {
+                p.x = W - p.radius;
+            }
+
+            if(p.y + p.radius > H)
+            {
+                p.y = H - p.radius;
+            }
+            else if(p.y - p.radius < 0)
+            {
+                p.y = H - p.radius;
+            }
+            checkRangeParticlesWithMouse(particles[i]);
+        }
+    }
+
+    function line ( p1, p2 )
+    {
+        var dx = p1.x - p2.x;
+        var dy = p1.y - p2.y;
+        var range = Math.sqrt(Math.pow(dx,2) + Math.pow(dy,2));
+        if(range <= minDist)
+        {
+            context.beginPath();
+            context.strokeStyle = "rgba(255,255,255,"+ (1.2-dist/minDist) +")";
+            context.moveTo(p1.x, p1.y);
+            context.lineTo(p2.x, p2.y);
+            context.stroke();
+            context.closePath();
+
+            // Some acceleration depending on distance
+            var ax = dx/7500,
+                    ay = dy/7500;
+
+            // Apply the acceleration
+            // xét gia tốc
+            p1.vx -= ax;
+            p1.vy -= ay;
+
+            p2.vx += ax;
+            p2.vy += ay;
+        }
+    }
+
+</script>
+</body>
+</html>

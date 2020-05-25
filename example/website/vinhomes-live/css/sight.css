@@ -1,0 +1,45 @@
+.sight {
+  display: block;
+}
+
+.sight-inner {
+  /*p {
+            margin-bottom: 55px;
+        }*/
+}
+
+.sight-inner .title-md {
+  margin-bottom: 35px;
+  margin-top: 35px;
+  font-size: 25px;
+}
+
+@media screen and (max-width: 640px) {
+  .sight-inner .title-md {
+    font-size: 25px;
+    margin: 20px 0;
+  }
+}
+
+.sight-inner-sum {
+  text-align: justify;
+  margin-bottom: 55px;
+}
+
+@media screen and (min-width: 640px) {
+  .sight-inner-sum {
+    -webkit-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 48px;
+    column-gap: 48px;
+  }
+}
+
+.sight-inner-sum .title-xs-inner {
+  text-align: initial;
+}
+
+.box-ctn {
+  text-align: justify;
+}
+/*# sourceMappingURL=sight.css.map */

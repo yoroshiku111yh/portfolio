@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'RalewayRegular';
+    src: url('../fonts/Raleway-Regular.eot');
+    src: url('../fonts/Raleway-Regular.eot') format('embedded-opentype'),
+        //url('../fonts/HelveticaLt.woff2') format('woff2'),
+    url('../fonts/Raleway-Regular.woff') format('woff'),
+    url('../fonts/Raleway-Regular.ttf') format('truetype'),
+    url('../fonts/Raleway-Regular.svg#HelveticaLt') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.eot');
+  src: url('../fonts/Montserrat-Regular.eot') format('embedded-opentype'),
+    //url('../fonts/HelveticaLt.woff2') format('woff2'),
+  url('../fonts/Montserrat-Regular.woff') format('woff'),
+  url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+  url('../fonts/Montserrat-Regular.svg#HelveticaLt') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$EasingQuadIn: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$EasingCubicIn: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$EasingQuartIn: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$EasingQuintIn: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$EasingSineIn: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$EasingExpoIn: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$EasingCircIn: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$EasingBackIn: cubic-bezier(0.600, 0, 0.735, 0.045);
+
+$EasingQuadOut: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$EasingCubicOut: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$EasingQuartOut: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$EasingQuintOut: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$EasingSineOut: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$EasingExpoOut: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$EasingCircOut:cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$EasingBackOut: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+$EasingQuadInOut: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$EasingCubicInOut: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$EasingQuartInOut: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$EasingQuintInOut: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$EasingSineInOut: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$EasingExpoInOut: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$EasingCircInOut: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$EasingBackInOut: cubic-bezier(0.680, 0, 0.265, 1);
+$EasingOut: cubic-bezier(.37,.15,.32,.94);
+
+
+@mixin TransitionWithDurationAndEase($duration, $easing) {
+    -webkit-transition: all $duration $easing;
+    -moz-transition: all $duration $easing;
+    -ms-transition: all $duration $easing;
+    -o-transition: all $duration $easing;
+    transition: all $duration $easing;
+}
+
+
+@mixin TransitionWithDurationAndEase_delay($duration, $easing, $delay) {
+    -webkit-transition: all $duration $easing $delay;
+    -moz-transition: all $duration $easing $delay;
+    -ms-transition: all $duration $easing $delay;
+    -o-transition: all $duration $easing $delay;
+    transition: all $duration $easing $delay;
+}
+
+
+@mixin centerTransformOrigin {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+
+@mixin transformOrigin($x, $y) {
+    -webkit-transform-origin: $x $y;
+    -moz-transform-origin: $x $y;
+    -ms-transform-origin: $x $y;
+    -o-transform-origin: $x $y;
+    transform-origin: $x $y;
+}
+
+
+@mixin transformScale($scale){
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+}
+
+
+@mixin translate($x, $y){
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+    transform: translate($x, $y);
+}
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+@mixin animation($name, $dur, $easing, $delay, $repeat, $direction, $fillMode, $state){
+    /* @keyframes name | duration | timing-function | delay |
+       iteration-count | direction | fill-mode | play-state */
+    /*animation: slidein 3s ease-in 1s 2 reverse both paused;*/
+
+    -webkit-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    -moz-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    -ms-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    -o-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+}
+
+
+@mixin font($fontName, $fontSize, $fontColor){
+    font-family: $fontName;
+    font-size: $fontSize;
+    color:$fontColor;
+}
+
+
+@mixin fontStyle ($fontName, $fontSize, $lineHeight, $padding, $marginBottom){
+    font-family: $fontName;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+    padding: $padding;
+    margin-bottom: $marginBottom;
+}
+
+@mixin fontNoColor ($fontName){
+    font-family: $fontName;
+}
+
+@mixin textGradient($fromColor, $toColor){
+  background: -webkit-linear-gradient($fromColor, $toColor);
+  background: linear-gradient($fromColor, $toColor);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin bgGradient($fromColor, $toColor){
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#7db9e8+0,1e5799+100 */
+    background: $fromColor; /* Old browsers */
+    background: -moz-radial-gradient(80% center, ellipse cover,  $fromColor 0%, $toColor 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(80% center, ellipse cover,  $fromColor 0%, $toColor 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at 80% center,  $fromColor 0%, $toColor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+@mixin color-blue{
+  color: #44c2f3;
+}
+
+@mixin background-blue{
+  background: #44c2f3;
+}
+
+@mixin ico ($bgPosition, $width, $height) {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url("../images/ico.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 $bgPosition;
+    width: $width;
+    height: $height;
+}
+
+@mixin radius ($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin shadow-out ($h, $v, $blur, $color) {
+    -webkit-box-shadow:  $h $v $blur $color;
+    -moz-box-shadow:  $h $v $blur $color;
+    box-shadow:  $h $v $blur $color;
+}
+
+@mixin shadow-in ($h, $v, $blur, $color) {
+    -webkit-box-shadow: inset  $h $v $blur $color;
+    -moz-box-shadow: inset  $h $v $blur $color;
+    box-shadow: inset  $h $v $blur $color;
+}
+
+
+@mixin rotate($rotate) {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+@mixin disableUserSelection(){
+    user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+@mixin textShadow ($txtshadow) {
+    text-shadow: $txtshadow;
+    -webkit-text-shadow: $txtshadow;
+}
+
+@mixin absoluteReset() {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@mixin beforeAfterReset() {
+    display: block;
+    content:'';
+}
+
+@mixin scrollBar($width) {
+    //scroll
+    scrollbar-arrow-color: #984100;
+    scrollbar-face-color: #984100;
+    scrollbar-highlight-color: #984100;
+    scrollbar-shadow-color: #984100;
+
+
+    &::-webkit-scrollbar {
+        width: $width;
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #984100;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: #ffb57d;
+    }
+    &::-webkit-scrollbar-thumb:window-inactive {
+        background: #ffb57d;
+    }
+    //END scroll
+}
+
+@mixin arrowDown($width, $color){
+    display: inline-block;
+    border-width: $width;
+    border-style: solid;
+    border-color: $color transparent transparent transparent;
+}
+
+
+@mixin arrowUp($width, $color){
+    display: inline-block;
+    border-width: $width;
+    border-style: solid;
+    border-color: transparent transparent $color transparent;
+}
+
+//loading
+$green: #008744;
+$blue: #0057e7;
+$red: #d62d20;
+$yellow: #ffa700;
+$white: #eee;
+
+// scaling... any units
+$width: 50px;
+
+// demo-specific
+
+#v02-loading {
+    position: fixed;
+    top: 0; bottom: 0; left: 0; right: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 99;
+}
+
+// end demo-specific
+
+.v02-loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -$width/2 0 0 -$width/2;
+    width: $width;
+    &:before {
+        content:'';
+        display: block;
+        padding-top: 100%;
+    }
+}
+
+.v02-circular {
+    animation: rotate 2s linear infinite;
+    height: 100%;
+    transform-origin: center center;
+    width: 100%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+}
+
+
+.v02-path {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+    animation:
+    dash 1.5s ease-in-out infinite,
+    color 6s ease-in-out infinite
+;
+    stroke-linecap: round;
+}
+
+@keyframes rotate{
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes dash{
+    0%{
+        stroke-dasharray: 1,200;
+        stroke-dashoffset: 0;
+    }
+    50%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -35px;
+    }
+    100%{
+        stroke-dasharray: 89,200;
+        stroke-dashoffset: -124px;
+    }
+}
+@keyframes color{
+    100%, 0%{
+        stroke: $red;
+    }
+    40%{
+        stroke: $blue;
+    }
+    66%{
+        stroke: $green;
+    }
+    80%, 90%{
+        stroke: $yellow;
+    }
+}
+//END loading

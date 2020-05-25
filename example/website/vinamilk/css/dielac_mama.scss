@@ -1,0 +1,620 @@
+#dielac{
+  .banner2{
+    padding-top: 30px;
+    .wrapper_banner{
+      .wrapper_banner2{
+        .banner2_left{
+          .title_banner2_left{
+            background: url("../images/dialac_mama/protein.png") no-repeat center center;
+          }
+          .title2_banner2_left{
+            color: #5a2d40;
+          }
+        }
+        .banner2_right{
+          .img_banner2_right{
+            background: url("../images/dialac_mama/new-dielac-mama.png") no-repeat center center;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-main {
+    .nav
+    {
+      background: #d5c17b;
+      .lstNav-item
+      {
+        a
+        {
+          color : #42222f;
+        }
+        .icoHome
+        {
+          background: url("../images/ico-home-dielac-mama.png") center top no-repeat;
+        }
+        .lstNav-sub-item
+        {
+          a:hover
+          {
+            background: #d5c17b;
+          }
+        }
+        .navInner-sub
+        {
+          background: #EADBA4;
+        }
+      }
+      .lstNav > li.active:before
+      {
+        border-color : transparent transparent #EADBA4 transparent;
+      }
+    }
+  }
+
+}
+
+#dielac{
+  .inner-op-gold-3{
+    background: url("../images/dialac_mama/background-new.png") no-repeat center center;
+    background-size: cover;
+    .title-md{
+      color: #5a2d40;
+    }
+  }
+}
+#dielac{
+  .dielac-1 {
+    display: block;
+    background: url("../images/dialac_mama/background_banner1_story.png")no-repeat bottom center;
+    background-size: cover;
+    .title-op-gold {
+      padding-top: 120px;
+      margin-bottom: 30px;
+      @media screen and (max-width: 474px) {
+        padding-top: 5px;
+      }
+    }
+    .content-op {
+      color: white;
+      @include textShadow(0 1px 1px rgba(18, 68, 153, .3))
+    }
+    .grp-btn {
+      margin-bottom: 115px;
+      .btn-more {
+        color: $clPurple;
+        font-size: 18px;
+        &:hover {
+          background: $clPurple;
+          color: $white;
+        }
+      }
+    }
+
+    .guide-scroll {
+      color: #4e2e68;
+      background: url("../images/arr-down-purple.png") no-repeat center bottom;
+    }
+  }
+}
+#dielac{
+  .text-gold{
+    background: url("../images/dialac_mama/text_gold.png") no-repeat center center;
+    width: 405px;
+    height: 47px;
+    display: inline-block;
+  }
+}
+#dielac{
+  .font-normal{
+    color: #3d3d3d;
+  }
+}
+#dielac{
+  .op-gold-2{
+    display: block;
+    background: url("../images/dialac_mama/background_banner2.png") center center no-repeat;
+    height: 750px;
+  }
+}
+#dielac{
+  .op-gold-2{
+    .container{
+      .col-6{
+        vertical-align: middle;
+        padding: 135.25px 0;
+        .op-gold-2-inner{
+          color: #5a2d40;
+          margin-top: 155.5px;
+          .title-xs-inner{
+            width: 50%;
+            display: inline-block;
+          }
+        }
+      }
+      .col-10{
+        .op-pro-sec2{
+
+        }
+      }
+    }
+  }
+}
+#dielac{
+  .op-gold-3{
+    .sld-op-3{
+      .op-sld-4{
+        background: url("../images/dialac_mama/banner3.png") no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        .container{
+          .content-sld{
+            color: #4b2c64;
+            font-size: 20px;
+            text-align: center;
+            float: right;
+            margin-right: 165px;
+            padding: 165px 0 165px;
+            .op-ico{
+              width: 53px;
+              height: 58px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+      .op-sld-2{
+        .content-sld{
+          color: #4b2c64;
+          font-size: 20px;
+          text-align: center;
+          float: right;
+          margin-right: 165px;
+          padding: 165px 0 165px;
+        }
+      }
+      .op-sld-3{
+        background: rgba(216,216,218,1);
+        background: -moz-linear-gradient(left, rgba(216,216,218,1) 0%, rgba(252,252,254,1) 50%, rgba(252,252,254,1) 100%);
+        background: -webkit-gradient(left top, right top, color-stop(0%, rgba(216,216,218,1)), color-stop(50%, rgba(252,252,254,1)), color-stop(100%, rgba(252,252,254,1)));
+        background: -webkit-linear-gradient(left, rgba(216,216,218,1) 0%, rgba(252,252,254,1) 50%, rgba(252,252,254,1) 100%);
+        background: -o-linear-gradient(left, rgba(216,216,218,1) 0%, rgba(252,252,254,1) 50%, rgba(252,252,254,1) 100%);
+        background: -ms-linear-gradient(left, rgba(216,216,218,1) 0%, rgba(252,252,254,1) 50%, rgba(252,252,254,1) 100%);
+        background: linear-gradient(to right, rgba(216,216,218,1) 0%, rgba(252,252,254,1) 50%, rgba(252,252,254,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8d8da', endColorstr='#fcfcfe', GradientType=1 );
+        .img-per{
+          background: url("../images/dialac_mama/img_slider_3.png") no-repeat center center;
+          -webkit-background-size: cover;
+          background-size: cover;
+          width: 652px;
+          height: 440px;
+          background-position-x: 150px;
+        }
+        .content-sld{
+          color: #4b2c64;
+          font-size: 20px;
+          text-align: center;
+          float: right;
+          margin-right: 165px;
+          padding: 165px 0 165px;
+        }
+
+      }
+      .op-sld-1{
+        background: url("../images/dialac_mama/background_slider1_.png") no-repeat center center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        height: 100%;
+        .content-sld{
+          color: #4b2c64;
+          font-size: 20px;
+          text-align: center;
+          float: right;
+          margin-right: 165px;
+          padding: 165px 0 165px;
+        }
+        .op-ico{
+          img{
+            width: auto;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+#dielac{
+  .op-gold-3{
+    .content-sec3{
+      background: #a65acb;
+    }
+  }
+}
+#dielac{
+  .content-sec3 {
+    background: #a65acb;
+    position: relative;
+    z-index: 2;
+    padding-top: 55px;
+    &-item {
+      @extend .clbt;
+      margin-bottom: 55px;
+      color: $white;
+      h5{
+        margin-bottom: 10px;
+      }
+      .ico-children {
+        display: inline-block;
+        background: url("../images/dialac_mama/slider_3_active.png")no-repeat 0 0;
+        width: 50px;
+        height: 39px;
+      }
+      .ico-heart {
+        display: inline-block;
+        background: url("../images/dialac_mama/slider_1_active.png") no-repeat 0 0;
+        width: 53px;
+        height: 58px;
+      }
+      .ico-droplets {
+        display: inline-block;
+        background: url("../images/dialac_mama/slider_4_active.png")no-repeat 0 0;
+        width: 31px;
+        height: 50px;
+      }
+      .ico-person {
+        display: inline-block;
+        background: url("../images/dialac_mama/slider_2_active.png")no-repeat 0 0;
+        width: 29px;
+        height: 61px;
+      }
+      &.active {
+        .ico-children {
+          background-position: 0 -39px;
+        }
+//        .ico-heart {
+//          background-position: 0 -60px;
+//        }
+        .ico-droplets {
+          background-position: 0 -53px;
+        }
+        .ico-person {
+          background-position: 0 -64px;
+        }
+      }
+    }
+  }
+}
+#dielac{
+  .img_doctor{
+    background: url("../images/dialac_mama/person_slider.png") no-repeat;
+  }
+}
+#dielac{
+  .op-gold-info{
+    .title-md{
+      color: #a65acb;
+    }
+  }
+}
+#dielac{
+  .op-gold-info-ctn{
+    .title-xs{
+      color: #a65acb;
+    }
+  }
+}
+#dielac{
+  .op-gold-info-item{
+    .btn-more{
+      background: #a65acb;
+    }
+  }
+}
+#dielac{
+  .banner5{
+    background: #a65acb;
+  }
+}
+#dielac{
+  .banner5{
+    .wrapper_banner{
+      .title-banner5{
+        .title_info{
+          color: #4b2c64;
+        }
+        .line_banner5{
+          background: #c18cdb;
+        }
+      }
+    }
+  }
+}
+#dielac{
+  .banner5_info{
+    .title-xs{
+      color: #a65acb;
+    }
+  }
+}
+#dielac{
+  .home-button {
+    background: #a65acb;
+    color: #fff;
+    text-align: center;
+    &:hover {
+      background-color: #fff;
+      color: #a65acb;
+      box-shadow: inset 0 0 0 2px #a65acb;
+    }
+  }
+}
+#dielac{
+  .home-info{
+    .home-button{
+      font-family: GothamMed;
+      font-size: 14px;
+      display: block;
+      width: 150px;
+      height: 40px;
+      background: #fff;
+      color:#2f67b1;
+      line-height: 40px;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 20px;
+      -webkit-transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+      -moz-transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+      -ms-transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+      -o-transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+      transition: all 0.2s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+      &:hover{
+        background: #0c60a7;
+        color: white;
+        box-shadow: none;
+      }
+    }
+  }
+}
+#dielac{
+  .row-middle{
+    color: #4c2d65;
+    display: inline-block;
+    font-size: 17px;
+  }
+  .row-bottom{
+    background: url("../images/dialac_mama/row-bottom.png") no-repeat center center;
+  }
+  .doctor-name{
+    color: #4c2d65;
+  }
+  .doctor-job{
+    color: #4c2d65;
+  }
+  .about-doctor{
+    .wrapper_banner{
+      .slider-doctor{
+        .owl-dots{
+          .owl-dot.active{
+            background: #a65acb;
+          }
+        }
+      }
+    }
+  }
+  /*overflow-x: hidden;*/
+    .modal-alpha{
+      .modal-banner-alpha{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d690eb+31,a459c9+100 */
+        background: rgb(214,144,235); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(214,144,235,1) 31%, rgba(164,89,201,1) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  rgba(214,144,235,1) 31%,rgba(164,89,201,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  rgba(214,144,235,1) 31%,rgba(164,89,201,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d690eb', endColorstr='#a459c9',GradientType=0 ); /* IE6-9 */
+
+        .img_banner1{
+          background: url("../images/dialac_mama/img_banner1.png") no-repeat center center;
+          width: 100%;
+          height: 678px;
+          background-size: 64%;
+          background-position-x: -19%;
+          bottom: 1%;
+          left: 10%;
+          @media screen and (max-width: 767px){
+            background-size: 100%;
+            background-position-x: inherit;
+            bottom: 22%;
+            left: 0;
+          }
+        }
+        .col-7{
+          float: right;
+          .content-op{
+            color: #fff;
+          }
+          @media screen and (max-width: 767px){
+            padding: 0 20px;
+            z-index: 2;
+            position: absolute;
+          }
+          @media screen and (max-width: 640px){
+            padding: 0 20px;
+            z-index: 2;
+            position: absolute;
+            top:0;
+          }
+        }
+        .row-middle{
+          color: #4c2d65;
+          display: inline-block;
+          font-size: 17px;
+        }
+        .row-bottom{
+          background: url("../images/dialac_mama/row-bottom.png") no-repeat center center;
+        }
+      }
+    }
+    .content-banner-alpha{
+      h2{
+        color: #4c2d65;
+      }
+      .image_modal{
+        background: url("../images/dialac_mama/img_content_story.png") no-repeat center center;
+      }
+      .caption-modal{
+        color: #a65acb;
+      }
+      .caption-modal2{
+        color: #bf8ed9;
+      }
+      .caption-content{
+        width: 50%;
+        text-align: center;
+        color: #6f6f6f;
+        font-family: GothamMed, sans-serif;
+        font-size: 17px;
+        display: inline-block;
+        margin: 10px 0;
+        line-height: 34px;
+      }
+    }
+}
+
+#dielac-mama{
+  .home-info{
+    .home-box-news{
+      p{
+        max-height: 72px;
+      }
+      a{
+        margin-top: 30px;
+      }
+    }
+  }
+}
+/*yoroshiku*/
+
+.content-dielac-mana
+{
+  position: relative;
+  display: block;
+  .wrapper-yo
+  {
+    .content
+    {
+      max-width: 1050px;
+      margin: 0 auto;
+      padding: 0px 5px;
+      .title
+      {
+        padding-top: 50px;
+        padding-bottom: 30px;
+        color : #a65acb;
+        font-family: "GothamMed";
+        font-size: 36px;
+        line-height: 40px;
+        text-align: center;
+        @media screen and (max-width: 934px) {
+          font-size: 25px;
+          line-height: 30px;
+        }
+      }
+      .content-detail
+      {
+        font-size: 24px;
+        font-family: "Arial";
+        color : #6f6f6f;
+        text-align: center;
+        line-height: 28px;
+        @media screen and (max-width: 934px) {
+          font-size: 20px;
+          line-height: 25px;
+
+        }
+      }
+      .video-info
+      {
+        display: block;
+        max-width: 600px;
+        margin: 10px auto;
+        padding-top: 40px;
+        video
+        {
+          max-width:  100%;
+        }
+        .info
+        {
+          .title
+          {
+            text-align: center;
+            font-size: 18px;
+            color : #a65acb;
+            font-family: "GothamMed";
+            line-height: 20px;
+            padding: 0px;
+            display: block;
+            margin: 5px auto;
+          }
+          .description
+          {
+            text-align: center;
+            margin : 0 auto;
+            font-family: "Arial";
+            font-size: 14px;
+            line-height: 18px;
+            color : #a65acb;
+          }
+          .detail
+          {
+            font-family: "Arial";
+            font-size: 14px;
+            line-height: 20px;
+            color : #6f6f6f;
+            text-align: center;
+            max-width: 458px;
+            margin: 10px auto;
+
+          }
+        }
+      }
+    }
+  }
+}
+.image-banner
+{
+  display: inline-block;
+  vertical-align: middle;
+  width : 50%;
+  img{
+    display: block;
+    margin: 0 auto;
+    padding-top: 40px;
+  }
+  @media screen and (max-width : 474px) {
+    display: block;
+    margin: 10px auto;
+    width: auto;
+    padding: 5px 10px;
+
+  }
+}
+.text-banner
+{
+  display: inline-block;
+  vertical-align: middle;
+  width : 48%;
+  @media screen and (max-width : 474px) {
+    display: block;
+    margin: 10px auto;
+    width: auto;
+    padding: 5px 10px;
+    .title-op-gold
+    {
+      padding-top: 5px;
+    }
+  }
+}
+
+/**/
+

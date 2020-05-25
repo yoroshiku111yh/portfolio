@@ -1,0 +1,746 @@
+@font-face {
+  font-family: 'SFUFuturaRegular';
+  src: url("../fonts/SFUFuturaRegular.eot");
+  src: url("../fonts/SFUFuturaRegular.eot") format("embedded-opentype"), url("../fonts/SFUFuturaRegular.svg#SFUFuturaRegular") format("svg"), url("../fonts/SFUFuturaRegular.woff") format("woff"), url("../fonts/SFUFuturaRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUFuturaHeavy';
+  src: url("../fonts/SFUFuturaHeavy.eot");
+  src: url("../fonts/SFUFuturaHeavy.eot") format("embedded-opentype"), url("../fonts/SFUFuturaHeavy.svg#SFUFuturaHeavy") format("svg"), url("../fonts/SFUFuturaHeavy.woff") format("woff"), url("../fonts/SFUFuturaHeavy.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SFUFuturaBook';
+  src: url("../fonts/SFUFuturaBook.eot");
+  src: url("../fonts/SFUFuturaBook.eot") format("embedded-opentype"), url("../fonts/SFUFuturaBook.svg#SFUFuturaBook") format("svg"), url("../fonts/SFUFuturaBook.woff") format("woff"), url("../fonts/SFUFuturaBook.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+.clearAfter:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  background-color: #0b77be;
+  width: 100%;
+  z-index: 999;
+  -webkit-transition: all 0.3s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+  transition: all 0.3s cubic-bezier(0.37, 0.15, 0.32, 0.94);
+}
+
+.nav-menu .menu-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.nav-menu .menu-main .menu-li {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 1129px) {
+  .nav-menu .menu-main .menu-li {
+    font-size: 15px;
+    padding: 0px 5px;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .nav-menu .menu-main .menu-li {
+    display: none;
+  }
+}
+
+.nav-menu .menu-main .menu-li > a {
+  display: block;
+  line-height: 96px;
+  font-family: "SFUFuturaRegular";
+  font-size: 18px;
+  color: white;
+  padding: 0px 10px;
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-menu .menu-main .menu-li > a:hover {
+  color: #ffc20e;
+}
+
+.nav-menu .menu-main .menu-li > a.active {
+  color: #ffc20e;
+}
+
+@media screen and (max-width: 1136px) {
+  .nav-menu .menu-main .menu-li > a {
+    line-height: 72px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .nav-menu .menu-main .menu-li > a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .nav-menu .menu-main .menu-li > a {
+    padding: 0 5px;
+  }
+}
+
+.nav-menu .menu-main .menu-li:hover {
+  color: #ffc20e;
+}
+
+.nav-menu .menu-main .logo.menu-li {
+  width: 350px;
+  padding-right: 8px;
+  position: relative;
+  display: inline-block;
+  float: none;
+  margin-top: -94px;
+}
+
+.nav-menu .menu-main .logo.menu-li img {
+  position: absolute;
+  width: 350px;
+  top: -40px;
+  z-index: 999;
+}
+
+@media screen and (max-width: 936px) {
+  .nav-menu .menu-main .logo.menu-li img {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .nav-menu .menu-main .logo.menu-li img {
+    width: 206px;
+  }
+}
+
+@media screen and (max-width: 1136px) {
+  .nav-menu .menu-main .logo.menu-li {
+    width: 226px;
+    margin-top: -68px;
+  }
+  .nav-menu .menu-main .logo.menu-li img {
+    top: -28px;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .nav-menu .menu-main .logo.menu-li {
+    float: left;
+    display: block;
+    margin-top: -13px;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .nav-menu .menu-main .logo.menu-li {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .nav-menu .menu-main .logo.menu-li {
+    margin-left: -40px;
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 382px) {
+  .nav-menu .menu-main .logo.menu-li {
+    width: 185px;
+  }
+}
+
+.nav-menu .menu-main .hambuger.menu-li {
+  display: none;
+  position: relative;
+  float: right;
+  font-family: "SFUFuturaBook";
+  z-index: 999;
+}
+
+@media screen and (max-width: 973px) {
+  .nav-menu .menu-main .hambuger.menu-li {
+    display: block;
+  }
+}
+
+.nav-menu .menu-main .hambuger.menu-li .hambuger-ct {
+  display: block;
+  width: 41px;
+  height: 17px;
+  border-top: 5px solid white;
+  border-bottom: 5px solid white;
+  position: relative;
+  margin: 10px auto;
+  margin-right: 25px;
+  overflow: hidden;
+}
+
+.nav-menu .menu-main .hambuger.menu-li .hambuger-ico {
+  /*display: block;
+                position: absolute;
+                font-size: 13px;
+                line-height: 30px;
+                height: 30px;
+                width: 86px;
+                left : 0px;
+                top: -8px;*/
+  display: block;
+  position: absolute;
+  font-size: 13px;
+  line-height: 30px;
+  height: 30px;
+  width: 86px;
+  left: 0px;
+  top: -7px;
+  -webkit-transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.75s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-menu .menu-main .hambuger.menu-li .hambuger-ico .line {
+  display: inline-block;
+  width: 46px;
+  height: 5px;
+  background-color: white;
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+.nav-menu .menu-main .hambuger.menu-li .hambuger-ico .word {
+  font-size: 13px;
+  line-height: 26px;
+  height: 28px;
+  display: inline-block;
+  vertical-align: middle;
+  color: #ffc20e;
+}
+
+.nav-menu .menu-main .hambuger.menu-li .menu-mobile {
+  display: block;
+  position: absolute;
+  height: 229px;
+  width: 228px;
+  overflow: hidden;
+  top: 70px;
+  right: -999px;
+  background-color: white;
+  padding-right: 25px;
+  -webkit-transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-menu .menu-main .hambuger.menu-li .menu-mobile .menu-item-rs a {
+  display: block;
+  text-align: right;
+  white-space: nowrap;
+  font-family: "SFUFuturaBook";
+  font-size: 18px;
+  line-height: 45px;
+  height: 45px;
+  color: #0b77be;
+  padding-left: 25px;
+  -webkit-transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.45s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.nav-menu .menu-main .hambuger.menu-li .menu-mobile .menu-item-rs {
+  border-bottom: 1px solid rgba(181, 166, 166, 0.45);
+  display: block;
+}
+
+.nav-menu .menu-main .hambuger.menu-li .menu-mobile .menu-item-rs:hover a {
+  color: #ffc20e;
+}
+
+.nav-menu .menu-main .hambuger.menu-li .menu-mobile .menu-item-rs:last-child {
+  border-bottom: 0px solid white;
+}
+
+.nav-menu.fixNav .menu-main .menu-li > a {
+  line-height: 50px;
+}
+
+.nav-menu.fixNav .menu-main .menu-li.logo {
+  width: 220px;
+  margin-top: -20px;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 1136px) {
+  .nav-menu.fixNav .menu-main .menu-li.logo {
+    width: 180px;
+    margin-top: -36px;
+    margin-right: 50px;
+  }
+}
+
+@media screen and (max-width: 973px) {
+  .nav-menu.fixNav .menu-main .menu-li.logo {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .nav-menu.fixNav .menu-main .menu-li.logo {
+    margin-left: -40px;
+  }
+}
+
+.section_1 {
+  width: auto;
+  height: 100%;
+  position: relative;
+  background: url("../images/background_header.png") no-repeat center;
+  background-size: cover;
+}
+
+@media screen and (max-height: 700px) {
+  .section_1 {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 936px) {
+  .section_1 {
+    height: auto;
+  }
+}
+
+.section_1 .content {
+  width: auto;
+  height: 100%;
+  position: relative;
+}
+
+.section_1 .content .can_milk {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  width: 49%;
+}
+
+.section_1 .content .can_milk img {
+  display: block;
+  float: right;
+}
+
+@media screen and (max-width: 936px) {
+  .section_1 .content .can_milk {
+    display: none;
+  }
+}
+
+.section_1 .content .slogan_vid {
+  display: inline-block;
+  vertical-align: bottom;
+  position: relative;
+  width: 49%;
+}
+
+@media screen and (max-width: 936px) {
+  .section_1 .content .slogan_vid {
+    display: block;
+    width: 820px;
+    margin: 0 auto;
+    padding-top: 180px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .section_1 .content .slogan_vid {
+    max-width: 722px;
+    width: auto;
+  }
+}
+
+.section_1 .content .slogan_vid .slogan_description {
+  display: block;
+  position: relative;
+}
+
+@media screen and (max-width: 936px) {
+  .section_1 .content .slogan_vid .slogan_description {
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .section_1 .content .slogan_vid .slogan_description {
+    display: block;
+  }
+}
+
+.section_1 .content .slogan_vid .slogan_description .slogan img {
+  margin: 15px auto;
+  display: block;
+}
+
+@media screen and (max-width: 820px) {
+  .section_1 .content .slogan_vid .slogan_description .slogan img {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 421px) {
+  .section_1 .content .slogan_vid .slogan_description .slogan img {
+    width: 240px;
+  }
+}
+
+.section_1 .content .slogan_vid .slogan_description .description {
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "SFUFuturaBook";
+  padding-bottom: 40px;
+}
+
+@media screen and (max-width: 421px) {
+  .section_1 .content .slogan_vid .slogan_description .description {
+    font-size: 15px;
+  }
+}
+
+.section_1 .content .slogan_vid .slogan_description .btn_check_it_out {
+  width: 280px;
+  height: 54px;
+  line-height: 54px;
+  color: white;
+  font-family: "SFUFuturaBook";
+  font-size: 21px;
+  text-align: center;
+  background-color: #43a4dc;
+  display: block;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -o-border-radius: 80px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.32);
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.section_1 .content .slogan_vid .slogan_description .btn_check_it_out a {
+  text-decoration: none;
+  list-style-type: none;
+  color: white;
+}
+
+.section_1 .content .slogan_vid .slogan_description .btn_check_it_out:hover {
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.32);
+}
+
+@media screen and (max-width: 936px) {
+  .section_1 .content .slogan_vid .btn_vid {
+    padding-left: 70px;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .section_1 .content .slogan_vid .btn_vid {
+    display: block;
+    padding-left: 0px;
+  }
+}
+
+.section_1 .content .slogan_vid .btn_vid .vid_utube {
+  display: block;
+  margin: 0 auto;
+  max-width: 390px;
+  height: 216px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 421px) {
+  .section_1 .content .slogan_vid .btn_vid .vid_utube {
+    max-width: 290px;
+    height: 150px;
+  }
+}
+
+.section_1 .content .slogan_vid .btn_vid .vid_utube .iframeVid {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
+
+.section_1 .content .make_img_vertical_bottom {
+  display: inline-block;
+  width: 0px;
+  height: 100%;
+}
+
+.section_2 {
+  display: block;
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url("../images/background_sec_2.png") no-repeat center center;
+  background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+  .section_2 {
+    height: auto;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .section_2 {
+    height: auto;
+  }
+}
+
+.section_2 .content {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+
+.section_2 .content .title {
+  display: block;
+  font-family: "SFUFuturaRegular", sans-serif;
+  font-size: 48px;
+  line-height: 56px;
+  padding-bottom: 10px;
+  padding-top: 50px;
+  margin-bottom: 60px;
+  display: block;
+  text-align: center;
+  color: white;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 520px) {
+  .section_2 .content .title {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 340px) {
+  .section_2 .content .title {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+}
+
+.section_2 .content .description {
+  display: block;
+  font-family: "SFUFuturaRegular", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  padding-bottom: 30px;
+  display: block;
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media screen and (max-width: 520px) {
+  .section_2 .content .description {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.section_2 .content .line {
+  font-family: "SFUFuturaRegular", sans-serif;
+  display: block;
+  width: 157px;
+  margin: 0 auto;
+  border: 1px solid white;
+}
+
+.section_2 .content .mixinContent {
+  display: block;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent {
+    max-width: 670px;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .section_2 .content .mixinContent {
+    max-width: 580px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section_2 .content .mixinContent {
+    max-width: 330px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin {
+  display: inline-block;
+  padding: 0px;
+  vertical-align: top;
+  cursor: pointer;
+  position: relative;
+  max-width: 250px;
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent .mixin {
+    padding: 0px 5px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin .imgDetail {
+  display: block;
+  position: relative;
+  height: 323px;
+  width: 250px;
+  position: relative;
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent .mixin .imgDetail {
+    height: 260px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .section_2 .content .mixinContent .mixin .imgDetail {
+    width: 125px;
+    height: 210px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin .imgDetail img {
+  width: 250px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent .mixin .imgDetail img {
+    width: 150px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin .title {
+  color: #282863;
+  font-size: 48px;
+  line-height: 52px;
+  min-height: 52px;
+  text-align: center;
+  font-family: "SFUFuturaRegular";
+  -webkit-transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent .mixin .title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section_2 .content .mixinContent .mixin .title {
+    font-size: 20px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin:hover .title {
+  color: white;
+}
+
+.section_2 .content .mixinContent .mixin:hover .imgDetail img {
+  bottom: 20px;
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent .mixin:nth-child(2) .imgDetail {
+    height: 260px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin:nth-child(2) .imgDetail img {
+  width: 150px;
+  left: 50px;
+}
+
+@media screen and (max-width: 1082px) {
+  .section_2 .content .mixinContent .mixin:nth-child(2) .imgDetail img {
+    height: 260px;
+    left: 0;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .section_2 .content .mixinContent .mixin:nth-child(2) .imgDetail img {
+    height: 210px;
+  }
+}
+
+@media screen and (max-width: 729px) {
+  .section_2 .content .mixinContent .mixin:nth-child(2) .imgDetail {
+    height: 210px;
+  }
+}
+
+.section_2 .content .mixinContent .mixin:nth-child(1) .title {
+  text-align: right;
+  margin-right: 40px;
+}
+
+@media screen and (max-width: 729px) {
+  .section_2 .content .mixinContent .mixin:nth-child(1) .title {
+    margin-right: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

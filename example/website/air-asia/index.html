@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Air Asia - App game facebook</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/game.css"/>
+<body>
+<div id="wrapper">
+    <div id="wrap_game">
+        <section id="character">
+            <div class="content">
+                <div class="wrapTitle">
+                    <div class="title">
+                        <p class="txt">Chọn</p>
+                        <span class="redTxt">
+                            Nhân vật
+                        </span>
+                    </div>
+                    <div class="description">
+                        Hãy chọn nhân vật mà bạn muốn tạo ảnh chibi.</br>
+                        Bạn sẽ chọn nhân vật nam hay nhân vật nữ ?
+                    </div>
+                </div>
+                <div class="choice-char clearAfter">
+                    <div class="char-content">
+                        <div class="figure-char">
+                            <img class="figure" src="images/boy.png" alt=""/>
+                        </div>
+                        <span class="btn btn-gender" gender="boy">CHỌN NHÂN VẬT NAM</span>
+                    </div>
+                    <div class="char-content">
+                        <div class="figure-char">
+                            <img class="figure" src="images/girl.png" alt=""/>
+                        </div>
+                        <span class="btn btn-gender" gender="girl">CHỌN NHÂN VẬT NỮ</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="places" class="hidden-div" >
+            <div class="content">
+                <div class="wrapTitle">
+                    <div class="title">
+                        <p class="txt">Chọn</p>
+                        <span class="redTxt">
+                            ĐIỂM ĐẾN
+                        </span>
+                    </div>
+                    <div class="description">
+                        Hãy chọn điểm đến cho nhân vật của bạn.
+                    </div>
+                </div>
+                <div class="content-choice-places">
+                    <span class="btn-back">
+                        <img class="arrow-back" src="images/arrow-circle.png"/>
+                    </span>
+                    <div class="wrap-place">
+                        <span class="scroll-bar">
+                            <span class="circle circle-top"></span>
+                            <span class="line-bar"></span>
+                            <span class="scroll-btn"></span>
+                            <span class="circle circle-bottom"></span>
+                        </span>
+                        <div class="content-place">
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                            <div class="thumbnail-place" place="bg-game.png">
+                                <img src="images/thumbnail-bg.png" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="uploadPicture" class="hidden-div" >
+            <div class="content">
+                <div class="wrapTitle">
+                    <div class="title">
+                        <p class="txt">Chọn</p>
+                        <span class="redTxt">
+                            HÌNH ẢNH
+                        </span>
+                    </div>
+                    <div class="description">
+                        Đăng tải hình ảnh từ thiết bị của bạn
+                    </div>
+                </div>
+                <div class="content-upload">
+                    <div class="upload-icon">
+                        <img src="images/thumbnail-upload-img.png" alt=""/>
+                    </div>
+                    <div class="back-upload">
+                        <span class="arrow-back">
+                            <img src="images/arrow-circle.png" alt=""/>
+                        </span>
+                        <span class="btn-upload" >
+                            <input class="hide-choose" type="file" accept="image/*" onchange="loadPreview(event)"/>
+                            CHỌN HÌNH ẢNH
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-upload">
+                    <img src="images/footer.png" alt=""/>
+                </div>
+            </div>
+        </section>
+        <section id="editPicture" class="hidden-div" >
+            <div class="content">
+                <div class="wrapTitle">
+                    <div class="title">
+                        <p class="txt">CHỈNH SỬA</p>
+                        <span class="redTxt">
+                            HÌNH ẢNH
+                        </span>
+                    </div>
+                    <div class="description">
+                        <!---->
+                    </div>
+                </div>
+
+                <div class="content-edit-picture">
+                    <div class="picture-edit">
+                        <canvas id="canvas"></canvas>
+                        <div class="img-upload" >
+                            <img src="" id="preview" alt=""/>
+                        </div>
+                        <div class="background">
+                            <img src="" id="img-bg" alt=""/>
+                        </div>
+                    </div>
+                    <div class="setting-content">
+                        <div class="bar-percent">
+                            <span class="title">KÍCH THƯỚC</span>
+                            <div class="wrap-bar">
+                                <span class="ico-minus ico-bar left"><img src="images/minus-ico.png" alt=""/></span>
+                                <input class="bar-line zoom" type="text"/>
+                                <span class="ico-plus ico-bar right"><img src="images/plus-ico.png" alt=""/></span>
+                            </div>
+                        </div>
+                        <div class="bar-percent">
+                            <span class="title">XOAY ẢNH</span>
+                            <div class="wrap-bar">
+                                <span class="ico-minus ico-bar left"><img src="images/rotate-left.png" alt=""/></span>
+                                <input class="bar-line rotate" type="text"/>
+                                <span class="ico-plus ico-bar right"><img src="images/rotate-right.png" alt=""/></span>
+                            </div>
+                        </div>
+                        <div class="btn-complete-back">
+                            <span class="btn-back">
+                                <img src="images/arrow-circle.png" alt=""/>
+                            </span>
+                            <span class="btn-complete done-btn">
+                                HOÀN TẤT
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="share" class="hidden-div">
+            <div class="content">
+                <div class="wrapTitle">
+                    <div class="title">
+                        <p class="txt">CHIA SẺ</p>
+                        <span class="redTxt">
+                            HÌNH ẢNH
+                        </span>
+                    </div>
+                    <div class="description">
+                        <!---->
+                    </div>
+                </div>
+                <div class="wrap-content-footer">
+                    <div class="footer"></div>
+                    <div class="content-edit-picture">
+                        <div class="product">
+                            <img src="" id="img-final" alt=""/>
+                        </div>
+                        <div class="content-btn-share">
+                            <div class="caption">
+                                “Có ai tình nguyện nắm tay
+                                anh đến nơi này không?”
+                            </div>
+                            <div class="btn-complete-back">
+                            <span class="btn-back">
+                                <img src="images/arrow-circle.png" alt=""/>
+                            </span>
+                            <span class="btn-complete">
+                                TẢI ẢNH VỀ
+                            </span>
+                            <span class="btn-share">
+                                <span class="text">Chia sẻ</span> <img src="images/fb-ico.png"/>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</div>
+<script src="js/jquery-2.0.3.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.ui.touch-punch.min.js"></script>
+<script src="js/propeller.js"></script>
+<script src="js/draggabilly.pkgd.js"></script>
+<script src="js/powerange.js"></script>
+<script src="js/places.js"></script>
+<script src="js/bar.js"></script>
+<script src="js/val.js"></script>
+<script src="js/dragDrop.js"></script>
+<script src="js/rotate.js"></script>
+<script src="js/editImg.js"></script>
+<script src="js/function.js"></script>
+</body>
+</html>

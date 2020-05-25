@@ -1,0 +1,136 @@
+@font-face {
+  font-family: Gotham-ExtraLight;
+  src: url(../fontface/Gotham-XLight.eot), url(../font/Gotham-XLight.otf), url(../font/Gotham-XLight.svg), url("../fontface/Gotham-XLight.eot?#iefix") format("embedded-opentype"), url("../fontface/Gotham-XLight.woff2") format("woff2"), url("../fontface/Gotham-XLight.woff") format("woff"), url("../fontface/Gotham-XLight.ttf") format("truetype"), url("../fontface/Gotham-XLight.svg#svgFontName") format("svg");
+  /*/ Legacy iOS /*/
+}
+
+@font-face {
+  font-family: Gotham-Light;
+  src: url(../fontface/Gotham-Light.eot), url(../fontface/Gotham-Light.OTF), url(../fontface/Gotham-Light.svg), url("../fontface/Gotham-Light.eot?#iefix") format("embedded-opentype"), url("../fontface/Gotham-Light.woff2") format("woff2"), url("../fontface/Gotham-Light.woff") format("woff"), url("../fontface/Gotham-Light.ttf") format("truetype"), url("../fontface/Gotham-Light.svg#svgFontName") format("svg");
+  /*/ Legacy iOS /*/
+}
+
+@font-face {
+  font-family: Lucida-Grande;
+  src: url(../fontface/lucida-grande-1361501376.eot), url(../fontface/lucida-grande-1361501376.OTF), url(../fontface/lucida-grande-1361501376.svg), url("../fontface/lucida-grande-1361501376.eot?#iefix") format("embedded-opentype"), url("../fontface/lucida-grande-1361501376.woff2") format("woff2"), url("../fontface/lucida-grande-1361501376.woff") format("woff"), url("../fontface/lucida-grande-1361501376.ttf") format("truetype"), url("../fontface/lucida-grande-1361501376.svg#svgFontName") format("svg");
+  /*/ Legacy iOS /*/
+}
+
+@font-face {
+  font-family: proximaNova-Light;
+  src: url(../font/light/PROXIMA_NOVA_LIGHT.eot), url(../font/light/PROXIMA_NOVA_LIGHT.OTF), url(../font/light/PROXIMA_NOVA_LIGHT.svg), url("../font/light/PROXIMA_NOVA_LIGHT.eot?#iefix") format("embedded-opentype"), url("../font/light/PROXIMA_NOVA_LIGHT.woff2") format("woff2"), url("../font/light/PROXIMA_NOVA_LIGHT.woff") format("woff"), url("../font/light/PROXIMA_NOVA_LIGHT.ttf") format("truetype"), url("../font/light/PROXIMA_NOVA_LIGHT.svg#svgFontName") format("svg");
+  /*/ Legacy iOS /*/
+}
+
+.wrapper {
+  height: 600px;
+  margin: 80px auto;
+}
+
+.wrapper .shadow {
+  width: 372px;
+  margin: 0 auto;
+  margin-top: 248px;
+  height: 158px;
+}
+
+.wrapper .shadow img {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  width: 372px;
+  height: 153px;
+  -webkit-transition: all 0.85s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+  transition: all 0.85s cubic-bezier(0.86, 0, 0.07, 1) 0s;
+}
+
+.wrapper #view {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  top: 115px;
+  left: 0;
+  right : 0;
+  margin: 0px auto;
+  z-index: 99;
+  /*transition: all 0.85s cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
+  -webkit-transition: all 0.85s cubic-bezier(0.68, 0, 0.265, 1) 0s;
+  transition: all 0.85s cubic-bezier(0.68, 0, 0.265, 1) 0s;
+}
+
+.wrapper #view #cube3D {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  margin: 0 auto;
+  /*transition: all 0.85s cubic-bezier(0.175, 0.885, 0.320, 1.275);*/
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  text-align: center;
+  display: inline-block;
+}
+
+.wrapper #view #cube3D .cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+}
+
+.wrapper #view #cube3D .cube-front-face {
+  background-color: gray;
+  -webkit-transform: translate3d(0, 0, 125px);
+          transform: translate3d(0, 0, 125px);
+  width: 250px;
+  height: 250px;
+}
+
+.wrapper #view #cube3D .cube-back-face {
+  width: 250px;
+  height: 250px;
+  background-color: black;
+  -webkit-transform: rotateY(180deg) translate3d(0, 0, 125px);
+          transform: rotateY(180deg) translate3d(0, 0, 125px);
+}
+
+.wrapper #view #cube3D .cube-left-face {
+  background-color: skyblue;
+  -webkit-transform: rotateY(-90deg) translate3d(0, 0, 125px);
+          transform: rotateY(-90deg) translate3d(0, 0, 125px);
+}
+
+.wrapper #view #cube3D .cube-right-face {
+  background-color: greenyellow;
+  -webkit-transform: rotateY(90deg) translate3d(0, 0, 125px);
+          transform: rotateY(90deg) translate3d(0, 0, 125px);
+  left: 50%;
+  margin-left: -125px;
+}
+
+.wrapper #view #cube3D .cube-top-face {
+  background-color: antiquewhite;
+  -webkit-transform: rotateX(90deg) translate3d(0, 0, 125px);
+          transform: rotateX(90deg) translate3d(0, 0, 125px);
+}
+
+.wrapper #view #cube3D .cube-bottom-face {
+  background-color: wheat;
+  -webkit-transform: rotateX(-90deg) translate3d(0, 0, 125px);
+          transform: rotateX(-90deg) translate3d(0, 0, 125px);
+}
+
+.button {
+  width: 700px;
+  margin: auto;
+  padding-top: 60px;
+}
+
+.button .button-face {
+  display: inline-block;
+  margin: 20px;
+}
+/*# sourceMappingURL=style.css.map */

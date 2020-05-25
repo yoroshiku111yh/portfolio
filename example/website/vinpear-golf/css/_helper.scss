@@ -1,0 +1,176 @@
+
+@font-face {
+  font-family: 'RobotoRegular';
+  src: url('../fonts/RobotoRegular.otf');
+  src: url('../fonts/RobotoRegular.eot') format('embedded-opentype'),
+  url('../fonts/RobotoRegular.woff2') format('woff2'),
+  url('../fonts/RobotoRegular.woff') format('woff'),
+  url('../fonts/RobotoRegular.ttf') format('truetype'),
+  url('../fonts/RobotoRegular.svg#RobotoRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoMedium';
+  src: url('../fonts/RobotoMedium.otf');
+  src: url('../fonts/RobotoMedium.eot') format('embedded-opentype'),
+  url('../fonts/RobotoMedium.woff2') format('woff2'),
+  url('../fonts/RobotoMedium.woff') format('woff'),
+  url('../fonts/RobotoMedium.ttf') format('truetype'),
+  url('../fonts/RobotoMedium.svg#RobotoMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'RobotoBold';
+  src: url('../fonts/RobotoBold.otf');
+  src: url('../fonts/RobotoBold.eot') format('embedded-opentype'),
+  url('../fonts/RobotoBold.woff2') format('woff2'),
+  url('../fonts/RobotoBold.woff') format('woff'),
+  url('../fonts/RobotoBold.ttf') format('truetype'),
+  url('../fonts/RobotoBold.svg#RobotoBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'RobotoBoldCondensed';
+  src: url('../fonts/RobotoBoldCondensed.otf');
+  src: url('../fonts/RobotoBoldCondensed.eot') format('embedded-opentype'),
+  url('../fonts/RobotoBoldCondensed.woff2') format('woff2'),
+  url('../fonts/RobotoBoldCondensed.woff') format('woff'),
+  url('../fonts/RobotoBoldCondensed.ttf') format('truetype'),
+  url('../fonts/RobotoBoldCondensed.svg#RobotoBoldCondensed') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UTMEssendineCapsBold';
+  src: url('../fonts/UTMEssendineCapsBold.otf');
+  src: url('../fonts/UTMEssendineCapsBold.eot') format('embedded-opentype'),
+  url('../fonts/UTMEssendineCapsBold.woff2') format('woff2'),
+  url('../fonts/UTMEssendineCapsBold.woff') format('woff'),
+  url('../fonts/UTMEssendineCapsBold.ttf') format('truetype'),
+  url('../fonts/UTMEssendineCapsBold.svg#UTMEssendineCapsBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'UTMEssendineCapsRegular';
+  src: url('../fonts/UTMEssendineCapsRegular.otf');
+  src: url('../fonts/UTMEssendineCapsRegular.eot') format('embedded-opentype'),
+  url('../fonts/UTMEssendineCapsRegular.woff2') format('woff2'),
+  url('../fonts/UTMEssendineCapsRegular.woff') format('woff'),
+  url('../fonts/UTMEssendineCapsRegular.ttf') format('truetype'),
+  url('../fonts/UTMEssendineCapsRegular.svg#UTMEssendineCapsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+$EasingQuadIn: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+$EasingCubicIn: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$EasingQuartIn: cubic-bezier(0.895, 0.030, 0.685, 0.220);
+$EasingQuintIn: cubic-bezier(0.755, 0.050, 0.855, 0.060);
+$EasingSineIn: cubic-bezier(0.470, 0.000, 0.745, 0.715);
+$EasingExpoIn: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$EasingCircIn: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$EasingBackIn: cubic-bezier(0.600, 0, 0.735, 0.045);
+
+$EasingQuadOut: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+$EasingCubicOut: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+$EasingQuartOut: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+$EasingQuintOut: cubic-bezier(0.230, 1.000, 0.320, 1.000);
+$EasingSineOut: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$EasingExpoOut: cubic-bezier(0.190, 1.000, 0.220, 1.000);
+$EasingCircOut:cubic-bezier(0.075, 0.820, 0.165, 1.000);
+$EasingBackOut: cubic-bezier(0.175, 0.885, 0.320, 1);
+
+$EasingQuadInOut: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$EasingCubicInOut: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$EasingQuartInOut: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$EasingQuintInOut: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$EasingSineInOut: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+$EasingExpoInOut: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$EasingCircInOut: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$EasingBackInOut: cubic-bezier(0.680, 0, 0.265, 1);
+$EasingOut: cubic-bezier(.37,.15,.32,.94);
+
+
+@mixin TransitionWithDurationAndEase($duration, $easing) {
+    -webkit-transition: all $duration $easing;
+    -moz-transition: all $duration $easing;
+    -ms-transition: all $duration $easing;
+    -o-transition: all $duration $easing;
+    transition: all $duration $easing;
+}
+
+
+@mixin TransitionWithDurationAndEase_delay($duration, $easing, $delay) {
+    -webkit-transition: all $duration $easing $delay;
+    -moz-transition: all $duration $easing $delay;
+    -ms-transition: all $duration $easing $delay;
+    -o-transition: all $duration $easing $delay;
+    transition: all $duration $easing $delay;
+}
+
+
+@mixin centerTransformOrigin {
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -o-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+}
+
+@mixin transformScale($scale){
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+    transform: scale($scale);
+}
+
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content;
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animation($name, $dur, $easing, $delay, $repeat, $direction, $fillMode, $state){
+    /* @keyframes name | duration | timing-function | delay |
+       iteration-count | direction | fill-mode | play-state */
+    /*animation: slidein 3s ease-in 1s 2 reverse both paused;*/
+
+    -webkit-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    -moz-animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+    animation: $name $dur $easing $delay $repeat $direction $fillMode $state;
+}
+
+
+@mixin font($fontName, $fontSize, $fontColor){
+    font-family: $fontName;
+    font-size: $fontSize;
+    color:$fontColor;
+}
+
+@mixin fontSize( $fontSize){
+    font-size: $fontSize;
+}
+
+

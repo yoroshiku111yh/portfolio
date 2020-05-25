@@ -1,0 +1,291 @@
+@import "helper";
+.contact_section
+{
+  display: block;
+  position: relative;
+  .content_contact
+  {
+    .contact-detail
+    {
+      border-top : 1px solid #e7e7e7;
+      padding-top: 40px;
+      position: relative;
+      @media screen and (max-width: 417px)
+      {
+        padding-top: 20px;
+      }
+      .contact
+      {
+        position: relative;
+        float : left;
+        width : 70%;
+        @media screen and (max-width: 840px)
+        {
+          width : auto;
+          float : none;
+        }
+
+        .title
+        {
+          font-family: "UTMAptimaBold";
+          font-size: 25px;
+          color : $gold-text;
+          text-align: left;
+          line-height: 40px;
+          padding-bottom: 40px;
+          display: block;
+          @media screen and (max-width: 948px)
+          {
+            font-size: 30px;
+            line-height: 35px;
+          }
+          @media screen and (max-width: 417px)
+          {
+            font-size: 20px;
+            line-height: 25px;
+            padding-bottom: 20px;
+          }
+        }
+        .detail
+        {
+          display: block;
+          position: relative;
+          .wrap
+          {
+            padding-bottom: 15px;
+            @media screen and (max-width:  583px)
+            {
+              display: block;
+            }
+          }
+          .label
+          {
+            display: inline-block;
+            font-family: "UTMAptimaBold";
+            font-size: 16px;
+            line-height: 22px;
+            text-align: left;
+            color : $gray-text;
+            width : 150px;
+            vertical-align: top;
+            @media screen and (max-width:  583px)
+            {
+              display: block;
+            }
+          }
+          .content-phanphoi
+          {
+            max-width: 438px;
+            display: inline-block;
+          }
+          .info
+          {
+            display: inline-block;
+            font-family: "UTMAptimaRegular";
+            //font-size: 18px;
+            line-height: 22px;
+            color : $gray-text;
+            vertical-align: top;
+            max-width: 366px;
+
+          }
+        }
+      }
+      .social
+      {
+        display: block;
+        position: relative;
+        float : left;
+        width : 30%;
+        @media screen and (max-width: 840px)
+        {
+          width : auto;
+          float : none;
+        }
+        .title
+        {
+          display: block;
+          width: auto;
+          text-align: right;
+          color : $gold-text;
+          font-family: "UTMAptimaBold";
+          //font-family: "UTMAptimaBold";
+          font-size: 25px;
+          line-height: 40px;
+          @media screen and (max-width: 948px)
+          {
+            font-size: 30px;
+            line-height: 35px;
+          }
+          @media screen and (max-width: 840px)
+          {
+            text-align: left;
+            padding: 0px;
+          }
+          @media screen and (max-width: 417px)
+          {
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+        .list
+        {
+          display: block;
+          width : auto;
+          padding-top: 30px;
+          @media screen and (max-width: 840px)
+          {
+            padding: 10px 0px;
+          }
+          .social-ico
+          {
+            display: block;
+            width : 58px;
+            height : 58px;
+            float: right;
+            margin:  10px;
+            @media screen and (max-width: 840px)
+            {
+              display: block;
+              float : left;
+              margin:  10px;
+            }
+          }
+        }
+      }
+      .regEmail
+      {
+        clear: both;
+        display: block;
+        width : auto;
+        padding-bottom: 20px;
+
+        .title
+        {
+          font-family: "UTMAptimaBold";
+          //font-family: "UTMAptimaBold";
+          font-size: 25px;
+          line-height: 54px;
+          text-align: left;
+          float : left;
+          width : 355px;
+          color: $olive;
+          @media screen and (max-width: 1000px)
+          {
+            width : auto;
+            float : none;
+          }
+          @media screen and (max-width: 840px)
+          {
+            text-align: left;
+            padding: 10px 0;
+          }
+          @media screen and (max-width: 417px)
+          {
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+        .form
+        {
+          float : left;
+          input
+          {
+            text-decoration: none;
+            list-style-type: none;
+            border : 1px solid #d6d6d6;
+            line-height: 54px;
+            font-family: "UTMAptimaItalic";
+            font-size: 20px;
+            text-align: left;
+            line-height: 52px;
+            border-right : 0px solid white ;
+            display: block;
+            float : left;
+            width : 480px;
+            padding-left: 10px;
+            @media screen and (max-width: 691px) {
+              width : 285px;
+            }
+            @media screen and (max-width: 484px) {
+              width : 90%;
+              float : none;
+              margin : 10px auto;
+              border : 1px solid #d6d6d6;
+            }
+          }
+          button
+          {
+            text-decoration: none;
+            list-style-type: none;
+            width : 151px;
+            height : 54px;
+            line-height: 54px;
+            font-family: "UTMAptimaBold";
+            font-size: 22px;
+            text-align: left;
+            position: relative;
+            border: 1px solid #898989;
+            color : $gold-text;
+            background-color: white;
+            line-height: 44px;
+            display: block;
+            float : left;
+            padding-left: 20px;
+            padding-bottom: 10px;
+            @include  TransitionWithDurationAndEase(0.65s, $EasingExpoOut);
+            .text
+            {
+              display: block;
+            }
+            .arrow
+            {
+              position: absolute;
+              width : 10px;
+              height : 11px;
+              right: 30px;
+              top: 0px;
+              bottom : 0;
+              margin-top : auto;
+              margin-bottom : auto;
+              opacity: 1;
+            }
+            .arrow.white
+            {
+              opacity: 0;
+            }
+            @media screen and (max-width: 484px) {
+              float : none;
+              margin : 10px auto;
+            }
+          }
+          button:hover
+          {
+            background-color: $gold-text;
+            color : white;
+            .arrow.white
+            {
+              opacity: 1;
+            }
+          }
+          @media screen and (max-width: 484px) {
+            float : none;
+            width : auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+#mapContact
+{
+  width : auto;
+  position: relative;
+  display: block;
+  max-height: 420px;
+  min-height: 420px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  border-top : 1px solid #e7e7e7;
+}

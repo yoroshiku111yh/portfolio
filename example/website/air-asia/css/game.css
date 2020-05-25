@@ -1,0 +1,820 @@
+@font-face {
+  font-family: 'GothamRoundedBook';
+  src: url("../fonts/GothamRoundedBook.eot");
+  src: url("../fonts/GothamRoundedBook.eot") format("embedded-opentype"), url("../fonts/GothamRoundedBook.woff2") format("woff2"), url("../fonts/GothamRoundedBook.woff") format("woff"), url("../fonts/GothamRoundedBook.ttf") format("truetype"), url("../fonts/GothamRoundedBook.svg#GothamRoundedBook") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothamRoundedMedium-Medium';
+  src: url("../fonts/GothamRoundedMedium-Medium.eot");
+  src: url("../fonts/GothamRoundedMedium-Medium.eot") format("embedded-opentype"), url("../fonts/GothamRoundedMedium-Medium.woff2") format("woff2"), url("../fonts/GothamRoundedMedium-Medium.woff") format("woff"), url("../fonts/GothamRoundedMedium-Medium.ttf") format("truetype"), url("../fonts/GothamRoundedMedium-Medium.svg#GothamRoundedMedium-Medium") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#loading .overLoading {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: block;
+  z-index: 99;
+  background: #fff;
+}
+
+#loading .loadingFlower {
+  display: block;
+  text-align: center;
+  width: 100px;
+  position: fixed;
+  top: 50%;
+  z-index: 9999;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -60px;
+}
+
+.cssload-dots {
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  outline: 1px solid red;
+  filter: url(#goo);
+  -o-filter: url(#goo);
+  -ms-filter: url(#goo);
+  -webkit-filter: url(#goo);
+  -moz-filter: url(#goo);
+  z-index: 999;
+}
+
+.cssload-dot {
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cssload-dot:before {
+  content: "";
+  width: 34px;
+  height: 34px;
+  border-radius: 49px;
+  background: #fbd301;
+  position: absolute;
+  left: 50%;
+  transform: translateY(0);
+  -o-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  margin-left: -17.5px;
+  margin-top: -17.5px;
+}
+
+.cssload-dot:nth-child(5):before {
+  z-index: 100;
+  width: 20.5px;
+  height: 20.5px;
+  margin-left: -10.75px;
+  margin-top: -10.75px;
+  animation: cssload-dot-colors 4.6s ease infinite;
+  -o-animation: cssload-dot-colors 4.6s ease infinite;
+  -ms-animation: cssload-dot-colors 4.6s ease infinite;
+  -webkit-animation: cssload-dot-colors 4.6s ease infinite;
+  -moz-animation: cssload-dot-colors 4.6s ease infinite;
+}
+
+.cssload-dot:nth-child(1) {
+  animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+  -o-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+  -ms-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+  -webkit-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+  -moz-animation: cssload-dot-rotate-1 4.6s 0s linear infinite;
+}
+
+.cssload-dot:nth-child(1):before {
+  background-color: #bd833a;
+  animation: cssload-dot-move 4.6s 0s ease infinite;
+  -o-animation: cssload-dot-move 4.6s 0s ease infinite;
+  -ms-animation: cssload-dot-move 4.6s 0s ease infinite;
+  -webkit-animation: cssload-dot-move 4.6s 0s ease infinite;
+  -moz-animation: cssload-dot-move 4.6s 0s ease infinite;
+}
+
+.cssload-dot:nth-child(2) {
+  animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+  -o-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+  -ms-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+  -webkit-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+  -moz-animation: cssload-dot-rotate-2 4.6s 1.15s linear infinite;
+}
+
+.cssload-dot:nth-child(2):before {
+  background-color: #0b5632;
+  animation: cssload-dot-move 4.6s 1.15s ease infinite;
+  -o-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+  -ms-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+  -webkit-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+  -moz-animation: cssload-dot-move 4.6s 1.15s ease infinite;
+}
+
+.cssload-dot:nth-child(3) {
+  animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+  -o-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+  -ms-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+  -webkit-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+  -moz-animation: cssload-dot-rotate-3 4.6s 2.3s linear infinite;
+}
+
+.cssload-dot:nth-child(3):before {
+  background-color: #afe102;
+  animation: cssload-dot-move 4.6s 2.3s ease infinite;
+  -o-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+  -ms-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+  -webkit-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+  -moz-animation: cssload-dot-move 4.6s 2.3s ease infinite;
+}
+
+.cssload-dot:nth-child(4) {
+  animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+  -o-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+  -ms-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+  -webkit-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+  -moz-animation: cssload-dot-rotate-4 4.6s 3.45s linear infinite;
+}
+
+.cssload-dot:nth-child(4):before {
+  background-color: #fbd301;
+  animation: cssload-dot-move 4.6s 3.45s ease infinite;
+  -o-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+  -ms-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+  -webkit-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+  -moz-animation: cssload-dot-move 4.6s 3.45s ease infinite;
+}
+
+@keyframes cssload-dot-move {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  18%, 22% {
+    -webkit-transform: translateY(-68px);
+            transform: translateY(-68px);
+  }
+  40%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes cssload-dot-move {
+  0% {
+    -webkit-transform: translateY(0);
+  }
+  18%, 22% {
+    -webkit-transform: translateY(-68px);
+  }
+  40%, 100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@keyframes cssload-dot-colors {
+  0% {
+    background-color: #fbd301;
+  }
+  25% {
+    background-color: #bd833a;
+  }
+  50% {
+    background-color: #0b5632;
+  }
+  75% {
+    background-color: #afe102;
+  }
+  100% {
+    background-color: #fbd301;
+  }
+}
+
+@-webkit-keyframes cssload-dot-colors {
+  0% {
+    background-color: #fbd301;
+  }
+  25% {
+    background-color: #bd833a;
+  }
+  50% {
+    background-color: #0b5632;
+  }
+  75% {
+    background-color: #afe102;
+  }
+  100% {
+    background-color: #fbd301;
+  }
+}
+
+@keyframes cssload-dot-rotate-1 {
+  0% {
+    -webkit-transform: rotate(-105deg);
+            transform: rotate(-105deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@-webkit-keyframes cssload-dot-rotate-1 {
+  0% {
+    -webkit-transform: rotate(-105deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+  }
+}
+
+@keyframes cssload-dot-rotate-2 {
+  0% {
+    -webkit-transform: rotate(165deg);
+            transform: rotate(165deg);
+  }
+  100% {
+    -webkit-transform: rotate(540deg);
+            transform: rotate(540deg);
+  }
+}
+
+@-webkit-keyframes cssload-dot-rotate-2 {
+  0% {
+    -webkit-transform: rotate(165deg);
+  }
+  100% {
+    -webkit-transform: rotate(540deg);
+  }
+}
+
+@keyframes cssload-dot-rotate-3 {
+  0% {
+    -webkit-transform: rotate(435deg);
+            transform: rotate(435deg);
+  }
+  100% {
+    -webkit-transform: rotate(810deg);
+            transform: rotate(810deg);
+  }
+}
+
+@-webkit-keyframes cssload-dot-rotate-3 {
+  0% {
+    -webkit-transform: rotate(435deg);
+  }
+  100% {
+    -webkit-transform: rotate(810deg);
+  }
+}
+
+@keyframes cssload-dot-rotate-4 {
+  0% {
+    -webkit-transform: rotate(705deg);
+            transform: rotate(705deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+            transform: rotate(1080deg);
+  }
+}
+
+@-webkit-keyframes cssload-dot-rotate-4 {
+  0% {
+    -webkit-transform: rotate(705deg);
+  }
+  100% {
+    -webkit-transform: rotate(1080deg);
+  }
+}
+
+.clearAfter:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.hidden-div {
+  visibility: hidden;
+  opacity: 0;
+  height: 0 !important;
+  overflow: hidden;
+}
+
+#wrap_game {
+  display: block;
+  /*margin: 0px auto;*/
+  margin: 0px 5px;
+  position: relative;
+  /*max-width: 1000px;*/
+}
+
+#wrap_game .btn-complete-back {
+  position: relative;
+  margin: 10px auto;
+  max-width: 200px;
+  padding-top: 30px;
+}
+
+#wrap_game .btn-complete-back .btn-back {
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#wrap_game .btn-complete-back .btn-complete {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "GothamRoundedMedium-Medium";
+  font-size: 15px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  background-color: #ea3228;
+  padding: 0px 30px;
+  border-radius: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+
+#wrap_game .content {
+  padding-right: 5px;
+  padding-left: 5px;
+  display: block;
+  position: relative;
+  min-height: 652px;
+  background: url("../images/bg.png") no-repeat center;
+  background-size: cover;
+}
+
+#wrap_game .content .wrapTitle {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+#wrap_game .content .wrapTitle .title {
+  text-align: center;
+}
+
+#wrap_game .content .wrapTitle .title .txt {
+  font-size: 32px;
+  color: #000000;
+  font-family: "GothamRoundedMedium-Medium";
+  line-height: 36px;
+}
+
+#wrap_game .content .wrapTitle .title .redTxt {
+  line-height: 56px;
+  font-size: 50px;
+  color: #ea3228;
+  font-family: "GothamRoundedMedium-Medium";
+}
+
+#wrap_game .content .wrapTitle .description {
+  display: block;
+  text-align: center;
+  max-width: 320px;
+  position: relative;
+  padding: 2px;
+  margin: 5px auto;
+  font-family: "GothamRoundedMedium-Medium";
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+}
+
+#wrap_game #character .choice-char {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  margin: 5px auto;
+}
+
+#wrap_game #character .choice-char .char-content {
+  display: inline-block;
+  padding: 0px;
+  margin: 0;
+  width: 48%;
+  vertical-align: bottom;
+}
+
+#wrap_game #character .choice-char .char-content .figure-char {
+  display: block;
+  position: relative;
+  margin: 0 auto;
+}
+
+#wrap_game #character .choice-char .char-content .figure-char .figure {
+  margin: 0 auto;
+  display: block;
+}
+
+#wrap_game #character .choice-char .char-content .btn {
+  display: block;
+  width: auto;
+  text-align: center;
+  font-family: "GothamRoundedMedium-Medium";
+  font-size: 15px;
+  color: white;
+  line-height: 30px;
+  cursor: pointer;
+  background-color: #ea3228;
+  border-radius: 15px;
+  max-width: 260px;
+  margin: 5px auto;
+}
+
+#wrap_game #character .choice-char .char-content .figure-char:nth-child(1) .figure {
+  max-width: 174px;
+}
+
+#wrap_game #character .choice-char .char-content .figure-char:nth-child(2) .figure {
+  max-width: 186px;
+}
+
+#wrap_game #places .content-choice-places {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#wrap_game #places .content-choice-places .btn-back {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  list-style-type: none;
+  background-color: #ea3228;
+  padding: 3px;
+  margin: 25px 0px;
+  max-width: 31px;
+  border-radius: 50%;
+}
+
+#wrap_game #places .content-choice-places .btn-back img {
+  display: block;
+}
+
+#wrap_game #places .content-choice-places .wrap-place {
+  position: relative;
+  display: block;
+  width: auto;
+  overflow: hidden;
+  height: 340px;
+  padding-right: 25px;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .scroll-bar {
+  position: absolute;
+  z-index: 10;
+  display: block;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 24px;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .scroll-bar .line-bar {
+  margin: 0 auto;
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: #ea3228;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .scroll-bar .scroll-btn {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ea3228;
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .scroll-bar .circle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 8px;
+  border-radius: 50%;
+  background-color: #ea3228;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .scroll-bar .circle.circle-top {
+  top: 0;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .scroll-bar .circle.circle-bottom {
+  bottom: 0;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .content-place {
+  position: relative;
+  display: block;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .content-place .thumbnail-place {
+  cursor: pointer;
+  display: inline-block;
+  width: 230px;
+  border-radius: 30px;
+  border: 2px solid #ea3228;
+  overflow: hidden;
+  margin: 10px 0;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .content-place .thumbnail-place img {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 0px;
+  max-width: 135px;
+  max-height: 124px;
+}
+
+#wrap_game #places .content-choice-places .wrap-place .content-place .thumbnail-place:nth-child(3n+2) {
+  margin: 10px 24px;
+}
+
+#wrap_game #uploadPicture .upload-icon {
+  max-width: 200px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+#wrap_game #uploadPicture .upload-icon img {
+  display: block;
+  margin: 0 auto;
+}
+
+#wrap_game #uploadPicture .back-upload {
+  display: block;
+  margin: 30px auto;
+  max-width: 250px;
+}
+
+#wrap_game #uploadPicture .back-upload .arrow-back {
+  display: inline-block;
+  width: 31px;
+  height: 31px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+#wrap_game #uploadPicture .back-upload .btn-upload {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "GothamRoundedMedium-Medium";
+  font-size: 15px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  background-color: #ea3228;
+  padding: 0px 30px;
+  border-radius: 15px;
+  margin-left: 10px;
+  position: relative;
+}
+
+#wrap_game #uploadPicture .back-upload .hide-choose {
+  opacity: 0.0;
+  /* Standard: FF gt 1.5, Opera, Safari */
+  filter: alpha(opacity=0);
+  /* IE lt 8 */
+  -ms-filter: "alpha(opacity=0)";
+  /* IE 8 */
+  -khtml-opacity: 0.0;
+  /* Safari 1.x */
+  -moz-opacity: 0.0;
+  /* FF lt 1.5, Netscape */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  cursor: pointer;
+}
+
+#wrap_game #uploadPicture .footer-upload {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#wrap_game #uploadPicture .footer-upload img {
+  width: 100%;
+}
+
+#wrap_game #editPicture {
+  display: block;
+  position: relative;
+}
+
+#wrap_game #editPicture .content-edit-picture {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#wrap_game #editPicture .content-edit-picture .picture-edit {
+  width: 48%;
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  position: relative;
+}
+
+#wrap_game #editPicture .content-edit-picture .picture-edit img {
+  width: 100%;
+  display: block;
+}
+
+#wrap_game #editPicture .content-edit-picture .picture-edit #canvas {
+  display: none;
+}
+
+#wrap_game #editPicture .content-edit-picture .picture-edit .img-upload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+#wrap_game #editPicture .content-edit-picture .picture-edit .background {
+  position: relative;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content {
+  display: inline-block;
+  width: 48%;
+  vertical-align: top;
+  padding-top: 40px;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent {
+  max-width: 300px;
+  margin: 0 auto;
+  min-height: 10px;
+  position: relative;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .title {
+  font-family: "GothamRoundedMedium-Medium";
+  font-size: 13px;
+  text-align: left;
+  line-height: 18px;
+  color: black;
+  display: block;
+  padding: 15px 0px 15px 6px;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .wrap-bar {
+  min-height: 10px;
+  position: relative;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .wrap-bar .ico-bar {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -6px;
+  bottom: 0;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .wrap-bar .ico-bar.left {
+  left: -1px;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .wrap-bar .ico-bar.right {
+  right: -1px;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .wrap-bar .range-bar {
+  margin: 0 auto;
+  color: #ea3228;
+  width: 90%;
+  background-color: #ea3228;
+  border-radius: 15px;
+  display: block;
+  height: 4px;
+  position: relative;
+  display: block;
+}
+
+#wrap_game #editPicture .content-edit-picture .setting-content .bar-percent .wrap-bar .range-handle {
+  border: 2px solid #ea3228;
+  background-color: #fff;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  left: 0;
+  top: -7px;
+  position: absolute;
+  /* width: 30px; */
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+#wrap_game #share .wrap-content-footer {
+  position: relative;
+  display: block;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .product {
+  width: 48%;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .product img {
+  width: 100%;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .content-btn-share {
+  display: inline-block;
+  width: 48%;
+  vertical-align: middle;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .content-btn-share .caption {
+  display: block;
+  max-width: 300px;
+  font-family: "GothamRoundedMedium-Medium";
+  font-size: 17px;
+  line-height: 25px;
+  color: black;
+  text-align: center;
+  margin: 10px auto;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .content-btn-share .btn-share {
+  display: block;
+  margin: 15px auto;
+  max-width: 83px;
+  cursor: pointer;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .content-btn-share .btn-share .text {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: "GothamRoundedBook";
+  font-size: 15px;
+  line-height: 20px;
+  color: black;
+  text-decoration: underline;
+}
+
+#wrap_game #share .wrap-content-footer .content-edit-picture .content-btn-share .btn-share img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#wrap_game #share .wrap-content-footer .footer {
+  display: block;
+  position: absolute;
+  bottom: -91px;
+  height: 140px;
+  left: 0;
+  right: 0;
+  background: url("../images/bg-footer-final.png") repeat-x;
+  background-size: contain;
+}
+/*# sourceMappingURL=game.css.map */

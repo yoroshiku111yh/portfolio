@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>change</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-2.0.3.min.js"></script>
+<body>
+<div class="loading">
+    <div class="loader">Loading...</div>
+</div>
+<div id="wrapper">
+    <div class="slide-wrapper">
+        <div class="menu-content">
+            <div class="logo"><a href="index.html"><img src="img/logo.png" alt=""/></a></div>
+            <div class="menu_ico_menu_nav">
+                <span class="icon-menu"></span>
+                <div class="menu-nav">
+                    <span class="menu-child">
+                        About
+                    </span>
+                    <span class="menu-child">
+                        VINHOMES GARDEN ESTATES
+                    </span>
+                    <span class="menu-child">
+                        Ecological living
+                    </span>
+                    <span class="menu-child">
+                        News
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="detail_page clearAfter">
+            <div class="imgDetail" style="background:url('img/slide-1.png') no-repeat; background-size: cover "></div>
+            <div class="slider-item animateParent" sort=1>
+                <!--<img src="img/slide-1.png" alt=""/>-->
+                <div class="cube">
+                    <div class="cube-face cube-face-front" >
+                            <div class="imgDetailPart" style="background:url('img/slide-1.png') no-repeat ;"></div>
+                            <!--<div class="hoverMask"></div>
+                            <img src="img/slide-1.png" alt=""/>-->
+                    </div>
+                    <div class="cube-face cube-face-left"></div>
+                    <div class="cube-face cube-face-right"></div>
+                </div>
+            </div>
+            <div class="slider-item animateParent"  sort=2>
+                <div class="cube">
+                    <div class="cube-face cube-face-front" >
+                        <div class="imgDetailPart" style="background:url('img/slide-1.png') no-repeat "></div>
+                            <!--<div class="hoverMask"></div>
+                            <img src="img/slide-2.png" alt=""/>-->
+                    </div>
+                    <div class="cube-face cube-face-left"></div>
+                    <div class="cube-face cube-face-right"></div>
+                </div>
+            </div>
+            <div class="slider-item animateParent" sort=3>
+                <div class="cube" >
+                    <div class="cube-face cube-face-front" >
+                        <div class="imgDetailPart" style="background:url('img/slide-1.png') no-repeat "></div>
+                        <!--<div class="hoverMask"></div>
+                        <img src="img/slide-3.png" alt=""/>-->
+                    </div>
+                    <div class="cube-face cube-face-left"></div>
+                    <div class="cube-face cube-face-right"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/detailpage.js"></script>
+<script src="js/TweenMax.min.js"></script>
+<script>
+    $(window).load(function(){
+        setTimeout(function() {
+            $('.loading').fadeOut();
+        },3000);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>Tiger</title>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="js/jquery-2.0.3.min.js"></script>
+    <link href="favicon.png" rel="icon" type="image/gif" />
+<body>
+<div class="loading">
+    <span class="ico-loading"></span>
+    <img src="img/logo-loading.png" alt=""/>
+</div>
+<div id="tiger">
+    <div class="core">
+        <div class="content">
+            <div id="firework"></div>
+            <span class="title">
+                <img class="bg-banner-header" src="img/banner-header.png" alt=""/>
+            </span>
+            <div class="location clearAfter">
+                <div class="location-content clearAfter">
+                    <span class="ico-location"><img src="img/location-ico.png" alt=""/></span>
+                    <div class="detail-location">
+                        <span class="clearAfter detail">
+                            <span class="where part">Đà Nẵng</span>
+                            <span class="date part"> | 02-01</span>
+                            <span class="time part"> | 19:00</span>
+                        </span>
+                        <span class="detail-where">Công viên Bờ Đông Cầu Sông Hàn</span>
+                    </div>
+                </div>
+                <div class="cooldown-content">
+                    <ul class="cooldown">
+                        <li class="cooldown-part">
+                            <div class="wrapper">
+                                <span class="child number countDay">10</span>
+                                <span class="child gold-date">NGÀY</span>
+                            </div>
+                        </li>
+                        <li class="cooldown-part">
+                            <div class="wrapper">
+                                <span class="child number countHours">24</span>
+                                <span class="child gold-date">GIỜ</span>
+                            </div>
+                        </li>
+                        <li class="cooldown-part">
+                            <div class="wrapper">
+                                <span class="child number countMinutes">35</span>
+                                <span class="child gold-date">PHÚT</span>
+                            </div>
+                        </li>
+                        <li class="cooldown-part">
+                            <div class="wrapper">
+                                <span class="child number countSecond">22</span>
+                                <span class="child gold-date">GIÂY</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!--<div class="information">
+                    <span class="text-part">
+                        <span class="child-info">Xem trực tiếp tại</span>
+                        <span class="logo-play"><img src="img/fpt-play.png" alt=""/></span>
+                        <span class="child-info">nhận ngay</span>
+                    </span>
+                    <span class="text-part">
+                        <img class="premium" src="img/50pre.png" alt=""/>
+                    </span>
+                </div>-->
+            </div>
+            <div class="tiger-stand">
+                <!--<img class="bg" src="img/bg-stand.png" alt=""/>-->
+
+                <div class="wrapper-infor">
+                    <div class="information">
+                        <span class="text-part">
+                            <span class="child-info">Xem trực tiếp tại</span>
+                            <span class="logo-play"><img src="img/fpt-play.png" alt=""/></span>
+                            <span class="child-info">nhận ngay</span>
+                        </span>
+                        <span class="text-part">
+                            <img class="premium" src="img/50pre.png" alt=""/>
+                            <img src="img/50pre-1.png" class="premium-light-off" alt=""/>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/pixi.min.js"></script>
+<script type="text/javascript" src="js/jquery.countdown.min.js"></script>
+<script type="text/javascript" src="js/firework.js"></script>
+<script type="text/javascript" src="js/function.js"></script>
+<script>
+    $(window).load(function(){
+        var loading = $('.loading');
+        var logo_loading = $('.loading img');
+        loading.css({'visibility' : 'hidden'});
+    });
+</script>
+</body>
+</html>

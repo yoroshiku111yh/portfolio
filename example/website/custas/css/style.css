@@ -1,0 +1,261 @@
+@font-face {
+  font-family: 'iCielMijasUltra';
+  src: url("../fonts/iCielMijas-Ultra.eot");
+  src: url("../fonts/iCielMijas-Ultra.eot") format("embedded-opentype"), url("../fonts/iCielMijas-Ultra.svg#iCielMijas-Ultra") format("svg"), url("../fonts/iCielMijas-Ultra.woff") format("woff"), url("../fonts/iCielMijas-Ultra.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+canvas {
+  position: relative;
+  padding: 10px 0px;
+}
+
+.plusContaintAfterCanvas {
+  position: relative;
+  width: auto;
+  background-color: black;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.sideScroll {
+  position: absolute;
+  width: 11%;
+  height: 102%;
+  top: 0;
+  background-color: transparent;
+  z-index: 99;
+  display: none;
+}
+
+.sideScroll.scrollRight {
+  right: 0;
+}
+
+.sideScroll.scrollLeft {
+  left: 0;
+}
+
+.coreFormRegister {
+  position: relative;
+  width: auto;
+  height: 100%;
+  background: url("../img/background.png") no-repeat center;
+  background-size: cover;
+}
+
+.coreFormRegister .containForm {
+  position: relative;
+  margin: 0px auto;
+  margin-bottom: 0px;
+  max-width: 948px;
+  width: auto;
+  height: auto;
+  background: url("../img/bg_form.png") no-repeat top;
+  background-size: 100% 100%;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 472px) {
+  .coreFormRegister .containForm {
+    padding-top: 30px;
+  }
+}
+
+.coreFormRegister .containForm form {
+  max-width: 710px;
+  margin: 0 auto;
+  display: block;
+  padding: 50px;
+  padding-top: 170px;
+}
+
+@media screen and (max-width: 817px) {
+  .coreFormRegister .containForm form {
+    max-width: 568px;
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .coreFormRegister .containForm form {
+    max-width: 496px;
+  }
+}
+
+.coreFormRegister .containForm .text {
+  display: inline-block;
+  font-size: 36px;
+  font-family: "iCielMijasUltra";
+  color: #005a21;
+  width: 218px;
+  text-align: left;
+}
+
+@media screen and (max-width: 678px) {
+  .coreFormRegister .containForm .text {
+    font-size: 28px;
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .coreFormRegister .containForm .text {
+    max-width: 150px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.coreFormRegister .containForm .bg_input {
+  display: inline-block;
+  border: 0px solid white;
+  line-height: 54px;
+  height: 54px;
+  max-width: 476px;
+  background: url("../img/bg_input.png") no-repeat center;
+  background-size: contain;
+}
+
+@media screen and (max-width: 817px) {
+  .coreFormRegister .containForm .bg_input {
+    max-width: 337px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .coreFormRegister .containForm .bg_input {
+    max-width: 337px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+.coreFormRegister .containForm .bg_input input {
+  border: 0px solid white;
+  line-height: 54px;
+  height: 54px;
+  max-width: 440px;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "iCielMijasUltra";
+  color: #702f60;
+  background-color: transparent;
+  font-size: 36px;
+  padding-left: 36px;
+}
+
+@media screen and (max-width: 817px) {
+  .coreFormRegister .containForm .bg_input input {
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .coreFormRegister .containForm .bg_input input {
+    max-width: 300px;
+    font-size: 28px;
+  }
+}
+
+.coreFormRegister .containForm .lineDiv {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+}
+
+.coreFormRegister .containForm .lineDiv .line {
+  display: inline-block;
+  border: 1px solid #005a21;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  width: 140px;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 817px) {
+  .coreFormRegister .containForm .lineDiv .line {
+    width: 70px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .coreFormRegister .containForm .lineDiv .line {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.coreFormRegister .containForm .lineDiv .textInLine {
+  display: inline-block;
+  font-family: "iCielMijasUltra";
+  font-size: 30px;
+  color: #005a21;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+}
+
+@media screen and (max-width: 678px) {
+  .coreFormRegister .containForm .lineDiv .textInLine {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 617px) {
+  .coreFormRegister .containForm .lineDiv .textInLine {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}
+
+.coreFormRegister .containForm .btnContain {
+  display: block;
+  position: relative;
+  max-width: 580px;
+  margin: 0 auto;
+  padding-top: 50px;
+  /*364px*/
+}
+
+@media screen and (max-width: 678px) {
+  .coreFormRegister .containForm .btnContain {
+    max-width: 364px;
+  }
+}
+
+.coreFormRegister .containForm .btnContain .btn {
+  display: inline-block;
+  width: 252px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "iCielMijasUltra";
+  font-size: 36px;
+  line-height: 54px;
+  height: 54px;
+  background: url("../img/btn_bg.png") no-repeat center;
+  background-size: 100% 100%;
+  text-align: center;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 678px) {
+  .coreFormRegister .containForm .btnContain .btn {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 472px) {
+  .coreFormRegister .containForm .btnContain .btn {
+    display: block;
+    margin: 20px auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */

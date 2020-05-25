@@ -1,0 +1,118 @@
+@import "helper";
+.news_detail_section
+{
+  position: relative;
+  width : auto;
+  height : auto;
+  display: block;
+  .content-news-detail
+  {
+    display: block;
+    position: relative;
+    .link
+    {
+      width : auto;
+      height: auto;
+      position: relative;
+      font-family: "UTMAptimaBold";
+      font-size: 15px;
+      text-align: left;
+      color : $gold-text;
+      .arrow
+      {
+        display: inline-block;
+        vertical-align: middle;
+        padding-top: 5px;
+      }
+      .text
+      {
+        display: inline-block;
+        padding-left: 5px;
+        vertical-align: middle;
+        max-width: 90%;
+        color : $gold-text;
+      }
+    }
+    .title
+    {
+      display: block;
+      width: auto;
+      text-align: left;
+      font-size: 25px;
+      font-family: "UTMAptimaBold";
+      //font-family: "UTMTimesBold";
+      line-height: 30px;
+      position: relative;
+      padding-top: 40px;
+      padding-bottom: 30px;
+      color: #5f7835;
+      @media screen and (max-width: 823px) {
+          /*font-size: 30px;*/
+      }
+      @media screen and (max-width: 655px) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      @media screen and (max-width: 543px) {
+        font-size: 20px;
+        line-height: 25px;
+      }
+
+    }
+    .date
+    {
+      font-family: "UTMAptimaItalic";
+      font-size: 15px;
+      line-height: 20px;
+      color : $gray-text;
+      text-align: left;
+      padding-bottom: 30px;
+      display: block;
+    }
+    .detail
+    {
+      font-family: "UTMAptimaRegular";
+      //font-size: 18px;
+      line-height: 24px;
+      /*text-align: left;*/
+      text-align: justify;
+      color : $gray-text;
+      .detail-row
+      {
+        display: block;
+        img
+        {
+          padding : 15px 0px;
+          display: block;
+          width : auto;
+          height: auto !important;
+        }
+      }
+      .detail-column
+      {
+        display: block;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        -webkit-column-gap: 48px;
+        -moz-column-gap: 48px;
+        column-gap: 48px;
+        img
+        {
+          margin: 10px 0px;
+          height: auto !important;
+        }
+        @media screen and (max-width: 672px) {
+          -webkit-column-count: 1;
+          -moz-column-count: 1;
+          column-count: 1;
+        }
+      }
+    }
+  }
+}
+.credit
+{
+  float : right ;
+  font-style: italic;
+}
