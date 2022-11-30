@@ -1,0 +1,9 @@
+node_modules
+.tmp
+.DS_Store
+**/*/.DS_Store
+.vscode
+.idea
+*.zip
+**/*/*.zip
+.git
