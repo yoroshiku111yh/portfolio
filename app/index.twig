@@ -1,7 +1,48 @@
 {% extends "_layout/layout.twig" %}
 {% block page %}
 	<main id="main">
-		
+		<section class="s-top-banner">
+			<div class="top-banner__wrapper">
+				<div class="top-banner__content">
+					<div class="top-banner__context">
+						<h4>Hi, I'm
+							<span class="-red">Minh</span>
+							aka
+							<span class="-red">Yo</span>
+						</h4>
+						<h4 class="-box-blue">
+							<span class="glitch" data-text="A Front-end developer">
+								A Front-end developer
+							</span>
+						</h4>
+						<h4>based in Ho Chi Minh City</h4>
+						<h4>
+							<span class="-red">Yoroshiku!</span>
+						</h4>
+						<div class="top-banner__btn">
+							<a href="#" class="btn-common">
+								<p>Let's talk!</p>
+							</a>
+						</div>
+					</div>
+					<div class="top-banner__avatar">
+						<img src="{{assets_url}}/images/avatar.jpg"/>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="s-aboutus">
+			<div class="marquee-text__wrapper">
+				<div class="marquee-text__inner">
+					<div class="marquee-text__content">
+						{% for i in 0..18 %}
+							<p>About us</p>
+							<p>&#9728;</p>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</section>
 	</main>
 {% endblock %}
 {% block after_js %}

@@ -2,7 +2,7 @@
  * Basic typography style for copy text
  */
 
- $viewBaseDesign : 1440;
+ $viewBaseDesign : 1920;
  html {
     font-size: (14*100/$viewBaseDesign) +vw;
     @include screen(mobile) {

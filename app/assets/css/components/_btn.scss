@@ -1,0 +1,17 @@
+.btn-common{
+    display: inline-block;
+    border-radius : rem(5);
+    overflow: hidden;
+    border : 2px solid #000;
+    cursor: pointer;
+    & > p {
+        @include fontComfortaa;
+        font-weight: 600;
+        font-size: rem(16);
+        text-align: center;
+        padding : rem(10) rem(15);
+        text-transform: uppercase;
+        color : #000;
+        margin : 0;
+    }
+}

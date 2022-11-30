@@ -1,111 +1,77 @@
-.s-top-banner {
+.s-top-banner{
     position: relative;
-    height: rem(600);
-    padding-left: rem(60);
-    padding-top: rem(96);
-    &__slider {
-        position: relative;
-        overflow: hidden;
+    width: 100%;
+    margin-top : rem(100);
+}
+.top-banner{
+    &__wrapper{
+        width : 100%;
+        height : rem(600);
+    }
+    &__content{
+        max-width: rem(1440);
         height: 100%;
-        width: 100%;
-    }
-    &__slide-item {
-        height: 100%;
-        width: 100%;
-        .headline-common__title {
-            transform: translateX(rem(-30));
-            transition: all 0.35s ease-in;
-            transition-delay: 0.25s;
-            filter: blur(4px);
-            opacity: 0;
-        }
-        .headline-common__desc {
-            transform: translateY(rem(15));
-            transition: all 0.3s ease-in;
-            transition-delay: 0.3s;
-            filter: blur(4px);
-            opacity: 0;
-        }
-        .index-caption__text {
-            transform: translateX(rem(15));
-            transition: all 0.25s ease-in;
-            transition-delay: 0.15s;
-            opacity: 0;
-        }
-        .btn-common {
-            opacity: 0;
-            transition: all 0.25s ease-in;
-            transition-delay: 0.4s;
-        }
-        .s-top-banner__slide-image-frame-wrapper {
-            transition: all 0.25s ease-in;
-            filter: blur(1.5rem);
-        }
-        &.is-selected {
-            .headline-common__title {
-                transform: translateX(0);
-                opacity: 1;
-                filter: blur(0px);
-            }
-            .headline-common__desc {
-                transform: translateY(0);
-                opacity: 1;
-                filter: blur(0px);
-            }
-            .index-caption__text {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            .btn-common {
-                opacity: 1;
-            }
-            .s-top-banner__slide-image-frame-wrapper {
-                filter: blur(0px);
-            }
-        }
-    }
-    &__slide-content {
-        display: block;
-        position: absolute;
-        top: rem(217);
-        bottom: 0;
-        left: rem(76);
-        width: rem(422);
-    }
-    &__slide-image {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        width: rem(700);
-        padding-left: rem(36);
-        box-sizing: border-box;
-    }
-    &__slide-image-frame {
-        overflow: hidden;
-        height: 97%;
-        border-top-left-radius: rem(470);
-        border-bottom-left-radius: rem(470);
-        z-index: 1;
+        margin : 0 auto;
         position: relative;
-        img {
-            width: 100%;
+        &:after{
+            display: inline-block;
+            vertical-align: middle;
+            width: 0px;
             height: 100%;
-            object-fit: cover;
+            content : '';
         }
     }
-    &__slide-image-border {
+    &__avatar{
         position: absolute;
-        border-top-left-radius: rem(470);
-        border-bottom-left-radius: rem(470);
-        border: rem(3) solid #16bdb3;
-        top: rem(18);
-        left: rem(11);
-        right: 0;
-        bottom: rem(1);
-        z-index: 0;
+        top : 0;
+        bottom : 0;
+        margin: auto;
+        right : rem(0);
+        width: rem(490);
+        height: rem(490);
+        overflow: hidden;
+        border-radius: 50%;
+        img{
+            object-fit: cover;
+            width: 100%;
+            min-height: 100%;
+        }
+    }
+    &__context{
+        display: inline-block;
+        width : rem(800);
+        vertical-align: middle;
+        h4{
+            @include fontMontserrat;
+            font-size: rem(48);
+            color : #000;
+            font-weight: 700;
+            line-height: 1.35;
+            text-align: left;
+            display: block;
+            text-transform: uppercase;
+            position: relative;
+            margin : 0;
+            margin-bottom : rem(7);
+            .-red{
+                color : #d52b2b
+            }
+            &.-box-blue{
+                background-color: blue;
+                color : #fff;
+                display: inline-block;
+                padding : rem(5) ;
+            }
+            .glitch{
+                position: relative;
+                &:before{
+                    top : rem(-4);
+                }
+            }
+        }
+    }
+    &__btn{
+        position: relative;
+        padding-top : rem(15);
     }
 }
-
-
-

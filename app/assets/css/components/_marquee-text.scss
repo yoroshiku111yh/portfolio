@@ -1,0 +1,54 @@
+.marquee-text {
+    &__wrapper {
+        position: relative;
+    }
+    &__inner {
+        position: relative;
+        width: rem(2000);
+        overflow: hidden;
+        box-shadow: -1px 0px 8px 1px #f8c828;
+        -webkit-box-shadow: -1px 0px 8px 1px #f8c828;
+        -moz-box-shadow: -1px 0px 8px 1px #f8c828;
+    }
+    &__content {
+        margin: 0;
+        padding: rem(15) 0;
+        width: 300% !important;
+        display: flex;
+        justify-content: space-around;
+        animation: marquee 45s linear infinite forwards;
+        background-color: #f8c828;
+        border: rem(12) solid transparent;
+        border-image: 16
+            repeating-linear-gradient(
+                -45deg,
+                #000 0,
+                #000 2em,
+                transparent 0,
+                transparent 2em,
+                #000 0,
+                #000 3em,
+                transparent 0,
+                transparent 4em
+            );
+        & > p {
+            display: inline-block;
+            vertical-align: middle;
+            @include fontMontserrat;
+            text-transform: uppercase;
+            color: #000;
+            margin: 0px rem(5);
+            font-weight: 600;
+            font-size: rem(20);
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-66.6%);
+    }
+}

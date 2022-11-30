@@ -37,16 +37,13 @@ a {
     @include on-event {
         text-decoration: underline;
     }
-
-    &:active,
-    &:focus {}
 }
 
 body {
     line-height: 1.4;
  //-webkit-transform: translate3d(0, 0, 0);
     min-height: 100vh;
-    background: #fff;
+    background: #f7f7f7;;
     padding-top: rem(120);
     @include screen(tablet) {
         //background: #fff url(../images/global/bg-tablet.jpg) center top;
