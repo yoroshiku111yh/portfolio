@@ -1,0 +1,122 @@
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+.s-aboutus {
+    position: relative;
+    padding-left: rem(60);
+    z-index: 2;
+    &__slider {
+        position: relative;
+        height: rem(679);
+        margin-top: rem(140);
+        z-index: 2;
+    }
+    &__slide-item {
+        width: 100%;
+        height: 100%;
+    }
+    &__slide-contain {
+        position: absolute;
+        top: rem(55);
+        left: rem(545);
+        width: rem(614);
+    }
+    &__slide-image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: rem(120);
+        width: rem(590);
+        transform-style: preserve-3d;
+    }
+    &__slide-image-frame {
+        position: absolute;
+        perspective: 200px;
+        &.-frame-1 {
+            width: rem(261.53);
+            height: rem(487.89);
+            border-radius: rem(500);
+            left: rem(113);
+            top: rem(30);
+            overflow: hidden;
+            transform: translateZ(-50px);
+            img {
+                width: 120%;
+                height: 120%;
+                margin-top: -10%;
+                object-fit: cover;
+            }
+        }
+        &.-frame-2 {
+            width: rem(291.32);
+            height: rem(291.32);
+            border-radius: 50%;
+            top: rem(312);
+            left: rem(0);
+            text-align: right;
+            transform: translateZ(0px);
+            .frame-inner {
+                width: rem(291.32);
+                height: rem(291.32);
+                border-radius: 50%;
+                
+                overflow: hidden;
+                position: relative;
+                z-index: 2;
+                display: inline-block;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .frame-border {
+                z-index: 0;
+                position: absolute;
+                left: rem(-10);
+                bottom: rem(-12);
+                width: rem(291.32);
+                height: rem(291.32);
+                border: 4px solid #16bdb3;
+                border-radius:  50%;
+                // border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+                // overflow: hidden;
+                // animation: morph 3s linear infinite;
+
+                overflow: hidden;
+            }
+        }
+    }
+    .slider-nav {
+        padding-left: rem(60);
+    }
+}
+
+.js-about-start-trigger {
+    position: absolute;
+    top: rem(0);
+    left: 0;
+}
+
+.js-about-end-trigger {
+    position: absolute;
+    left: 0;
+    bottom: rem(-50);
+}
+
+@keyframes morph {
+    0%,
+    100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    }
+    34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+    }
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>{{ title }}</title>
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ assets_url }}/images/favicons/favicon.ico">
+		<meta name="theme-color" content="#ffffff">
+
+		{{ wp_head }}
+
+<link rel="stylesheet" href="{{assets_url}}/css/app.css">
+    {% block stylesheet %}{% endblock %}
+{% if dev == true %}
+    <script type="text/javascript" src="{{ assets_url }}/misc/jquery/jquery.js"></script>
+    {% endif %}
+	</head>
+
+	<body>
+
+		<!-- ... the rest of the HTML page ... -->
+		{% include '_layout/header.twig' %}
+		<div class="body-smooth-scroll ">
+			{% block page %}{% endblock %}
+			{% include '_layout/footer.twig' %}
+		</div>
+		{% block before_js %}{% endblock %}
+
+		<script src="{{assets_url}}/js/app.js"></script>
+
+		{{ wp_footer }}
+
+		 {% if dev == true %}
+    <script src="{{assets_url}}/js/runtime.js"></script>
+    {% endif %}
+    <script src="{{assets_url}}/js/vendor.js"></script>
+    <script src="{{assets_url}}/js/app.js"></script>
+    {{ wp_footer }}
+    {% block after_js %}{% endblock %}
+
+
+	</body>
+
+</html>

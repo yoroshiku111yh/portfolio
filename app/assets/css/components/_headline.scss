@@ -1,0 +1,25 @@
+.headline-common{
+    &__title{
+        text-transform: uppercase;
+        font-size: rem(36);
+        @include fontMontserrat;
+        font-weight: 700;
+        color : #1F2656;
+        line-height: 1.35;
+        margin : 0;
+        text-align: left;
+        display: block;
+        padding-bottom : rem(25);
+    }
+    &__desc{
+        font-size: rem(16);
+        font-weight: 400;
+        text-align: left;
+        line-height: 1.5;
+        @include fontComfortaa;
+        color : #1F2656;
+        display: block;
+        padding-bottom : rem(45);
+        margin : 0;
+    }
+}

@@ -1,0 +1,106 @@
+.flickity-fade {
+    .flickity-slider {
+        transform: none !important;
+    }
+    &__item {
+        left: 0 !important;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 1;
+        transform: none !important;
+        &.is-selected {
+            opacity: 1;
+            z-index: 2;
+        }
+    }
+}
+
+.flickity-page-dots{
+    .dot{
+        font-size: 0;
+        width: rem(8);
+        height: rem(8);
+        border-radius: 50%;
+        background-color: #D9D9D9;
+        transition: all 0.25s ease-in-out;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right : rem(15);
+        cursor: pointer;
+        &.is-selected{
+            background-color: rgba(31, 38, 86, 1);
+            width: rem(27);
+            border-radius: rem(10);
+            cursor: auto;
+        }
+    }
+}
+
+.flickity-prev-next-button{
+    cursor: pointer;
+    position: absolute;
+    bottom : rem(-75);
+    width: rem(50);
+    height : rem(50);
+    overflow: hidden; 
+    transition: all 0.35s ease-in-out; 
+    &:after{
+        position: absolute;
+        top : 0;
+        left : 0;
+        bottom :0;
+        right : 0;
+        border-radius: 50%;
+        border : 3px solid rgba(22, 189, 179, 1);
+        content  : '';
+        transition: all 0.25s ease-in-out;
+    }
+    svg{
+        display: block;
+        position: absolute;
+        top : 0;
+        left : 0;
+        bottom : 0;
+        right : 0;
+        z-index: 1;
+        width : rem(18);
+        height : rem(25);
+        margin : auto;
+        path { 
+            opacity: 1;
+            stroke-linecap: round;
+            fill : rgba(22, 189, 179, 1);
+        }
+    }
+    &:disabled{
+        cursor: auto;
+        svg{
+            path{
+                fill : rgba(189, 189, 189, 1)
+            }
+        }
+        &:after{
+            border : 3px solid rgba(189, 189, 189, 1);
+        }
+        &:hover{
+            svg{
+                path{
+                    fill : rgba(189, 189, 189, 1)
+                }
+            }
+            &:after{
+                background-color: #f3f3f3;
+            }
+        }
+    }
+    &:hover{
+        &:after{
+            background-color: rgba(22, 189, 179, 1);
+        }
+        svg{
+            path {
+                fill : #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+.btn-common {
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+    min-height: rem(40);
+    min-width: rem(145);
+    box-sizing: border-box;
+    padding-right : rem(30);
+    cursor: pointer;
+    &.-white{
+        &:after{
+            background-color: #fff;
+        }
+    }
+    &:after{
+        position: absolute;
+        content : '';
+        top : 0;
+        bottom : 0;
+        right : 0;
+        width : rem(78);
+        border-radius: rem(500);
+        background-color: #DCF5F4;
+        z-index: 0;
+        height: 100%;
+        display: block;
+        opacity: 0;
+    }
+    &:before{
+        position: absolute;
+        background: url("../../assets/images/icon/ico-ar-right.png") no-repeat center;
+        background-size: contain;
+        width: rem(18);
+        height : rem(12);
+        right : rem(8);
+        bottom : 0;
+        top : rem(-3);
+        margin : auto;
+        z-index: 1;
+        content : '';
+        display: block;
+    }
+    & > p {
+        @include fontMontserrat;
+        font-size: rem(14);
+        font-weight: 600;
+        line-height: 1;
+        color: #16bdb3;
+        margin : 0;
+        position: relative;
+        z-index: 2;
+        padding-top : rem(12);
+    }
+    &:hover{
+        &:after{
+            opacity: 1;
+            animation: animateButtonBubble 0.75s  cubic-bezier(0.175, 0.885, 0.32, 1.275) 1 normal forwards;
+        }
+        animation: animateButtonWrapper 0.5s 0.05s linear 1 normal forwards;
+    }
+}
+
+
+@keyframes animateButtonBubble {
+    0%{
+        right : 0
+    }
+    35% {
+        right : 75%;
+        width : rem(34);
+    }
+    100%{
+        left : 0;
+        right : 0;
+        width : 100%;
+    }
+}
+
+@keyframes animateButtonWrapper {
+    0%{
+        padding-left : 0;
+        padding-right : rem(30);
+    }
+    100%{
+        padding-left : rem(15);
+        padding-right : rem(35);
+    }
+}
