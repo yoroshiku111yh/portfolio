@@ -1,0 +1,32 @@
+.box-context {
+    position: relative;
+    &__inner {
+        background-color: #000;
+        padding: rem(15) rem(15) rem(20) rem(15);
+        @include fontComfortaa;
+        font-weight: 500;
+        font-size: rem(16);
+        color: #fff;
+        position: relative;
+        overflow: visible;
+        box-shadow: 16px -10px 5px 0px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: 16px -10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 16px -10px 5px 0px rgba(0, 0, 0, 0.75);
+        line-height: 1.3;
+        h3{
+            font-size: rem(24);
+            color : #fff;
+            line-height: 1.35;
+            margin : 0;
+            padding-bottom : rem(5);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+    }
+    &__detail{
+        padding-bottom : rem(15);
+        position: relative;
+        z-index: 1;
+    }
+}

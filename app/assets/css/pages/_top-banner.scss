@@ -1,7 +1,8 @@
 .s-top-banner{
     position: relative;
     width: 100%;
-    margin-top : rem(100);
+    padding-top : rem(100);
+    overflow: hidden;
 }
 .top-banner{
     &__wrapper{
@@ -9,7 +10,6 @@
         height : rem(600);
     }
     &__content{
-        max-width: rem(1440);
         height: 100%;
         margin : 0 auto;
         position: relative;
@@ -75,3 +75,4 @@
         padding-top : rem(15);
     }
 }
+

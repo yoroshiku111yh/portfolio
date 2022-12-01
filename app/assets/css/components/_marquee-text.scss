@@ -16,7 +16,7 @@
         width: 300% !important;
         display: flex;
         justify-content: space-around;
-        animation: marquee 45s linear infinite forwards;
+        animation: marquee-left 45s linear infinite forwards;
         background-color: #f8c828;
         border: rem(12) solid transparent;
         border-image: 16
@@ -41,14 +41,26 @@
             font-weight: 600;
             font-size: rem(20);
         }
+        &.-right{
+            animation: marquee-right 45s linear infinite forwards;
+        }
     }
 }
 
-@keyframes marquee {
+@keyframes marquee-left {
     0% {
         transform: translateX(0);
     }
     100% {
+        transform: translateX(-66.6%);
+    }
+}
+
+@keyframes marquee-right {
+    100% {
+        transform: translateX(0);
+    }
+    0% {
         transform: translateX(-66.6%);
     }
 }

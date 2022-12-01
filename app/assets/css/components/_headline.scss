@@ -1,0 +1,12 @@
+.headline-common{
+    font-size: rem(64);
+    color : #000;
+    text-align: left;
+    @include fontMontserrat;
+    font-weight: 600;
+    text-shadow: 3px 3px 0 #ccc;
+    display: inline-block;
+    margin : 0;
+    line-height: 1.35;
+    text-transform: uppercase;
+}

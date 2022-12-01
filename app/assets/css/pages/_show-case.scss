@@ -1,0 +1,17 @@
+.s-showcase {
+    position: relative;
+    padding-top: rem(300);
+    padding-bottom: rem(100);
+    .marquee-text {
+        &__wrapper {
+            position: absolute;
+            top: rem(85);
+            left: rem(-30);
+            right: rem(-30);
+            transform: rotate(2deg);
+        }
+    }
+    &__container{
+        margin : 0 auto;
+    }
+}
