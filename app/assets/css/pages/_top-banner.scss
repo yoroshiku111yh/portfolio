@@ -1,13 +1,13 @@
 .s-top-banner{
     position: relative;
     width: 100%;
-    padding-top : rem(100);
+    padding-top : 0;
     overflow: hidden;
 }
 .top-banner{
     &__wrapper{
         width : 100%;
-        height : rem(600);
+        height : 100vh;
     }
     &__content{
         height: 100%;

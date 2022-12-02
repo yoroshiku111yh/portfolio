@@ -2,7 +2,7 @@ const { default: gsap } = require('gsap');
 
 document.addEventListener("DOMContentLoaded", function (event) {
     new (require('./pages/smoothScrollHomePage.js').default)();
-    
+    new (require('./pages/backgroundMain.js').default)();
     setTimeout(() => {
         if (document.querySelector('.gsap-marker-scroller-start')) {
             const markers = gsap.utils.toArray('[class *= "gsap-marker"]');

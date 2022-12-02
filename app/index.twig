@@ -1,30 +1,11 @@
 {% extends "_layout/layout.twig" %}
 {% block page %}
 	<main id="main">
-		{% include '_components/top-banner.twig' %}
-		{% include '_components/about-me.twig' %}
-		<section class="s-showcase">
-			<div class="marquee-text__wrapper">
-				<div class="marquee-text__inner">
-					<div class="marquee-text__content -right">
-						{% for i in 0..18 %}
-							<p>Showcase</p>
-							<p>&#9728;</p>
-						{% endfor %}
-					</div>
-				</div>
-			</div>
-			<div class="s-showcase__container container">
-				<div class="s-showcase__headline">
-					<h4 class="headline-common">
-						My works.
-					</h4>
-				</div>
-				<div class="s-showcase__content">
-					<div></div>
-				</div>
-			</div>
-		</section>
+		<div class="background-main">
+			<canvas id="bg-cv" data-src="{{assets_url}}/models/skull/skull.obj"></canvas>
+		</div>
+		{# {% include '_components/top-banner.twig' %} #}
+		
 	</main>
 {% endblock %}
 {% block after_js %}
