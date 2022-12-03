@@ -53,7 +53,7 @@ vec2 sdf(vec3 p) {
     if(isMobile == true) {
         final = mix(box, box, .5 + .5 * sin(time / 3.));
         //total = 1;
-    }   
+    }
     float radiusPoints = 0.05;
     if(isStartGoToCenter == true) {
         if(isMobile == false) {
@@ -61,7 +61,7 @@ vec2 sdf(vec3 p) {
                 float randOffset = rand(vec2(i, 0));
                 float progr = 1. - fract(time / 3. + randOffset * 3.);
                 vec3 pos = vec3(sin(randOffset * 2. * PI), cos(randOffset * 2. * PI), randOffset * 2.);
-                float goToCenter = sdSphere(p - pos * progr, radiusPoints*(randOffset + 0.45));
+                float goToCenter = sdSphere(p - pos * progr, radiusPoints * (randOffset + 0.45));
                 //is box
                 // vec3 p1 = rotate(p - pos * progr , vec3(1.), time / 3.);
                 // float goToCenter = sdBox(p1, vec3(.05));
@@ -107,6 +107,10 @@ void main() {
     float tMax = 5.;
 
     float type = 1.;
+
+
+    // camera	
+    
 
     for(int i = 0; i < 256; ++i) {
         vec3 pos = camPos + t * ray;
