@@ -1,5 +1,5 @@
 
-import SceneBackgroundMain from './../components/background-main/scene';
+import SceneRaymarchingBasic from './../components/rayMarchingBasic/scene';
 
 export default  class BackgroundMain {
     constructor(){
@@ -9,14 +9,16 @@ export default  class BackgroundMain {
             width : window.innerWidth,
             height : window.innerHeight,
         },
-        this.srcModel = this.canvasElm.dataset.src;
         this.init();
     }
     init(){
-        this.scene = new SceneBackgroundMain({
+        this.scene = new SceneRaymarchingBasic({
             $container : this.canvasElm,
             size : this.size,
-            srcModel : this.srcModel,
-        })
+            speed : 0.02
+        });
+        setTimeout(() => {
+            this.scene.startPointsGo();
+        }, 100);
     }
 }
