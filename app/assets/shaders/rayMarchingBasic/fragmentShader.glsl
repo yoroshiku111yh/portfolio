@@ -110,10 +110,6 @@ void main() {
 
     float type = 0.;
 
-
-    // camera	
-    
-
     for(int i = 0; i < 256; ++i) {
         vec3 pos = camPos + t * ray;
         float h = sdf(pos).x;
@@ -123,6 +119,7 @@ void main() {
 
         t += h;
     }
+    
     vec3 color = bg;
     if(t < tMax) {
         vec3 pos = camPos + t * ray;
