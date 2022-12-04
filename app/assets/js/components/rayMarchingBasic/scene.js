@@ -103,6 +103,9 @@ export default class SceneRaymarchingBasic extends SceneBase {
             },
             isMouseLeave : {
                 value : this.isMouseLeave
+            },
+            zVertex : {
+                value : 1.0
             }
         });
         this.uniforms = material.getUniform();

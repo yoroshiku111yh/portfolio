@@ -4,7 +4,7 @@ import SceneRaymarchingBasic from './../components/rayMarchingBasic/scene';
 export default  class BackgroundMain {
     constructor(){
         this.canvasElm = document.querySelector("#bg-cv");
-        if(!this.canvasElm) return;
+        if(!this.canvasElm || !window.supportgl2) return;
         this.size = {
             width : window.innerWidth,
             height : window.innerHeight,
@@ -19,6 +19,6 @@ export default  class BackgroundMain {
         });
         setTimeout(() => {
             this.scene.startPointsGo();
-        }, 100);
+        }, 1000);
     }
 }

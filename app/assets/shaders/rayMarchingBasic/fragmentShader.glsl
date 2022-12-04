@@ -41,7 +41,7 @@ vec2 sdf(vec3 p) {
     float radius = 0.15;
     float radiusBox = .2;
     float type = 0.;
-    int total = 10; // dont know why bug glitch when dynamic value uniform
+    int total = 7; // dont know why bug glitch when dynamic value uniform
 
     vec3 p1 = rotate(p, vec3(1.), time / 3.);
     float box = smin(sdBox(p1, vec3(radiusBox)), sdSphere(p, .2), radius);
@@ -65,6 +65,7 @@ vec2 sdf(vec3 p) {
                 //is box
                 // vec3 p1 = rotate(p - pos * progr , vec3(1.), time / 3.);
                 // float goToCenter = sdBox(p1, vec3(.05));
+                //type = final - goToCenter;
                 final = smin(final, goToCenter, radius);
             }
         } else {
@@ -79,13 +80,14 @@ vec2 sdf(vec3 p) {
     if(isMouseLeave == false) {
         radiusMouseSphere = .1 + .05 * sin(time);
     }
-    //float mouseSphere = sdSphere(p - vec3(mouse * resolution.zw * 2., 0.), radiusMouseSphere*0.5);
+    
     vec3 pMouseBox = rotate(p - vec3(mouse * resolution.zw * 2., 0.), vec3(1.), -time / 2.);
     float mouseSphere = sdBox(pMouseBox, vec3(radiusMouseSphere * 0.35));
-
-    if(mouseSphere < final)
-        type = 1.;
-
+    //float mouseSphere = sdSphere(p - vec3(mouse * resolution.zw * 2., 0.), radiusMouseSphere*0.5);
+    //type = final - mouseSphere;
+    if(final > mouseSphere){
+        type = 1.0;
+    }
     return vec2(smin(final, mouseSphere, .1), type);
 }
 
@@ -106,7 +108,7 @@ void main() {
     float t = 0.;
     float tMax = 5.;
 
-    float type = 1.;
+    float type = 0.;
 
 
     // camera	
@@ -127,9 +129,9 @@ void main() {
         color = vec3(1.);
         vec3 normal = calcNormal1(pos);
         color = normal;
-
+        //vec3 color1 = vec3(0.06f, 0.03f, 0.08f);
+        //color = mix(colorOrb, color1, type);
         color = colorOrb;
-
         float fresnel = fresnelFn(ray, normal);
         color = mix(color, bg, fresnel);
     }

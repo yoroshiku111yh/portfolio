@@ -11,19 +11,20 @@
 
 		{{ wp_head }}
 
-<link rel="stylesheet" href="{{assets_url}}/css/app.css">
-    {% block stylesheet %}{% endblock %}
-{% if dev == true %}
-    <script type="text/javascript" src="{{ assets_url }}/misc/jquery/jquery.js"></script>
-    {% endif %}
+		<link rel="stylesheet" href="{{assets_url}}/css/app.css"> {% block stylesheet %}{% endblock %}
+		{% if dev == true %}
+			<script type="text/javascript" src="{{ assets_url }}/misc/jquery/jquery.js"></script>
+		{% endif %}
 	</head>
 
 	<body>
 
 		<!-- ... the rest of the HTML page ... -->
 		{% include '_layout/header.twig' %}
-		<div class="body-smooth-scroll ">
-			{% block page %}{% endblock %}
+		<div class="background-main">
+			<canvas id="bg-cv" data-src="{{assets_url}}/models/skull/skull.obj" data-env="{{assets_url}}/env/empty_warehouse_01_1k.hdr"></canvas>
+		</div>
+		<div class="body-smooth-scroll "> {% block page %}{% endblock %}
 			{% include '_layout/footer.twig' %}
 		</div>
 		{% block before_js %}{% endblock %}
@@ -32,13 +33,13 @@
 
 		{{ wp_footer }}
 
-		 {% if dev == true %}
-    <script src="{{assets_url}}/js/runtime.js"></script>
-    {% endif %}
-    <script src="{{assets_url}}/js/vendor.js"></script>
-    <script src="{{assets_url}}/js/app.js"></script>
-    {{ wp_footer }}
-    {% block after_js %}{% endblock %}
+		{% if dev == true %}
+			<script src="{{assets_url}}/js/runtime.js"></script>
+		{% endif %}
+		<script src="{{assets_url}}/js/vendor.js"></script>
+		<script src="{{assets_url}}/js/app.js"></script>
+		{{ wp_footer }}
+		{% block after_js %}{% endblock %}
 
 
 	</body>

@@ -1,11 +1,8 @@
 {% extends "_layout/layout.twig" %}
 {% block page %}
 	<main id="main">
-		<div class="background-main">
-			<canvas id="bg-cv" data-src="{{assets_url}}/models/skull/skull.obj" data-env="{{assets_url}}/env/empty_warehouse_01_1k.hdr"></canvas>
-		</div>
 		{% include '_components/top-banner.twig' %}
-		
+		{% include '_components/about.twig' %}
 	</main>
 {% endblock %}
 {% block after_js %}
