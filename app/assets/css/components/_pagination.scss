@@ -1,0 +1,11 @@
+.pagination{
+    &__wrapper{
+        position: absolute;
+        bottom : rem(20);
+        left : 0;
+        right : 0;
+        margin : auto;
+        width : rem(350);
+        height : 35px;
+    }
+}

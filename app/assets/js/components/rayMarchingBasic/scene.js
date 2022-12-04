@@ -5,7 +5,7 @@ import SceneBase from './../../ultilities/sceneBase';
 import ShaderRayMarchingBasic from './../../../shaders/rayMarchingBasic/index';
 
 export default class SceneRaymarchingBasic extends SceneBase {
-    constructor({ $container, size = {}, speed = 0.035, totalOrb = 5 }) {
+    constructor({ $container, size = {}, speed = 0.035, totalOrb = 5, zVertex = 1.0 }) {
         super($container, size.width, size.height);
         this.frustumSize = 1;
         this.time = 0;
@@ -19,6 +19,7 @@ export default class SceneRaymarchingBasic extends SceneBase {
         this.resolution = new THREE.Vector4();
         this.count = 0;
         this.isStartGoToCenter = false;
+        this.zVertex = zVertex;
         this.init();
     }
     initCamera() {
@@ -86,8 +87,8 @@ export default class SceneRaymarchingBasic extends SceneBase {
             progress: {
                 value: 0.0
             },
-            isStartGoToCenter : {
-                value : this.isStartGoToCenter
+            isStartGoToCenter: {
+                value: this.isStartGoToCenter
             },
             mouse: {
                 value: this.mouse
@@ -95,17 +96,17 @@ export default class SceneRaymarchingBasic extends SceneBase {
             resolution: {
                 value: this.resolution
             },
-            isMobile : {
-                value : this.isMobile
+            isMobile: {
+                value: this.isMobile
             },
             colorOrb: {
                 value: new THREE.Vector3(new THREE.Color("#040809").r, new THREE.Color("#040809").g, new THREE.Color("#040809").b)
             },
-            isMouseLeave : {
-                value : this.isMouseLeave
+            isMouseLeave: {
+                value: this.isMouseLeave
             },
-            zVertex : {
-                value : 1.0
+            zVertex: {
+                value: this.zVertex
             }
         });
         this.uniforms = material.getUniform();
@@ -115,29 +116,29 @@ export default class SceneRaymarchingBasic extends SceneBase {
     }
     stop() {
         this.isPlaying = false;
+        this.isInteractive = false;
     }
     play() {
         this.isPlaying = true;
-    }
-    stopInteractive(){
-        this.isInteractive = false;
-    }
-    startInteractive(){
         this.isInteractive = true;
     }
-    startPointsGo(){
+    startPointsGo() {
         this.isStartGoToCenter = true;
     }
     mouseEvents() {
-        if(window.innerWidth < 768) return;
+        if (window.innerWidth < 768) return;
         document.addEventListener("mousemove", (e) => {
-            if(!this.isInteractive) return;
+            if (!this.isInteractive) return;
+            if ($(e.target).hasClass("js-hide-effect-bg")) {
+                this.isMouseLeave = true;
+                return;
+            }
             this.mouse.x = e.pageX / this.W - 0.5;
             this.mouse.y = -e.pageY / this.H + 0.5;
             this.isMouseLeave = false;
         });
-        document.addEventListener("mouseleave", () =>{
-            if(!this.isInteractive) return;
+        document.addEventListener("mouseleave", () => {
+            if (!this.isInteractive) return;
             this.isMouseLeave = true;
         })
     }
@@ -147,5 +148,6 @@ export default class SceneRaymarchingBasic extends SceneBase {
         this.uniforms.time.value = this.time;
         this.uniforms.isMouseLeave.value = this.isMouseLeave;
         this.uniforms.isStartGoToCenter.value = this.isStartGoToCenter;
+        this.uniforms.zVertex.value = this.zVertex;
     }
 }
