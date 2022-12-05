@@ -1,0 +1,23 @@
+.-underline-effect {
+    display: inline-block;
+    position: relative;
+    transition: all 0.25s ease-in-out;
+    &:after {
+        display: block;
+        content: "";
+        bottom: 0;
+        height: rem(3);
+        width: 10%;
+        position: absolute;
+        background-color: #fff;
+        transition: all 0.25s ease-in-out;
+    }
+    &:hover {
+        transform: translateY(rem(-10));
+        color: #600eff;
+        &:after {
+            width: 100%;
+            background-color: #600eff;
+        }
+    }
+}

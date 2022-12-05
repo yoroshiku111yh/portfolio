@@ -8,9 +8,13 @@ const initScrollTrigger = new InitScrollTriggerBody();
 export default class BackgroundMain {
     constructor() {
         this.canvasElm = document.querySelector("#bg-cv");
+        this.canvasElm.style.opacity = 0;
         this.size = {
             width: window.innerWidth,
             height: window.innerHeight,
+        };
+        this.processScroll = {
+            value : 0
         };
         this.init();
     }
@@ -25,6 +29,10 @@ export default class BackgroundMain {
             size: this.size,
             speed: 0.02
         });
+        
+        setTimeout(() => {
+            this.canvasElm.style.opacity = "";
+        }, 500);
         setTimeout(() => {
             this.scene.startPointsGo();
         }, 1000);
@@ -40,8 +48,20 @@ export default class BackgroundMain {
                 markers: false,
             }
         });
-        this.tl.to(".circle-black", {
+        this.tl
+        .to(".circle-black", {
             transform : "scale(3000%)"
-        });
+        }, "stage-1")
+        .to(this.processScroll, {
+            value : 1,
+            onUpdate:() => {
+                if(this.processScroll.value > 0.0002){
+                    $(".mouse_scroll").addClass("-hide");
+                }
+                else{
+                    $(".mouse_scroll").removeClass("-hide");
+                }
+            }
+        }, "stage-1")
     }
 }

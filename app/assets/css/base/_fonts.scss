@@ -1,6 +1,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Six+Caps&display=swap');
+
 @mixin fontComfortaa {
     font-family: 'Comfortaa', sans-serif;
 }
@@ -15,4 +17,8 @@
 
 @mixin fontAntonio {
     font-family: 'Antonio', sans-serif;
+}
+
+@mixin fontSix {
+    font-family: 'Six Caps', sans-serif;
 }

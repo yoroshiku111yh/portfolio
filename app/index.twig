@@ -2,10 +2,22 @@
 {% block page %}
 	<main id="main">
 		<div class="circle-black-outer">
-			<div class="circle-black "></div>
+			<div class="circle-black ">
+				<div class="mouse_scroll">
+					<div class="mouse">
+						<div class="wheel"></div>
+					</div>
+					<div>
+						<span class="m_scroll_arrows unu"></span>
+						<span class="m_scroll_arrows doi"></span>
+						<span class="m_scroll_arrows trei"></span>
+					</div>
+				</div>
+			</div>
 		</div>
 		{% include '_components/top-banner.twig' %}
 		{% include '_components/about.twig' %}
+		{% include '_components/skills.twig' %}
 	</main>
 {% endblock %}
 {% block after_js %}

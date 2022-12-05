@@ -8,15 +8,12 @@ function checkSupportWebgl2() {
         window.supportgl2 = false;
     }
 }
-
-
 document.addEventListener("DOMContentLoaded", function (event) {
     checkSupportWebgl2();
     importModule();
     setTimeout(() => {
         if (document.querySelector('.gsap-marker-scroller-start')) {
             const markers = gsap.utils.toArray('[class *= "gsap-marker"]');
-
             window.bodyScrollBar.addListener(({ offset }) => {
                 gsap.set(markers, { marginTop: -offset.y })
             });
@@ -28,4 +25,5 @@ function importModule(){
     new (require('./pages/smoothScrollHomePage.js').default)();
     new (require('./pages/backgroundMain.js').default)();
     new (require('./pages/topBanner.js').default)();
+    new (require('./pages/about.js').default)();
 }
