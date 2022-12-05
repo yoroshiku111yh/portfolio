@@ -8,7 +8,7 @@ export default class TopBanner {
     init() {
         gsap
             .to(".js-headline-1", {
-                duration: 0.25,
+                duration: 0.5,
                 y: "0",
                 alpha: 1,
                 rotate: 0,
@@ -17,7 +17,7 @@ export default class TopBanner {
             });
         gsap
             .to(".js-headline-2", {
-                duration: 0.25,
+                duration: 0.5,
                 y: "0",
                 alpha: 1,
                 rotate: 0,
@@ -26,21 +26,21 @@ export default class TopBanner {
             });
         gsap
             .to(".js-headline-3", {
-                duration: 0.25,
+                duration: 0.5,
                 y: "0",
                 alpha: 1,
                 rotate: 0,
                 ease: Power1.easeOut,
-                delay: 0.65
+                delay: 1.
             });
         gsap
             .to(".js-headline-4", {
-                duration: 0.25,
+                duration: 0.5,
                 y: "0",
                 alpha: 1,
                 rotate: 0,
                 ease: Power1.easeOut,
-                delay: 0.85
+                delay: 1.5
             });
     }
 }
