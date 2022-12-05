@@ -1,0 +1,23 @@
+.s-about{
+    background-color: #000;
+    margin-top : 300px;
+    padding-top : 0;
+    position: relative;
+    z-index: 1;
+    &__container{
+        padding : 0 rem(45);
+        position: relative;
+    }
+    &__detail{
+        position: relative;
+        @include fontAntonio;
+        font-weight: 100;
+        color : #fff;
+        font-size: rem(80);
+        text-align: left;
+        & > .spacing{
+            padding-left : rem(80);
+            display: inline-block;
+        }
+    }
+}

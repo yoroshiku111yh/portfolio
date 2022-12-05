@@ -32,6 +32,7 @@
         width: 100%;
         & > div {
             text-align: left;
+            overflow: hidden;
             @media screen and (max-width : 821px) {
                 text-align: right;
             }
@@ -42,16 +43,15 @@
     }
     &__headline {
         display: inline-block;
-        @include fontShareTech;
-        font-weight: 400;
+        @include fontAntonio;
+        font-weight: 300;
         color: #fff;
         font-size: 8vw;
         text-transform: uppercase;
         margin: rem(15) rem(15) rem(35) rem(15);
-        padding: 0;
+        padding: rem(5) 0;
         position: relative;
         text-shadow: rem(1) rem(1) #ccc;
-        transition: all 0.15s ease-in-out;
         @media screen and (max-width : 821px) {
             font-size: 13vw;
         }
@@ -60,16 +60,11 @@
             margin: rem(10) rem(7) rem(15) rem(10);
             text-shadow: rem(0) rem(0) #ccc;
         }
-        &:hover {
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.75);
-            letter-spacing: rem(1);
-        }
     }
     &__text-med{
         display: inline-block;
-        @include fontShareTech;
-        font-weight: 400;
+        @include fontAntonio;
+        font-weight: 300;
         color: #fff;
         font-size: 5vw;
         text-transform: uppercase;
@@ -110,4 +105,16 @@
     transform-origin : 50% 50%;
     background-color: #000;
     z-index: 0;
+}
+
+.js-headline-1{
+    opacity: 0;
+    transform-origin: 75% 0%;
+    transform: translateY(rem(25)) rotate(-10deg);
+}
+
+.js-headline-2{
+    opacity: 0;
+    transform-origin: 0% 0%;
+    transform: translateY(rem(25)) rotate(10deg);
 }

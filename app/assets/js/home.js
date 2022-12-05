@@ -27,4 +27,5 @@ document.addEventListener("DOMContentLoaded", function (event) {
 function importModule(){
     new (require('./pages/smoothScrollHomePage.js').default)();
     new (require('./pages/backgroundMain.js').default)();
+    new (require('./pages/topBanner.js').default)();
 }
