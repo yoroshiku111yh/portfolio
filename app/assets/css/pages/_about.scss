@@ -1,10 +1,14 @@
 .s-about{
     background-color: #000;
-    margin-top : 300px;
+    margin-top : rem(200);
     padding-top : 0;
     position: relative;
     z-index: 1;
     padding-bottom : rem(60);
+    @media screen and (max-width : 768px){
+        margin-top : rem(50);
+        padding-bottom: rem(30);
+    }
     &:after{
         position: absolute;
         bottom : 0;
@@ -14,6 +18,12 @@
         background-color: #fff;
         content : '';
         display: block;
+        @media screen and (max-width : 768px){
+            right : rem(15);
+            height : rem(2);
+            width : 30%;
+            bottom : rem(5);
+        }
     }
     &__container{
         position: relative;
@@ -28,6 +38,10 @@
             padding-left : rem(80);
             display: inline-block;
         }
+        @media screen and (max-width : 768px){
+            font-size: rem(25);
+            line-height: 1.4;
+        }
     }
     &__text{
         display: block;
@@ -37,6 +51,9 @@
         p{
             color : #fff;
             margin : 0;
+        }
+        @media screen and (max-width : 768px){
+            padding-top : rem(7);
         }
     }
     &__mask-blend{

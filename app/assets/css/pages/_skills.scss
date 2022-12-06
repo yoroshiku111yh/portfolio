@@ -3,11 +3,15 @@
     padding-top : rem(70);
     padding-bottom : rem(50);
     background-color: #000;
+    @media screen and (max-width : 768px){
+        padding-top : rem(35);
+        padding-bottom: rem(30);
+    }
     &__headline{
         text-align: right;
     }
     &__detail{
-        padding-right : rem(20);
+        padding-right : rem(5);
         padding-bottom: rem(25);
         padding-top : rem(15);
         @include fontAntonio;
@@ -17,19 +21,26 @@
         color : #fff;
         text-transform: uppercase;
         text-align: right;
+        @media screen and (max-width : 768px){
+            font-size: rem(30);
+        }
         & > span{
             display: inline-block;
             position: relative;
             padding-left : rem(20);
+            padding-bottom : rem(5);
             &:after{
                 content : "#";
                 display: block;
                 left : 0;
-                bottom : 0;
+                bottom : rem(5);
                 width : rem(20);
                 position: absolute;
                 font-size: rem(35);
                 color : #974c4c;
+                @media screen and (max-width : 768px){
+                    font-size: rem(16);
+                }
             }
         }
     }

@@ -11,6 +11,9 @@
         position: absolute;
         background-color: #fff;
         transition: all 0.25s ease-in-out;
+        @media screen and (max-width : 768px){
+            height: rem(2);
+        }
     }
     &:hover {
         transform: translateY(rem(-10));

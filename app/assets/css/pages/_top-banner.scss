@@ -25,6 +25,9 @@
             height: 100%;
             content: "";
         }
+        @media screen and (max-width: 821px) {
+            padding : rem(15);
+        }
     }
     &__detail {
         display: inline-block;
@@ -83,29 +86,7 @@
     }
 }
 
-.circle-black-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh + 300px);
-    z-index: 0;
-    overflow: hidden;
-}
 
-.circle-black {
-    position: absolute;
-    top: 91vh;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: rem(300);
-    height: rem(300);
-    border-radius: 50%;
-    transform-origin: 50% 50%;
-    background-color: #000;
-    z-index: 0;
-}
 
 .js-headline-1 {
     opacity: 0;

@@ -21,7 +21,6 @@ export default class About{
         });
         this.tl.from(".s-about__text", {
             opacity : 0,
-            filter : "blur(4px)",
             y : "75px"
         })
     }

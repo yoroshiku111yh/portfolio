@@ -6,7 +6,7 @@ export default class SmoothScroll {
     }
     initSmoothScroll() {
         const scroller = document.querySelector('.body-smooth-scroll');
-        if (!scroller || window.innerWidth < 768) {
+        if (!scroller) {
             return;
         }
         scroller.classList.add("smooth-scroll-wrapper");

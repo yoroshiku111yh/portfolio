@@ -8,4 +8,10 @@
     margin : 0;
     line-height: 1.35;
     text-transform: uppercase;
+    @media screen and (max-width : 821px){
+        font-size: rem(70);
+    }
+    @media screen and (max-width : 768px){
+        font-size: rem(18);
+    }
 }
