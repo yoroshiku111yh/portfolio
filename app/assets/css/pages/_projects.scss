@@ -1,0 +1,89 @@
+.s-projects {
+    background-color: #000;
+    position : relative;
+    &__container{
+        margin : 0 auto;
+        position: relative;
+        width: 100%;
+        min-height: calc(100vh - 40px);
+    }
+    &__title-section{
+        display : block;
+        position : absolute;
+        &:nth-child(1){
+            top : rem(0);
+            left : rem(45);
+        }
+        &:nth-child(2){
+            bottom : rem(0);
+            right: rem(45);
+        }
+    }
+    &__block{
+        width : 100%;
+        min-height : 100vh;
+        padding-top : 20px;
+        padding-bottom : 20px;
+        position : relative;
+        &.-project-1{
+            background-color : #0F3EE9;
+        }
+    }
+    &__decor{
+        position : absolute;
+        top : -40px;
+        height : 40px;
+        left : 0;
+        right : 0;
+        &.-decor-1{
+            background-image: linear-gradient(to bottom, #000000, #340823, #570052, #631396, #0f3ee9);
+        }
+    }
+    &__timeline{
+        position : absolute;
+        bottom : rem(0);
+        left : rem(45);
+        p{
+            font-weight : 200;
+            font-size: 2vw;
+            @include fontAntonio;
+            display : inline-block;
+            vertical-align : middle;
+            color : rgb(229, 228, 228);
+        }
+    }
+    &__timeline-space{
+        display : inline-block;
+        width : rem(200);
+        height : 2px;
+        background-color : #fff;
+        margin : 0 rem(10);
+        vertical-align: middle;
+    }
+    &__section-decor{
+        position : absolute;
+        top : rem(-100);
+        left :0;
+        right : 0;
+        height : rem(100);
+    }
+}
+
+
+.js-start-trigger-project-1{
+    position : absolute;
+    top : rem(100);
+    left : 0;
+    width : 0;
+    height : 0;
+}
+
+
+.title-section{
+    font-size: 25vw;
+    font-weight : 600;
+    @include fontAntonio;
+    color : #fff;
+    text-align : left;
+    text-transform: uppercase;
+}

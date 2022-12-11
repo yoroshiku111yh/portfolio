@@ -26,4 +26,5 @@ function importModule(){
     new (require('./pages/backgroundMain.js').default)();
     new (require('./pages/topBanner.js').default)();
     new (require('./pages/about.js').default)();
+    new (require('./pages/projects-background.js').default)();
 }
